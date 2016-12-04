@@ -21,5 +21,5 @@ namespace MiddleOut
     /// </summary>
     public enum UserTypes { User, Admin }
 
-    class EnumType { }
+    class EnumTypes { }
 }
