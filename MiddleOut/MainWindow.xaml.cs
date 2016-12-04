@@ -24,6 +24,8 @@ namespace MiddleOut
         public MainWindow()
         {
             InitializeComponent();
+            User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
+            Console.WriteLine(karan.getName());
         }
     }
 }
