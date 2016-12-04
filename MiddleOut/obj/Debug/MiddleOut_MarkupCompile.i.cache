@@ -4,16 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
+=======
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
+>>>>>>> 3aebfe44486d81c74bc904838a56d8debcea8210
 MiddleOut
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
 5-1202269702
 
 142096731049
 131151349269
+=======
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
+5-1202269702
+
+13-1428053494
+13-531857899
+>>>>>>> 3aebfe44486d81c74bc904838a56d8debcea8210
 MainWindow.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
 
 False

@@ -19,6 +19,7 @@ c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\D
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+<<<<<<< HEAD
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MiddleOut.exe
@@ -40,3 +41,7 @@ C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\Set
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\App.g.cs
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut_MarkupCompile.cache
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
+=======
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+>>>>>>> 3aebfe44486d81c74bc904838a56d8debcea8210
