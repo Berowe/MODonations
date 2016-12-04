@@ -19,3 +19,5 @@ c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\D
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 c:\users\toorkpc\documents\visual studio 2015\Projects\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
