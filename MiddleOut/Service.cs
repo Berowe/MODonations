@@ -18,7 +18,7 @@ namespace MiddleOut
         private Boolean myCompleted = false;
         private Boolean mySelected = false;
 
-        private string myReview;
+        private ReviewService myReview;
 
         public Service(int theServiceID, int theUserID)
         {
@@ -290,7 +290,7 @@ namespace MiddleOut
             return mySelected;
         }
 
-        public string getReview()
+        public ReviewService getReview()
         {
             return myReview;
         }
@@ -327,7 +327,7 @@ namespace MiddleOut
             mySelected = theSelected;
         }
 
-        public void setReview(string theReview)
+        public void setReview(ReviewService theReview)
         {
             myReview = theReview;
         }
@@ -355,21 +355,23 @@ namespace MiddleOut
         public string ToString()
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append(myServiceID.ToString());
-            builder.Append(myUserID.ToString());
-            builder.Append(myServiceDescription);
-            builder.Append(myCompleted.ToString());
-            builder.Append(mySelected.ToString());
+            builder.Append(myServiceID.ToString() + "\n");
+            builder.Append(myUserID.ToString() + "\n");
+            builder.Append(myServiceDescription + "\n");
+            builder.Append(myCompleted.ToString() + "\n");
+            builder.Append(mySelected.ToString() + "\n");
             if (myTimeStart != null)
             {
-                builder.Append(myTimeStart);
-                builder.Append(myTimeStop);
+                builder.Append(myTimeStart + " to ");
+                builder.Append(myTimeStop + "\n");
             }
             if (myLocationX != null)
             {
-                builder.Append(myLocationX);
-                builder.Append(myLocationY);
+                builder.Append(myLocationX + ", ");
+                builder.Append(myLocationY + "\n");
             }
+
+            builder.Append(myReview.ToString() + "\n");
 
             return builder.ToString();
         }
