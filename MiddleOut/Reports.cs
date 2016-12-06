@@ -29,6 +29,13 @@ namespace MiddleOut
         {
             return _report;
         }
+
+        override 
+        public string ToString()
+        {
+            return _report;
+        }
+
         #endregion
         #endregion
 
@@ -49,11 +56,14 @@ namespace MiddleOut
             {
                 var sb = new StringBuilder();
                 var totalTaxCredit = 0.0;
-
+                var serviceNum = 0;
+                sb.Append("Report: \n\n");
                 foreach (var service in _listOfCompletedServices)
                 {
+                    sb.Append("Service " + serviceNum + ":\n");
                     totalTaxCredit = totalTaxCredit + service.getTaxCredit();
-                    sb.Append(service.ToString() + "\n\n");
+                    sb.Append(service + "\n\n");
+                    serviceNum++;
                 }
                 sb.Append("Total Tax Credit: $" + totalTaxCredit);
                 _report = sb.ToString();

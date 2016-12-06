@@ -92,6 +92,7 @@ namespace MiddleOut
         public string ToString()
         {
             var sb = new StringBuilder();
+            sb.Append("Review: \n");
             sb.Append("User ID: "+_userId + "\n");
             sb.Append("Rating: " + _rating + "\n");
             sb.Append("Summary: " + _summary + "\n");
