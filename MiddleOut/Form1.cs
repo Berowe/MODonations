@@ -21,5 +21,15 @@ namespace MiddleOut
         {
 
         }
+
+        private void signUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void about_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
