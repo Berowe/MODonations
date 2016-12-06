@@ -371,7 +371,7 @@ namespace MiddleOut
                 builder.Append(myLocationY + "\n");
             }
 
-            builder.Append(myReview.ToString() + "\n");
+           // builder.Append(myReview.ToString() + "\n");
 
             return builder.ToString();
         }
