@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace MiddleOut
 {
@@ -85,6 +86,16 @@ namespace MiddleOut
         public int GetRating()
         {
             return _rating;
+        }
+
+        override 
+        public string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("User ID: "+_userId + "\n");
+            sb.Append("Rating: " + _rating + "\n");
+            sb.Append("Summary: " + _summary + "\n");
+            return sb.ToString();
         }
         #endregion
 
