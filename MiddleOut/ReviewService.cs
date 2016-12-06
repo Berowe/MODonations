@@ -13,25 +13,28 @@ namespace MiddleOut
         private string _summary;
         private int _rating;
         private readonly int _userId;
-        private readonly int _serviceId;
+        private readonly ServiceTypes _serviceType;
+        private readonly DonationTypes _donationType;
         #endregion
 
         #region methods
         #region public methods
+
         /// <summary>
         /// Constructor that sets the fields.
         /// </summary>
         /// <param name="theUserId">The userId of the user associated with this review.</param>
-        /// <param name="theServiceId">The serviceId of the service associated with this review.</param>
-        public ReviewService(int theUserId, int theServiceId)
+        /// <param name="theDonationType">The type of donation.</param>
+        /// <param name="theServiceType">The type of service.</param>
+        public ReviewService(int theUserId, DonationTypes theDonationType, ServiceTypes theServiceType)
         {
-            if (theServiceId <= 0) throw new ArgumentOutOfRangeException(nameof(theServiceId));
-            if (theUserId <= 0) throw new ArgumentOutOfRangeException(nameof(theUserId));
+            if (theUserId < 0) throw new ArgumentOutOfRangeException(nameof(theUserId));
 
             _summary = string.Empty;
             _rating = 0;
             _userId = theUserId;
-            _serviceId = theServiceId;
+            _serviceType = theServiceType;
+            _donationType = theDonationType;
         }
 
         /// <summary>
@@ -65,9 +68,14 @@ namespace MiddleOut
         /// Returns the ServiceID, as an int, of the service that is associated with this review.
         /// </summary>
         /// <returns>The ServiceID, as an int, of the service that is associated with this review.</returns>
-        public int GetServiceId()
+        public ServiceTypes GetServiceId()
         {
-            return _serviceId;
+            return _serviceType;
+        }
+
+        public DonationTypes GetDonationType()
+        {
+            return _donationType;
         }
 
         /// <summary>
@@ -94,6 +102,8 @@ namespace MiddleOut
             var sb = new StringBuilder();
             sb.Append("Review: \n");
             sb.Append("User ID: "+_userId + "\n");
+            sb.Append("Service Type: " + _serviceType + "\n");
+            sb.Append("Donation Type: " + _donationType + "\n");
             sb.Append("Rating: " + _rating + "\n");
             sb.Append("Summary: " + _summary + "\n");
             return sb.ToString();
