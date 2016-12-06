@@ -24,21 +24,10 @@ namespace MiddleOut
         public MainWindow()
         {
             InitializeComponent();
+            Form1 login = new Form1();
+            login.Show();
             User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
             Console.WriteLine(karan.getName());
-
-            var service = new Service(1, 2);
-
-            var list = new List<Service> {service};
-
-            var report = new Reports(list);
-
-            Console.WriteLine(report.ToString());
-
-            ReviewService review = new ReviewService(1, 1);
-            review.SetSummary("I'm the best, around, nothing going to ever keep me down!");
-
-            Console.WriteLine(review.ToString());
         }
     }
 }
