@@ -74,9 +74,9 @@
             this.homePageNamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.homePageNamePanel.Controls.Add(this.homePageLabel);
             this.homePageNamePanel.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.homePageNamePanel.Location = new System.Drawing.Point(0, 0);
+            this.homePageNamePanel.Location = new System.Drawing.Point(3, 3);
             this.homePageNamePanel.Name = "homePageNamePanel";
-            this.homePageNamePanel.Size = new System.Drawing.Size(280, 145);
+            this.homePageNamePanel.Size = new System.Drawing.Size(274, 118);
             this.homePageNamePanel.TabIndex = 1;
             // 
             // homePageLabel
@@ -87,7 +87,7 @@
             this.homePageLabel.AutoSize = true;
             this.homePageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homePageLabel.ForeColor = System.Drawing.Color.White;
-            this.homePageLabel.Location = new System.Drawing.Point(59, 57);
+            this.homePageLabel.Location = new System.Drawing.Point(41, 38);
             this.homePageLabel.Name = "homePageLabel";
             this.homePageLabel.Size = new System.Drawing.Size(194, 37);
             this.homePageLabel.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.mapsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mapsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mapsButton.ForeColor = System.Drawing.Color.White;
-            this.mapsButton.Location = new System.Drawing.Point(0, 430);
+            this.mapsButton.Location = new System.Drawing.Point(0, 400);
             this.mapsButton.Margin = new System.Windows.Forms.Padding(0);
             this.mapsButton.Name = "mapsButton";
             this.mapsButton.Size = new System.Drawing.Size(280, 68);
@@ -116,7 +116,7 @@
             this.updateServiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updateServiceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateServiceButton.ForeColor = System.Drawing.Color.White;
-            this.updateServiceButton.Location = new System.Drawing.Point(0, 362);
+            this.updateServiceButton.Location = new System.Drawing.Point(0, 297);
             this.updateServiceButton.Margin = new System.Windows.Forms.Padding(0);
             this.updateServiceButton.Name = "updateServiceButton";
             this.updateServiceButton.Size = new System.Drawing.Size(280, 68);
@@ -131,7 +131,7 @@
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutButton.ForeColor = System.Drawing.Color.White;
-            this.logOutButton.Location = new System.Drawing.Point(609, 0);
+            this.logOutButton.Location = new System.Drawing.Point(593, 27);
             this.logOutButton.Name = "logOutButton";
             this.logOutButton.Size = new System.Drawing.Size(181, 67);
             this.logOutButton.TabIndex = 1;
