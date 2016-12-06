@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.passwordBox = new System.Windows.Forms.MaskedTextBox();
             this.signIn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.emailBox = new System.Windows.Forms.MaskedTextBox();
             this.signUp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -41,11 +41,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.passwordBox);
             this.panel2.Location = new System.Drawing.Point(165, 406);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(395, 71);
             this.panel2.TabIndex = 1;
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.ForeColor = System.Drawing.Color.White;
+            this.passwordBox.Location = new System.Drawing.Point(34, 17);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '•';
+            this.passwordBox.Size = new System.Drawing.Size(329, 30);
+            this.passwordBox.TabIndex = 0;
+            this.passwordBox.Text = "password";
             // 
             // signIn
             // 
@@ -64,36 +77,23 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.panel3.Controls.Add(this.maskedTextBox2);
+            this.panel3.Controls.Add(this.emailBox);
             this.panel3.Location = new System.Drawing.Point(165, 273);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(395, 71);
             this.panel3.TabIndex = 2;
             // 
-            // maskedTextBox1
+            // emailBox
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
-            this.maskedTextBox1.Location = new System.Drawing.Point(34, 17);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PasswordChar = '•';
-            this.maskedTextBox1.Size = new System.Drawing.Size(329, 30);
-            this.maskedTextBox1.TabIndex = 0;
-            this.maskedTextBox1.Text = "password";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.ForeColor = System.Drawing.Color.White;
-            this.maskedTextBox2.Location = new System.Drawing.Point(34, 21);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(329, 30);
-            this.maskedTextBox2.TabIndex = 0;
-            this.maskedTextBox2.Text = "john@doe.com";
+            this.emailBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.ForeColor = System.Drawing.Color.White;
+            this.emailBox.Location = new System.Drawing.Point(34, 21);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(329, 30);
+            this.emailBox.TabIndex = 0;
+            this.emailBox.Text = "john@doe.com";
             // 
             // signUp
             // 
@@ -134,8 +134,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button signIn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox passwordBox;
+        private System.Windows.Forms.MaskedTextBox emailBox;
         private System.Windows.Forms.Button signUp;
     }
 }
