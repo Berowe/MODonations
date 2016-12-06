@@ -19,11 +19,13 @@ namespace MiddleOut
 
         #region methods
         #region public methods
+
         /// <summary>
         /// Constructor that sets the fields.
         /// </summary>
         /// <param name="theUserId">The userId of the user associated with this review.</param>
-        /// <param name="theServiceId">The serviceId of the service associated with this review.</param>
+        /// <param name="theDonationType">The type of donation.</param>
+        /// <param name="theServiceType">The type of service.</param>
         public ReviewService(int theUserId, DonationTypes theDonationType, ServiceTypes theServiceType)
         {
             if (theUserId < 0) throw new ArgumentOutOfRangeException(nameof(theUserId));
