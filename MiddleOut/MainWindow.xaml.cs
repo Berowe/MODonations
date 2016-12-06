@@ -35,7 +35,8 @@ namespace MiddleOut
 
             Console.WriteLine(report.ToString());
 
-            ReviewService review = new ReviewService(1, 1);
+            ReviewService review = new ReviewService(0,DonationTypes.Clothes, ServiceTypes.Donor);
+            review.SetRating(100);
             review.SetSummary("I'm the best, around, nothing going to ever keep me down!");
 
             Console.WriteLine(review.ToString());
