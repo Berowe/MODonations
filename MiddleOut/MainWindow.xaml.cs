@@ -24,6 +24,8 @@ namespace MiddleOut
         public MainWindow()
         {
             InitializeComponent();
+            Form1 login = new Form1();
+            login.Show();
             User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
             Console.WriteLine(karan.getName());
 
@@ -40,6 +42,7 @@ namespace MiddleOut
             review.SetSummary("I'm the best, around, nothing going to ever keep me down!");
 
             Console.WriteLine(review.ToString());
+
         }
     }
 }
