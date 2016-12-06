@@ -80,6 +80,12 @@
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="userHomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userHomePage.Designer.cs">
+      <DependentUpon>userHomePage.cs</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userHomePage.resx">
+      <DependentUpon>userHomePage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
