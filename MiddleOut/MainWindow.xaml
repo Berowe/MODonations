@@ -9,8 +9,7 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="welcome">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
-                <mui:Link DisplayName="DashBoard" Source="/userHomePage.cs" />
+                <mui:Link DisplayName="Home Page" Source="/Pages/Home.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">
@@ -19,7 +18,7 @@
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
     </mui:ModernWindow.MenuLinkGroups>
-    
+
     <mui:ModernWindow.TitleLinks>
         <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
         <mui:Link DisplayName="help" Source="https://github.com/firstfloorsoftware/mui" />
