@@ -128,3 +128,10 @@ C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resou
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.userHomePage.resources
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.userHomePage.resources
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Design.dll
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.dll
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
