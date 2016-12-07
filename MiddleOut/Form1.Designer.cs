@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+       
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -33,7 +35,7 @@
             this.signIn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.emailBox = new System.Windows.Forms.MaskedTextBox();
-            this.signUp = new System.Windows.Forms.Button();
+            this.signUpButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -95,19 +97,19 @@
             this.emailBox.TabIndex = 0;
             this.emailBox.Text = "john@doe.com";
             // 
-            // signUp
+            // signUpButton
             // 
-            this.signUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.signUp.FlatAppearance.BorderSize = 0;
-            this.signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUp.ForeColor = System.Drawing.Color.White;
-            this.signUp.Location = new System.Drawing.Point(566, 27);
-            this.signUp.Name = "signUp";
-            this.signUp.Size = new System.Drawing.Size(140, 56);
-            this.signUp.TabIndex = 3;
-            this.signUp.Text = "Sign up";
-            this.signUp.UseVisualStyleBackColor = false;
+            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.signUpButton.FlatAppearance.BorderSize = 0;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUpButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpButton.ForeColor = System.Drawing.Color.White;
+            this.signUpButton.Location = new System.Drawing.Point(566, 27);
+            this.signUpButton.Name = "signUpButton";
+            this.signUpButton.Size = new System.Drawing.Size(140, 56);
+            this.signUpButton.TabIndex = 3;
+            this.signUpButton.Text = "Sign up";
+            this.signUpButton.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -115,7 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(732, 723);
-            this.Controls.Add(this.signUp);
+            this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.signIn);
             this.Controls.Add(this.panel2);
@@ -136,6 +138,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MaskedTextBox passwordBox;
         private System.Windows.Forms.MaskedTextBox emailBox;
-        private System.Windows.Forms.Button signUp;
+        private System.Windows.Forms.Button signUpButton;
+
+        
+
     }
 }
