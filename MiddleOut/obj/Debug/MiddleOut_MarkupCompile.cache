@@ -9,21 +9,12 @@ MiddleOut
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
-6-373454382
+10-23307818
 
-22541726790
+241054996225
 21-25081515
-MainWindow.xaml;Pages\AddService.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
-=======
-C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
-9-852123138
-
-23786623317
-211703013015
-AddServicePage.xaml;ListPage1.xaml;MainWindow.xaml;MapPage.xaml;NotificationPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
->>>>>>> 7870846c719382abcd848449b44513b9cc2b1e1c
+AddServicePage.xaml;ListPage1.xaml;MainWindow.xaml;MapPage.xaml;NotificationPage.xaml;Pages\AddService.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
 
 False
 
