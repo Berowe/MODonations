@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace MiddleOut
 {
     /// <summary>
-    /// Interaction logic for ListPage1.xaml
+    /// Interaction logic for MapPage.xaml
     /// </summary>
-    public partial class ListPage1 : UserControl
+    public partial class MapPage : UserControl
     {
-        public ListPage1()
+        public MapPage()
         {
             InitializeComponent();
         }
-        
     }
 }
