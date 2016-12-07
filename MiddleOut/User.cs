@@ -42,7 +42,7 @@ namespace MiddleOut
             myCity = city;
             myState = state;
             myZipCode = zipcode;
-            mySerialNumber = UserDatabase.getUserID();
+            //mySerialNumber = UserDatabase.getUserID();
             myServices = new ArrayList();
         }
 

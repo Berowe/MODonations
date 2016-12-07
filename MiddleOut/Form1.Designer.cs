@@ -99,7 +99,7 @@
             // 
             // signUpButton
             // 
-<<<<<<< HEAD
+
             this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.signUpButton.FlatAppearance.BorderSize = 0;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,20 +111,7 @@
             this.signUpButton.TabIndex = 3;
             this.signUpButton.Text = "Sign up";
             this.signUpButton.UseVisualStyleBackColor = false;
-=======
-            this.signUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.signUp.FlatAppearance.BorderSize = 0;
-            this.signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUp.ForeColor = System.Drawing.Color.White;
-            this.signUp.Location = new System.Drawing.Point(566, 27);
-            this.signUp.Name = "signUp";
-            this.signUp.Size = new System.Drawing.Size(140, 56);
-            this.signUp.TabIndex = 3;
-            this.signUp.Text = "Sign up";
-            this.signUp.UseVisualStyleBackColor = false;
-            this.signUp.Click += new System.EventHandler(this.signUp_Click);
->>>>>>> 2ceec5b6e6578c6a7704811f019178f865b0442a
+
             // 
             // Form1
             // 

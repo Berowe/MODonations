@@ -34,8 +34,8 @@ namespace MiddleOut
 
             
 
-            User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
-            Console.WriteLine(karan.getName());
+            //User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
+            //Console.WriteLine(karan.getName());
 
             var service = new Service(1, 2);
 
