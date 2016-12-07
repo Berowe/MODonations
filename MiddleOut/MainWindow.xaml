@@ -9,7 +9,12 @@
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="welcome">
             <mui:LinkGroup.Links>
+<<<<<<< HEAD
                 <mui:Link DisplayName="Home Page" Source="ListPage1.xaml" />
+=======
+                <mui:Link DisplayName="Home Page" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="Add A Service" Source="/Pages/AddService.xaml" />
+>>>>>>> 5838a2b1ec611061afee7163f982a605d902d460
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">

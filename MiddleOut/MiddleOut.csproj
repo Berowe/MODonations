@@ -97,8 +97,13 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="newUser.cs" />
+<<<<<<< HEAD
     <Compile Include="NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>
+=======
+    <Compile Include="Pages\AddService.xaml.cs">
+      <DependentUpon>AddService.xaml</DependentUpon>
+>>>>>>> 5838a2b1ec611061afee7163f982a605d902d460
     </Compile>
     <Compile Include="Reports.cs" />
     <Compile Include="ReviewService.cs" />
@@ -122,11 +127,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
     <Page Include="MapPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NotificationPage.xaml">
+=======
+    <Page Include="Pages\AddService.xaml">
+>>>>>>> 5838a2b1ec611061afee7163f982a605d902d460
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
