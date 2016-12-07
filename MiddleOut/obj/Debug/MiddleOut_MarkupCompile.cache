@@ -4,16 +4,20 @@
 winexe
 C#
 .cs
-C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
 MiddleOut
 none
 false
 DEBUG;TRACE
-C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
 5-1202269702
 
 21273353882
+<<<<<<< HEAD
 201135842436
+=======
+21-25081515
+>>>>>>> e128a7642e9c43a6f7a01df4412eb8b3721069c3
 MainWindow.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;
 
 False
