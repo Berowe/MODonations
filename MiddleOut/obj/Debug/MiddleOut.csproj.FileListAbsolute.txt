@@ -127,7 +127,6 @@ C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
-C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.userHomePage.resources
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.userHomePage.resources
@@ -138,5 +137,16 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.F
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Design.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
+<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.g.cs
+=======
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.g.cs
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g.cs
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
+>>>>>>> 7870846c719382abcd848449b44513b9cc2b1e1c
