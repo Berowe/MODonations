@@ -129,7 +129,7 @@
             this.backButtonToLogin.ForeColor = System.Drawing.Color.White;
             this.backButtonToLogin.Location = new System.Drawing.Point(28, 29);
             this.backButtonToLogin.Name = "backButtonToLogin";
-            this.backButtonToLogin.Size = new System.Drawing.Size(161, 65);
+            this.backButtonToLogin.Size = new System.Drawing.Size(140, 56);
             this.backButtonToLogin.TabIndex = 6;
             this.backButtonToLogin.Text = "Back";
             this.backButtonToLogin.UseVisualStyleBackColor = false;
