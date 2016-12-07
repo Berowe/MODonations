@@ -43,5 +43,10 @@ namespace MiddleOut
             Console.WriteLine(review.ToString());
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

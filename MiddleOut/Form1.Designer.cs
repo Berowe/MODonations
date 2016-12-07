@@ -51,12 +51,12 @@
             // 
             this.passwordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.Color.White;
             this.passwordBox.Location = new System.Drawing.Point(34, 17);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '•';
-            this.passwordBox.Size = new System.Drawing.Size(329, 30);
+            this.passwordBox.Size = new System.Drawing.Size(329, 28);
             this.passwordBox.TabIndex = 0;
             this.passwordBox.Text = "password";
             // 
@@ -83,16 +83,15 @@
             this.panel3.Size = new System.Drawing.Size(395, 71);
             this.panel3.TabIndex = 2;
             // 
-
             // emailBox
             // 
             this.emailBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.Color.White;
             this.emailBox.Location = new System.Drawing.Point(34, 21);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(329, 30);
+            this.emailBox.Size = new System.Drawing.Size(329, 28);
             this.emailBox.TabIndex = 0;
             this.emailBox.Text = "john@doe.com";
             // 
