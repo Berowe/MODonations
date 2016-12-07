@@ -87,6 +87,9 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListPage1.xaml.cs">
+      <DependentUpon>ListPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="newUser.cs" />
     <Compile Include="Reports.cs" />
     <Compile Include="ReviewService.cs" />
@@ -99,6 +102,10 @@
     <Compile Include="userHomePage.Designer.cs">
       <DependentUpon>userHomePage.cs</DependentUpon>
     </Compile>
+    <Page Include="ListPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

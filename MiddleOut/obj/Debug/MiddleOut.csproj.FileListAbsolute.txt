@@ -138,3 +138,5 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.F
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Design.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.g.cs
