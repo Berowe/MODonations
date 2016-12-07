@@ -10,6 +10,7 @@
         <mui:LinkGroup DisplayName="welcome">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Home Page" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="Add A Service" Source="/Pages/AddService.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings" GroupKey="settings">

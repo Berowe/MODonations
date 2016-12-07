@@ -32,7 +32,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.passwordBox = new System.Windows.Forms.MaskedTextBox();
-            this.signIn = new System.Windows.Forms.Button();
+            this.signInSubmit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.emailBox = new System.Windows.Forms.MaskedTextBox();
             this.signUpButton = new System.Windows.Forms.Button();
@@ -62,19 +62,20 @@
             this.passwordBox.TabIndex = 0;
             this.passwordBox.Text = "password";
             // 
-            // signIn
+            // signInSubmit
             // 
-            this.signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
-            this.signIn.FlatAppearance.BorderSize = 0;
-            this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signIn.ForeColor = System.Drawing.Color.White;
-            this.signIn.Location = new System.Drawing.Point(165, 542);
-            this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(395, 64);
-            this.signIn.TabIndex = 2;
-            this.signIn.Text = "Sign in";
-            this.signIn.UseVisualStyleBackColor = false;
+            this.signInSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.signInSubmit.FlatAppearance.BorderSize = 0;
+            this.signInSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signInSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInSubmit.ForeColor = System.Drawing.Color.White;
+            this.signInSubmit.Location = new System.Drawing.Point(165, 542);
+            this.signInSubmit.Name = "signInSubmit";
+            this.signInSubmit.Size = new System.Drawing.Size(395, 64);
+            this.signInSubmit.TabIndex = 2;
+            this.signInSubmit.Text = "Sign in";
+            this.signInSubmit.UseVisualStyleBackColor = false;
+            this.signInSubmit.Click += new System.EventHandler(this.signInSubmit_Click);
             // 
             // panel3
             // 
@@ -99,7 +100,6 @@
             // 
             // signUpButton
             // 
-
             this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.signUpButton.FlatAppearance.BorderSize = 0;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,7 +111,7 @@
             this.signUpButton.TabIndex = 3;
             this.signUpButton.Text = "Sign up";
             this.signUpButton.UseVisualStyleBackColor = false;
-
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // Form1
             // 
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(732, 723);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.signIn);
+            this.Controls.Add(this.signInSubmit);
             this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Text = "Login";
@@ -136,7 +136,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button signIn;
+        private System.Windows.Forms.Button signInSubmit;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MaskedTextBox passwordBox;
         private System.Windows.Forms.MaskedTextBox emailBox;

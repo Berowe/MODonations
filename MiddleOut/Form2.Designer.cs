@@ -1,4 +1,6 @@
-﻿namespace MiddleOut
+﻿using System;
+
+namespace MiddleOut
 {
     partial class Form2
     {
@@ -119,6 +121,7 @@
             this.signUpSubmit.TabIndex = 5;
             this.signUpSubmit.Text = "Sign Up";
             this.signUpSubmit.UseVisualStyleBackColor = false;
+            this.signUpSubmit.Click += new System.EventHandler(this.signUpSubmit_Click);
             // 
             // backButtonToLogin
             // 
@@ -133,6 +136,7 @@
             this.backButtonToLogin.TabIndex = 6;
             this.backButtonToLogin.Text = "Back";
             this.backButtonToLogin.UseVisualStyleBackColor = false;
+            this.backButtonToLogin.Click += new System.EventHandler(this.backButtonToLogin_Click);
             // 
             // Form2
             // 
@@ -167,5 +171,6 @@
         private System.Windows.Forms.MaskedTextBox confirmPasswordTwoBox;
         private System.Windows.Forms.Button signUpSubmit;
         private System.Windows.Forms.Button backButtonToLogin;
+
     }
 }

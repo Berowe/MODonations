@@ -23,21 +23,17 @@ namespace MiddleOut
     {
         public MainWindow()
         {
+            this.Hide();
             InitializeComponent();
-            Form1 login = new Form1();
+            Form1 login = new Form1(this);
             login.Show();
 
             
 
-            Form2 signUp = new Form2();
-            signUp.Show();
+        //User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
+        //Console.WriteLine(karan.getName());
 
-            
-
-            //User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
-            //Console.WriteLine(karan.getName());
-
-            var service = new Service(1, 2);
+        var service = new Service(1, 2);
 
             var list = new List<Service> {service};
 
