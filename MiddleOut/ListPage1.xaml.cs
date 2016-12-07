@@ -24,5 +24,10 @@ namespace MiddleOut
         {
             InitializeComponent();
         }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
