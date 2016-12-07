@@ -124,3 +124,7 @@ C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut_MarkupComp
 C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.userHomePage.resources

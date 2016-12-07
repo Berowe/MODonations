@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 using System.Windows;
+using System.Text;
 
 namespace MiddleOut
 {
@@ -19,23 +17,113 @@ namespace MiddleOut
         private String userName;
         #endregion
         #endregion
+        private String myName;
+        private String myPassword;
+        private String myEmail;
+        private String myStreet;
+        private String myApartment;
+        private String myCity;
+        private String myState;
+        private String myZipCode;
+        private String myUserID;
+        private Boolean myAdmin = false;
+        private int mySerialNumber;
+        private ArrayList myServices;
 
-        //Login checks if user exists in database.
-        public User(String name, String email)
+        //The user object
+        public User(String name, String password, String email, String street, String apartment, String city, 
+            String state, String zipcode)
         {
-            userName = name;
-            //isAdmin = Enum.userType;
+            myName = name;
+            myPassword = password;
+            myEmail = email;
+            myStreet = street;
+            myApartment = apartment;
+            myCity = city;
+            myState = state;
+            myZipCode = zipcode;
+            mySerialNumber = UserDatabase.getUserID();
+            myServices = new ArrayList();
         }
 
         public String getName()
         {
-            return userName;
+            return myName;
         }
 
-        public void editProfile()
+        public Boolean getPassword(String thePassword)
         {
-
+            Boolean verify = false;
+            if (thePassword.Equals(myPassword))
+            {
+                verify = true;
+            }
+            return verify;
         }
+
+        public String getEmail()
+        {
+            return myEmail;
+        }
+
+        public String getAddress()
+        {
+            StringBuilder address = new StringBuilder();
+            address.Append(myStreet + ", ");
+            if (myApartment != null)
+            {
+                address.Append(myApartment + ", ");
+            }
+            address.Append(myCity + ", ");
+            address.Append(myState + ", ");
+            address.Append(myZipCode);
+            return address.ToString();
+        }
+
+        public Boolean isAdmin()
+        {
+            return myAdmin;
+        }
+
+        public ArrayList getServices()
+        {
+            return myServices;
+        }
+
+        public void setName(String name)
+        {
+            myName = name;
+        }
+
+        public void setPassword(String password)
+        {
+            myPassword = password;
+        }
+
+        public void setEmail(String email)
+        {
+            myEmail = email;
+        }
+
+        public void setAddress(String street, String apartment, String city, String state, String zipcode)
+        {
+            myStreet = street;
+            myApartment = apartment;
+            myCity = city;
+            myState = state;
+            myZipCode = zipcode;
+        }
+
+        public void setAdmin(Boolean admin)
+        {
+            myAdmin = admin;
+        }
+
+        public void addService(String serviceID)
+        {
+            myServices.Add(serviceID);
+        }
+
         #region Service handling (User can only handle their own services)
         public void serviceSignUp()
         {

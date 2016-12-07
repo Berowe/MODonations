@@ -53,12 +53,12 @@
             // 
             this.passwordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.Color.White;
             this.passwordBox.Location = new System.Drawing.Point(34, 17);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '•';
-            this.passwordBox.Size = new System.Drawing.Size(329, 30);
+            this.passwordBox.Size = new System.Drawing.Size(329, 28);
             this.passwordBox.TabIndex = 0;
             this.passwordBox.Text = "password";
             // 
@@ -67,7 +67,7 @@
             this.signIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.signIn.FlatAppearance.BorderSize = 0;
             this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn.ForeColor = System.Drawing.Color.White;
             this.signIn.Location = new System.Drawing.Point(165, 542);
             this.signIn.Name = "signIn";
@@ -89,16 +89,17 @@
             // 
             this.emailBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.emailBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.Color.White;
             this.emailBox.Location = new System.Drawing.Point(34, 21);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(329, 30);
+            this.emailBox.Size = new System.Drawing.Size(329, 28);
             this.emailBox.TabIndex = 0;
             this.emailBox.Text = "john@doe.com";
             // 
             // signUpButton
             // 
+<<<<<<< HEAD
             this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
             this.signUpButton.FlatAppearance.BorderSize = 0;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -110,6 +111,20 @@
             this.signUpButton.TabIndex = 3;
             this.signUpButton.Text = "Sign up";
             this.signUpButton.UseVisualStyleBackColor = false;
+=======
+            this.signUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.signUp.FlatAppearance.BorderSize = 0;
+            this.signUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUp.ForeColor = System.Drawing.Color.White;
+            this.signUp.Location = new System.Drawing.Point(566, 27);
+            this.signUp.Name = "signUp";
+            this.signUp.Size = new System.Drawing.Size(140, 56);
+            this.signUp.TabIndex = 3;
+            this.signUp.Text = "Sign up";
+            this.signUp.UseVisualStyleBackColor = false;
+            this.signUp.Click += new System.EventHandler(this.signUp_Click);
+>>>>>>> 2ceec5b6e6578c6a7704811f019178f865b0442a
             // 
             // Form1
             // 

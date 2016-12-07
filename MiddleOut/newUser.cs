@@ -37,9 +37,9 @@ namespace MiddleOut
         }
 
         // Input information into User Database. New users are always general users, and can be given Admin.
-        public void addUser(String name, String address, String email, String pass, int userID)
-        {
-            // TO DO find database Endpoint.
-        }
+        //public void addUser(String name, String address, String email, String pass, int userID)
+        //{
+        // TO DO find database Endpoint.
+        //} Commented out by Braxton.  The user database will take in a user object.
     }
 }

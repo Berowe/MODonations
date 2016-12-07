@@ -45,11 +45,15 @@ namespace MiddleOut
 
             Console.WriteLine(report.ToString());
 
-            ReviewService review = new ReviewService(0,DonationTypes.Clothes, ServiceTypes.Donor);
-            review.SetRating(100);
-            review.SetSummary("I'm the best, around, nothing going to ever keep me down!");
+            ReviewService review = new ReviewService(4, "the best");
+
 
             Console.WriteLine(review.ToString());
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
