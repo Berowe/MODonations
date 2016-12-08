@@ -26,7 +26,7 @@
                 <RadioButton Name="FoodRadioButton" Content="Food" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 <RadioButton Name="HygieneProductsRadioButton" Content="Hygiene Products" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 <RadioButton Name="OtherRadioButton" Content="Other" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                <TextBox Name="OtherTextBox" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" TextChanged="OtherTextBox_TextChanged" LostFocus="OtherTextBox_LostFocus" GotFocus="OtherTextBox_GotFocus"/>
+                <TextBox Name="OtherTextBox" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100"/>
 
             </StackPanel>
         </Grid>
