@@ -38,7 +38,6 @@ namespace MiddleOut
         private void backButtonToLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
             formOne.Show();
         }
     }

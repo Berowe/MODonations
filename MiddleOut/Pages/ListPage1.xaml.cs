@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstFloor.ModernUI.Windows.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,9 @@ namespace MiddleOut
         public ListPage1()
         {
             InitializeComponent();
+            ListPageHome.Height = MaxHeight - MaxHeight /10;
+            ListPageHome.Height = MaxWidth - MaxWidth / 10;
+
         }
-        
     }
 }

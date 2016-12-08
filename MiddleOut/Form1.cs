@@ -54,6 +54,24 @@ namespace MiddleOut
         {
             main.Show();
             this.Close();
+
+        }
+
+        private void emailBox_Leave(object sender, EventArgs e)
+        {
+            if (emailBox.Text == "")
+            {
+                emailBox.Text = "Email";
+                emailBox.ForeColor = Color.LightGray;
+            }
+        }
+        private void emailBox_Enter(object sender, EventArgs e)
+        {
+            if (emailBox.Text == "Email")
+            {
+                emailBox.Text = "";
+                emailBox.ForeColor = Color.White;
+            }
         }
     }
 }

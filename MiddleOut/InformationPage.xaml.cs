@@ -75,8 +75,6 @@ namespace MiddleOut
                 textBlock1.Text = temp[temp.Length - 1];
                 nextPage.IsEnabled = true;
             }
-            
-
         }
 
         private void startTimeBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -93,8 +91,30 @@ namespace MiddleOut
         {
             Console.WriteLine(vehicleList.SelectedItem as String);
             
+        }
 
+        private void startTimeBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (startTime.Text == "Start Time")
+            {
+                startTime.Text = "";
+            }
+        }
 
+        private void endTimeBox_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (endTime.Text == "End Time")
+            {
+                endTime.Text = "";
+            }
+        }
+
+        private void Paragraph_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (capacity.Text == "Capacity")
+            {
+                capacity.Text = "";
+            }
         }
     }
 }

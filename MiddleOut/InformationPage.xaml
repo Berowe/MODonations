@@ -7,46 +7,67 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Background="White">
     <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer Margin="0,242,-21,-17" HorizontalAlignment="Right" Width="115">
-            <Button x:Name="nextPage" Content="Finish" Width="76" Height="26" Click="nextPage_Click" RenderTransformOrigin="0.5,0.5" Background="#FF01A3F8" BorderThickness="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="licenseInsuranceText" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="License "/><LineBreak/><Run FontWeight="Bold" Text="&amp; Insurance"/></TextBlock>
+            <TextBlock x:Name="vehicleTypeText" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Type of Vehicle"/></TextBlock>
+            <TextBlock x:Name="textBlock" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Availability"/></TextBlock>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="textBlock1" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" />
+            <StackPanel  Grid.Row="1">
+                <ComboBox x:Name="vehicleList" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="87" SelectionChanged="vehicleList_SelectionChanged" IsSynchronizedWithCurrentItem="False" SelectedIndex="0"/>
+                <RichTextBox x:Name="capacityBox" HorizontalAlignment="Center" Height="21" Width="87" TextChanged="capacityBox_TextChanged" >
+                    <FlowDocument>
+                        <Paragraph MouseLeftButtonDown="Paragraph_MouseDown">
+                            <Run x:Name="capacity" Text="Capacity"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+
+                <RichTextBox x:Name="startTimeBox" HorizontalAlignment="Center" Height="21" Width="87" TextChanged="startTimeBox_TextChanged">
+                <FlowDocument >
+                    <Paragraph MouseLeftButtonDown="startTimeBox_MouseLeftButtonDown">
+                        <Run Name="startTime" Text="Start Time" />
+                    </Paragraph>
+                </FlowDocument>
+                </RichTextBox>
+                <RichTextBox x:Name="endTimeBox" HorizontalAlignment="Center" Height="21" Width="87" TextChanged="endTimeBox_TextChanged" Margin="2,0">
+                    <FlowDocument>
+                        <Paragraph MouseDown="endTimeBox_MouseDown">
+                            <Run x:Name="endTime" Text="End Time"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Button x:Name="button" Content="Upload" FontFamily="Century Gothic" FontSize="10" Click="button_Click" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="73" BorderThickness="0" Background="#FF01A3FF"/>
+            <Button x:Name="nextPage" Content="Finish" VerticalAlignment="Bottom" Click="nextPage_Click" Background="#FF01A3F8" Width="73" BorderThickness="0">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
                         <RotateTransform/>
-                        <TranslateTransform X="15"/>
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-        </ScrollViewer>
-        <TextBlock x:Name="licenseInsuranceText" HorizontalAlignment="Left" Margin="0,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="License "/><LineBreak/><Run FontWeight="Bold" Text="&amp; Insurance"/></TextBlock>
-        <ScrollViewer Margin="174,16,0,216">
-            <Button x:Name="button" Content="Upload" FontFamily="Century Gothic" FontSize="10" Click="button_Click" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="73" BorderThickness="0" Background="#FF01A3FF"/>
-        </ScrollViewer>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" Margin="118,18,0,0"/>
-        <TextBlock x:Name="vehicleTypeText" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Type of Vehicle"/></TextBlock>
-        <ComboBox x:Name="vehicleList" HorizontalAlignment="Left" Margin="118,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="vehicleList_SelectionChanged" IsSynchronizedWithCurrentItem="False" SelectedIndex="0"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Availability"/></TextBlock>
-        <RichTextBox x:Name="startTimeBox" HorizontalAlignment="Left" Height="21" Margin="118,155,0,0" VerticalAlignment="Top" Width="87" TextChanged="startTimeBox_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="Start Time"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <RichTextBox x:Name="endTimeBox" HorizontalAlignment="Left" Height="21" Margin="118,186,0,0" VerticalAlignment="Top" Width="87" TextChanged="endTimeBox_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="End Time"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <RichTextBox x:Name="capacityBox" HorizontalAlignment="Left" Height="21" Margin="118,106,0,0" VerticalAlignment="Top" Width="87" TextChanged="capacityBox_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="Capacity"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        </Grid>
     </Grid>
 </UserControl>

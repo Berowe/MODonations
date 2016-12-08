@@ -27,12 +27,10 @@ namespace MiddleOut
             InitializeComponent();
             Form1 login = new Form1(this);
             login.Show();
-            
             ReviewService review = new ReviewService(4, "the best");
 
-
             Console.WriteLine(review.ToString());
-
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

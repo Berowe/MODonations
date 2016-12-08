@@ -8,15 +8,16 @@
              >
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-            <mui:ModernTab x:Name="ListPageHome" Layout="List" >
+        <mui:ModernTab x:Name="ListPageHome" Layout="Tab" ListWidth="Auto" SelectedSource="Pages/Home.xaml">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="Home" Source="Pages/Home.xaml"/>
+                <mui:Link DisplayName="Home" Source="Pages/Home.xaml" />
                 <mui:Link DisplayName="Add A Service" Source="/ChooseServicePage.xaml" />
                 <mui:Link DisplayName="Mapping" Source="/MapPage.xaml" />
                 <mui:Link DisplayName="Notifications" Source="/NotificationPage.xaml" />
                 <mui:Link DisplayName="About" Source="/AboutPage.xaml" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
+
     </Grid>
 </UserControl>
