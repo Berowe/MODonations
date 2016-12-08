@@ -30,6 +30,8 @@
 
             </StackPanel>
         </Grid>
-        
+        <Grid Name="ButtonGrid" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="nextPage" Content="Continue" Click="nextPage_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

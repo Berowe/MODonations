@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstFloor.ModernUI.Windows.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,12 @@ namespace MiddleOut
                 OtherTextBox.Text = "";
                 //OtherTextBox.ForeColor = Color.White;
             }
+        }
+
+        private void nextPage_Click(object sender, RoutedEventArgs e)
+        {
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
     }
 }
