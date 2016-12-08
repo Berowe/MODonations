@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300" Background="White">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer Margin="0,242,-21,-17" HorizontalAlignment="Right" Width="115">
-            <Button x:Name="nextPage" Content="Next" Width="76" Height="26" Click="nextPage_Click" RenderTransformOrigin="0.5,0.5" Background="#FF01A3F8" BorderThickness="0">
+            <Button x:Name="nextPage" Content="Finish" Width="76" Height="26" Click="nextPage_Click" RenderTransformOrigin="0.5,0.5" Background="#FF01A3F8" BorderThickness="0">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -19,9 +19,34 @@
                 </Button.RenderTransform>
             </Button>
         </ScrollViewer>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="License "/><LineBreak/><Run FontWeight="Bold" Text="&amp; Insurance"/></TextBlock>
-        <Button x:Name="button" Content="Upload" Margin="145,48,0,0" FontFamily="Century Gothic" FontSize="10" Click="button_Click" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" BorderThickness="0" Background="#FF01A3FF"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" Margin="34,50,0,0"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="licenseInsuranceText" HorizontalAlignment="Left" Margin="0,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="License "/><LineBreak/><Run FontWeight="Bold" Text="&amp; Insurance"/></TextBlock>
+        <ScrollViewer Margin="174,16,0,216">
+            <Button x:Name="button" Content="Upload" FontFamily="Century Gothic" FontSize="10" Click="button_Click" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="73" BorderThickness="0" Background="#FF01A3FF"/>
+        </ScrollViewer>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" Margin="118,18,0,0"/>
+        <TextBlock x:Name="vehicleTypeText" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Type of Vehicle"/></TextBlock>
+        <ComboBox x:Name="vehicleList" HorizontalAlignment="Left" Margin="118,70,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Availability"/></TextBlock>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="21" Margin="118,155,0,0" VerticalAlignment="Top" Width="87">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Start Time"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="21" Margin="118,186,0,0" VerticalAlignment="Top" Width="87">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="End Time"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox x:Name="richTextBox_Copy" HorizontalAlignment="Left" Height="21" Margin="118,106,0,0" VerticalAlignment="Top" Width="87" TextChanged="richTextBox_Copy_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Capacity"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
     </Grid>
 </UserControl>

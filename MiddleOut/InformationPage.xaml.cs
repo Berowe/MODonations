@@ -66,5 +66,10 @@ namespace MiddleOut
             }
 
         }
+
+        private void richTextBox_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

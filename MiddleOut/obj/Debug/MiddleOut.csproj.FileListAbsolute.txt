@@ -122,3 +122,5 @@ C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\roweb\OneDrive\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.xml
