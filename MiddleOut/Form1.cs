@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstFloor.ModernUI.Windows.Navigation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace MiddleOut
 {
@@ -17,6 +20,7 @@ namespace MiddleOut
         {
             main = theMain;
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         public Form1()
@@ -41,7 +45,7 @@ namespace MiddleOut
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            Form2 signUpForm = new Form2(this);
+            Form2 signUpForm = new Form2(this, main);
             this.Hide();
             
         }

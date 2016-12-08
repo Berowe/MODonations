@@ -13,22 +13,26 @@ namespace MiddleOut
     public partial class Form2 : Form
     {
         private Form1 formOne;
+        private MainWindow main;
 
         public Form2()
         {
-            InitializeComponent();
+            InitializeComponent();      
         }
 
-        public Form2(Form1 theForm)
+        public Form2(Form1 theForm, MainWindow main)
         {
             InitializeComponent();
+            this.main = main;
             formOne = theForm;
+            this.CenterToScreen();
             this.Show();
         }
 
         private void signUpSubmit_Click(object sender, EventArgs e)
         {
             this.Close();
+            main.Show();
         }
 
         private void backButtonToLogin_Click(object sender, EventArgs e)

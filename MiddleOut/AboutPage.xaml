@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MiddleOut.BasicPage2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             >
+    <Grid Style="{StaticResource ContentRoot}" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <StackPanel MinWidth="200" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" Text="About" Style="{StaticResource Heading2}" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="About our Service" FontWeight="Bold"/>
+            <TextBlock Grid.Column="1" Text="Meet the Team" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <TextBlock Text="Hello" HorizontalAlignment="Left"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock Text="Karan Toor"/>
+                    <TextBlock Text="Ameet Toor"/>
+                    <TextBlock Text="Lovejit Hari"/>
+                    <TextBlock Text="Braxton Rowe"/>
+                    <TextBlock Text="Charlton Smith"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
