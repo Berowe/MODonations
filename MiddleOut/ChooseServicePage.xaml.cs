@@ -33,9 +33,6 @@ namespace MiddleOut
             {
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
-            } else if ((bool)DriverRadioButton.IsChecked)
-            {
-
             } else if ((bool)DonateRadioButton.IsChecked)
             {
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
