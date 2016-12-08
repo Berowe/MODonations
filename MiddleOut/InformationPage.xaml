@@ -5,10 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" Background="White">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer>
-            <Button x:Name="nextPage" Content="Button" Width="76" Height="26" Click="nextPage_Click"/>
+            <Button x:Name="nextPage" Content="Button" Width="76" Height="26" Click="nextPage_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="15"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </ScrollViewer>
     </Grid>
 </UserControl>
