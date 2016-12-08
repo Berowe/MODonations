@@ -25,10 +25,12 @@ namespace MiddleOut
         public InformationPage()
         {
             InitializeComponent();
+            nextPage.IsEnabled = false;
         }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
+            
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
@@ -63,7 +65,9 @@ namespace MiddleOut
                 string filename = dlg.FileName;
                 String[] temp = filename.Split('\\');
                 textBlock1.Text = temp[temp.Length - 1];
+                nextPage.IsEnabled = true;
             }
+            
 
         }
 
