@@ -85,6 +85,9 @@
     <Compile Include="ChooseServicePage.xaml.cs">
       <DependentUpon>ChooseServicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EducatePage.xaml.cs">
+      <DependentUpon>EducatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +131,10 @@
     <Page Include="ChooseServicePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EducatePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="InformationPage.xaml">
       <SubType>Designer</SubType>
