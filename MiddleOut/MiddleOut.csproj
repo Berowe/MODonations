@@ -90,7 +90,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListPage1.xaml.cs">
+    <Compile Include="Pages\ListPage1.xaml.cs">
       <DependentUpon>ListPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="MapPage.xaml.cs">
@@ -99,9 +99,6 @@
     <Compile Include="newUser.cs" />
     <Compile Include="NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AddService.xaml.cs">
-      <DependentUpon>AddService.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reports.cs" />
     <Compile Include="ReviewService.cs" />
@@ -112,7 +109,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListPage1.xaml">
+    <Page Include="Pages\ListPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,10 +127,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NotificationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\AddService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
