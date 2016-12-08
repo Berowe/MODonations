@@ -111,6 +111,9 @@
       <DependentUpon>NotificationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reports.cs" />
+    <Compile Include="RequestGoodsPage.xaml.cs">
+      <DependentUpon>RequestGoodsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReviewService.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
@@ -181,6 +184,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="RequestGoodsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ThankYou.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

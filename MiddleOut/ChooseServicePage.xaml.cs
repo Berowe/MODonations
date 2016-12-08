@@ -28,8 +28,26 @@ namespace MiddleOut
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
-            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
-            NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
+            
+            if ((bool)DriverRadioButton.IsChecked)
+            {
+                IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+                NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
+            } else if ((bool)DriverRadioButton.IsChecked)
+            {
+
+            } else if ((bool)DonateRadioButton.IsChecked)
+            {
+                IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+                NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
+            } else if ((bool)EducateRadioButton.IsChecked)
+            {
+
+            } else if ((bool)RequestGoodsButton.IsChecked)
+            {
+                IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+                NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
+            }
         }
     }
 }
