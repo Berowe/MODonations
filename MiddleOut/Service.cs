@@ -1,276 +1,52 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Text;
 
 namespace MiddleOut
 {
+
     class Service
     {
-
-        private int myUserID;
-        private int myServiceID;
+        [JsonProperty("myName")]
+        private String myName;
+        [JsonProperty("myUserID")]
+        private String myUserID;
+        [JsonProperty("myServiceID")]
+        private String myServiceID;
+        [JsonProperty("myServiceDescription")]
         private string myServiceDescription;
-        private string myTimeStart = null;
-        private string myTimeStop = null;
-        private string myLocationX = null;
-        private string myLocationY = null;
-
+        [JsonProperty("myTimeStart")]
+        private string myTimeStart;
+        [JsonProperty("myTimeStop")]
+        private string myTimeStop;
+        [JsonProperty("myLocation")]
+        private int[] myLocation;
+        [JsonProperty("myTaxCredit")]
         private double myTaxCredit;
-        private Boolean myCompleted = false;
-        private Boolean mySelected = false;
-
+        [JsonProperty("myCompleted")]
+        private Boolean myCompleted;
+        [JsonProperty("mySelected")]
+        private Boolean mySelected;
+        [JsonProperty("myReview")]
         private ReviewService myReview;
 
-        public Service(int theServiceID, int theUserID)
+        public Service(String theName, String theEmail)
         {
-            myUserID = theUserID;
-            myServiceID = theServiceID;
+            myName = theName;
+            myUserID = theEmail;
+            myServiceID = "";
+            myServiceDescription = "";
+            myTimeStart = "";
+            myTimeStop = "";
+            myLocation = new int[2];
+            myLocation[0] = 0;
+            myLocation[1] = 0;
+            myTaxCredit = 0.00;
+            myCompleted = false;
+            mySelected = false;
         }
 
-        public Service beginService(int theServiceID, int theUserID)
-        {
-            Service serve = new Service(theServiceID, theUserID);
-            string id = Convert.ToString(theServiceID);
-
-            char sType = id[0];
-            char dType = id[1];
-
-            switch (sType)
-            {
-                case '0':
-                    switch (dType)
-                    {
-                        case '0':
-                            serve = new ToyDonor(theServiceID, theUserID);
-                            break;
-                        case '1':
-                            serve = new ClothesDonor(theServiceID, theUserID);
-                            break;
-                        case '2':
-                            serve = new TechDonor(theServiceID, theUserID);
-                            break;
-                        case '3':
-                            serve = new FirstAidDonor(theServiceID, theUserID);
-                            break;
-                        case '4':
-                            serve = new FoodDonor(theServiceID, theUserID);
-                            break;
-                        case '5':
-                            serve = new ToolsDonor(theServiceID, theUserID);
-                            break;
-                        case '6':
-                            serve = new HygeneDonor(theServiceID, theUserID);
-                            break;
-                        case '7':
-                            serve = new OtherDonor(theServiceID, theUserID);
-                            break;
-                    }
-                    break;
-                case '1':
-                    switch (dType)
-                    {
-                        case '0':
-                            serve = new GoodsDriver(theServiceID, theUserID);
-                            break;
-                        case '1':
-                            serve = new PersonDriver(theServiceID, theUserID);
-                            break;
-                    }
-                    break;
-                case '2':
-                    switch (dType)
-                    {
-                        case '0':
-                            serve = new MathEducator(theServiceID, theUserID);
-                            break;
-                        case '1':
-                            serve = new WritingEducator(theServiceID, theUserID);
-                            break;
-                        case '2':
-                            serve = new ReadingEducator(theServiceID, theUserID);
-                            break;
-                    }
-                    break;
-                case '3':
-                    switch (dType)
-                    {
-                        case '0':
-                            serve = new DonationRequest(theServiceID, theUserID);
-                            break;
-                        case '1':
-                            serve = new DriverRequest(theServiceID, theUserID);
-                            break;
-                        case '2':
-                            serve = new EducatorRequest(theServiceID, theUserID);
-                            break;
-                    }
-                    break;
-            }
-
-
-            return serve;
-        }
-
-        public class ToyDonor : Service
-        {
-            public ToyDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class ClothesDonor : Service
-        {
-            public ClothesDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class TechDonor : Service
-        {
-            public TechDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class FirstAidDonor : Service
-        {
-            public FirstAidDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class HygeneDonor : Service
-        {
-            public HygeneDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class ToolsDonor : Service
-        {
-            public ToolsDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class FoodDonor : Service
-        {
-            public FoodDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class OtherDonor : Service
-        {
-            public OtherDonor(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class PersonDriver : Service
-        {
-            public PersonDriver(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class GoodsDriver : Service
-        {
-            public GoodsDriver(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class MathEducator : Service
-        {
-            public MathEducator(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class ReadingEducator : Service
-        {
-            public ReadingEducator(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class DonationRequest : Service
-        {
-            public DonationRequest(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class DriverRequest : Service
-        {
-            public DriverRequest(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class EducatorRequest : Service
-        {
-            public EducatorRequest(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public class WritingEducator : Service
-        {
-            public WritingEducator(int theServiceID, int theUserID) :
-                base(theServiceID, theUserID)
-            {
-                myUserID = theUserID;
-                myServiceID = theServiceID;
-            }
-        }
-
-        public int getUserID()
+        public String getUserID()
         {
             return myUserID;
         }
@@ -295,6 +71,11 @@ namespace MiddleOut
             return myReview;
         }
 
+        public void setUserID(String theID)
+        {
+            myUserID = theID;
+        }
+
         public void setDescription(string theDescription)
         {
             myServiceDescription = theDescription;
@@ -308,8 +89,8 @@ namespace MiddleOut
 
         public void setLocation(int theX, int theY)
         {
-            myLocationX = Convert.ToString(theX);
-            myLocationY = Convert.ToString(theY);
+            myLocation[0] = theX;
+            myLocation[1] = theY;
         }
 
         public void setTax(double theTaxCredit)
@@ -332,23 +113,14 @@ namespace MiddleOut
             myReview = theReview;
         }
 
-        public string ToFile()
+        public void setServiceID(String theID)
         {
-            StringBuilder builder = new StringBuilder();
-            builder.Append(myServiceID.ToString() + "/&/");
-            builder.Append(myUserID.ToString() + "/&/");
-            builder.Append(myServiceDescription + "/&/");
-            builder.Append(myCompleted.ToString() + "/&/");
-            builder.Append(mySelected.ToString() + "/&/");
-            if (myTimeStart != null)
-            {
-                builder.Append(myTimeStart + "/&/");
-                builder.Append(myTimeStop + "/&/");
-                builder.Append(myLocationX + "/&/");
-                builder.Append(myLocationY + "/&/");
-            }
+            myServiceID = theID;
+        }
 
-            return builder.ToString();
+        public String getServiceID()
+        {
+            return myServiceID;
         }
 
         override
@@ -365,11 +137,8 @@ namespace MiddleOut
                 builder.Append(myTimeStart + " to ");
                 builder.Append(myTimeStop + "\n");
             }
-            if (myLocationX != null)
-            {
-                builder.Append(myLocationX + ", ");
-                builder.Append(myLocationY + "\n");
-            }
+            builder.Append(Convert.ToString(myLocation[0]));
+            builder.Append(Convert.ToString(myLocation[1]));
 
             if (myReview != null)
             {

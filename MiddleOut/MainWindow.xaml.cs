@@ -27,20 +27,7 @@ namespace MiddleOut
             InitializeComponent();
             Form1 login = new Form1(this);
             login.Show();
-
             
-
-        //User karan = new MiddleOut.User("Karan", "notAsCoolAsAmeet@yup.com");
-        //Console.WriteLine(karan.getName());
-
-        var service = new Service(1, 2);
-
-            var list = new List<Service> {service};
-
-            var report = new Reports(list);
-
-            Console.WriteLine(report.ToString());
-
             ReviewService review = new ReviewService(4, "the best");
 
 

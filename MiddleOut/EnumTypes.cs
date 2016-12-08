@@ -9,12 +9,12 @@ namespace MiddleOut
     /// <summary>
     /// Donation type enumerations
     /// </summary>
-    public enum DonationTypes { Clothes, Electronics, FirstAid, Food, Hygiene, Tools, Toys, TransportPerson, TransportGoods, Other }
+    public enum DonationTypes { Toys, Clothes, Tech, FirstAid, Food, Hygene, Tools, Other, TransportPerson, TransportGoods, MathEducator, ReadingEducator, WritingEducator, DonationRequest, DriverRequest, EducatorRequest }
 
     /// <summary>
     /// Service type enumerations
     /// </summary>
-    public enum ServiceTypes { Driver, Donor, Educator, Requester }
+    public enum ServiceTypes { Donor, Driver, Educator, Requester }
 
     /// <summary>
     /// User type enumerations
