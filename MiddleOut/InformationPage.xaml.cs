@@ -26,6 +26,14 @@ namespace MiddleOut
         {
             InitializeComponent();
             nextPage.IsEnabled = false;
+            List<String> vehicles = new List<String>();
+            vehicles.Add("Sedan");
+            vehicles.Add("Truck");
+            vehicles.Add("SUV");
+            vehicles.Add("Compact");
+            
+            vehicleList.ItemsSource = vehicles;
+            vehicleList.SelectedIndex = 0;
         }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
@@ -35,7 +43,7 @@ namespace MiddleOut
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
-        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void capacityBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -71,8 +79,21 @@ namespace MiddleOut
 
         }
 
-        private void richTextBox_Copy_TextChanged(object sender, TextChangedEventArgs e)
+        private void startTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void endTimeBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(vehicleList.SelectedItem as String);
+            
+
 
         }
     }

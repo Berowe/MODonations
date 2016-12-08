@@ -25,23 +25,23 @@
         </ScrollViewer>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" Margin="118,18,0,0"/>
         <TextBlock x:Name="vehicleTypeText" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Type of Vehicle"/></TextBlock>
-        <ComboBox x:Name="vehicleList" HorizontalAlignment="Left" Margin="118,70,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="vehicleList" HorizontalAlignment="Left" Margin="118,70,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="vehicleList_SelectionChanged" IsSynchronizedWithCurrentItem="False" SelectedIndex="0"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Availability"/></TextBlock>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="21" Margin="118,155,0,0" VerticalAlignment="Top" Width="87">
+        <RichTextBox x:Name="startTimeBox" HorizontalAlignment="Left" Height="21" Margin="118,155,0,0" VerticalAlignment="Top" Width="87" TextChanged="startTimeBox_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Start Time"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox x:Name="richTextBox1" HorizontalAlignment="Left" Height="21" Margin="118,186,0,0" VerticalAlignment="Top" Width="87">
+        <RichTextBox x:Name="endTimeBox" HorizontalAlignment="Left" Height="21" Margin="118,186,0,0" VerticalAlignment="Top" Width="87" TextChanged="endTimeBox_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="End Time"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox x:Name="richTextBox_Copy" HorizontalAlignment="Left" Height="21" Margin="118,106,0,0" VerticalAlignment="Top" Width="87" TextChanged="richTextBox_Copy_TextChanged">
+        <RichTextBox x:Name="capacityBox" HorizontalAlignment="Left" Height="21" Margin="118,106,0,0" VerticalAlignment="Top" Width="87" TextChanged="capacityBox_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Capacity"/>
