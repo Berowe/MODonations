@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="MiddleOut.RequestGoodsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="HeadingGrid" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Text="Choose a donation:" FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Name="RadioButtonGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <RadioButton Name="ToysRadioButton" Content="Toys" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="ClothesRadioButton" Content="Clothes" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="TechRadioButton" Content="Tech" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="FirstAidGoodsButton" Content="First Aid" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="FoodRadioButton" Content="Food" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="HygieneProductsRadioButton" Content="Hygiene Products" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="OtherRadioButton" Content="Other" FontSize="18" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <TextBox Name="OtherTextBox" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" TextChanged="OtherTextBox_TextChanged" LostFocus="OtherTextBox_LostFocus" GotFocus="OtherTextBox_GotFocus"/>
+
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</UserControl>
