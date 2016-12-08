@@ -16,34 +16,15 @@ using System.Windows.Shapes;
 namespace MiddleOut
 {
     /// <summary>
-    /// Interaction logic for RequestGoodsPage.xaml
+    /// Author: Karanbir Toor 
+    /// Interaction logic for RequestGoodsPage.xaml 
     /// </summary>
     public partial class RequestGoodsPage : UserControl
     {
         public RequestGoodsPage()
         {
             InitializeComponent();
-        }
-
-        private void OtherTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
-
-        private void OtherTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-        private void OtherTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OtherTextBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
+            OtherTextBox.Text = "Donation";
         }
 
         private void OtherTextBox_LostFocus(object sender, RoutedEventArgs e)
