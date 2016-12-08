@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace MiddleOut
 {
     /// <summary>
-    /// Interaction logic for BasicPage1.xaml
+    /// Interaction logic for InformationPage.xaml
     /// </summary>
-    public partial class BasicPage1 : UserControl
+    public partial class InformationPage : UserControl
     {
-        public BasicPage1()
+        public InformationPage()
         {
             InitializeComponent();
+        }
+
+        private void nextPage_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

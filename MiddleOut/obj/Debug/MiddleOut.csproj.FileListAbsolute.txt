@@ -142,13 +142,15 @@ C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.baml
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ChooseServicePage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\InformationPage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ChooseServicePage.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\InformationPage.g.cs

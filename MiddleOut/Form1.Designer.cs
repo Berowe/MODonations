@@ -36,6 +36,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.emailBox = new System.Windows.Forms.MaskedTextBox();
             this.signUpButton = new System.Windows.Forms.Button();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -113,12 +114,27 @@
             this.signUpButton.UseVisualStyleBackColor = false;
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
+            // aboutButton
+            // 
+            this.aboutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(139)))), ((int)(((byte)(212)))));
+            this.aboutButton.FlatAppearance.BorderSize = 0;
+            this.aboutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutButton.ForeColor = System.Drawing.Color.White;
+            this.aboutButton.Location = new System.Drawing.Point(31, 27);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(140, 56);
+            this.aboutButton.TabIndex = 4;
+            this.aboutButton.Text = "About";
+            this.aboutButton.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(732, 723);
+            this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.signInSubmit);
@@ -141,8 +157,6 @@
         private System.Windows.Forms.MaskedTextBox passwordBox;
         private System.Windows.Forms.MaskedTextBox emailBox;
         private System.Windows.Forms.Button signUpButton;
-
-        
-
+        private System.Windows.Forms.Button aboutButton;
     }
 }

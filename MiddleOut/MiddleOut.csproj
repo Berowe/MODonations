@@ -75,8 +75,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AddServicePage.xaml.cs">
-      <DependentUpon>AddServicePage.xaml</DependentUpon>
+    <Compile Include="ChooseServicePage.xaml.cs">
+      <DependentUpon>ChooseServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -89,6 +89,9 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationPage.xaml.cs">
+      <DependentUpon>InformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListPage1.xaml.cs">
       <DependentUpon>ListPage1.xaml</DependentUpon>
@@ -105,7 +108,11 @@
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
     <Compile Include="User.cs" />
-    <Page Include="AddServicePage.xaml">
+    <Page Include="ChooseServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
