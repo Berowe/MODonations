@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace MiddleOut
 {
     /// <summary>
-    /// Interaction logic for InformationPage.xaml
+    /// Interaction logic for ThankYou.xaml
     /// </summary>
-    public partial class InformationPage : UserControl
+    public partial class ThankYou : UserControl
     {
-        public InformationPage()
+        public ThankYou()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace MiddleOut
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
-            NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
+            NavigationCommands.GoToPage.Execute("/Pages/Home.xaml", target);
         }
     }
 }

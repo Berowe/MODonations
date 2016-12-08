@@ -154,3 +154,5 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ChooseServicePag
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\InformationPage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ChooseServicePage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\InformationPage.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ThankYou.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ThankYou.g.cs

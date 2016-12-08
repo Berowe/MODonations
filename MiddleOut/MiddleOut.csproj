@@ -107,6 +107,9 @@
     <Compile Include="ReviewService.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
+    <Compile Include="ThankYou.xaml.cs">
+      <DependentUpon>ThankYou.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Page Include="ChooseServicePage.xaml">
       <SubType>Designer</SubType>
@@ -167,6 +170,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="ThankYou.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
