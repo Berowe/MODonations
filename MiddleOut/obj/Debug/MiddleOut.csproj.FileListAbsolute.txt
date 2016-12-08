@@ -136,8 +136,6 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.F
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Design.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.baml
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.baml
@@ -145,12 +143,12 @@ C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.baml
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g.cs
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\ListPage1.g.cs
