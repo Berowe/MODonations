@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Text;
 
 namespace MiddleOut
@@ -10,7 +10,9 @@ namespace MiddleOut
     internal class ReviewService
     {
         #region fields
+        [JsonProperty("_summary")]
         private readonly string _summary;
+        [JsonProperty("_rating")]
         private readonly int _rating;
         #endregion
 
@@ -30,7 +32,7 @@ namespace MiddleOut
             if (theRating > 5) theRating = 5;
             _rating = theRating;
         }
-        override 
+        override
         public string ToString()
         {
             var sb = new StringBuilder();

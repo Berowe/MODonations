@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Formatters;
 using System.Web.Script.Serialization;
 
 namespace MiddleOut
@@ -12,7 +14,6 @@ namespace MiddleOut
         private String myResourcePath;
         private String myPath;
         private String myFileName;
-        private String mySerialNumber;
 
         public UserDatabase()
         {
@@ -32,16 +33,25 @@ namespace MiddleOut
         {
             if (File.Exists(myFileName))
             {
-                myUsers = new JavaScriptSerializer()
-                    .Deserialize<Dictionary<String, User>>(File.ReadAllText(myFileName));
+                String deSerial = File.ReadAllText(myFileName);
+                object dictionary = JsonConvert.DeserializeObject(deSerial, new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.All,
+                    TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+                });
+                myUsers = (Dictionary<String, User>)dictionary;
             }
         }
 
         public void addUser(User theUser)
         {
             myUsers.Add(theUser.getEmail(), theUser);
-            File.Delete(myFileName);
-            File.WriteAllText(myFileName, new JavaScriptSerializer().Serialize(myUsers));
+            string serial = JsonConvert.SerializeObject(myUsers, Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All,
+                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+            });
+            File.WriteAllText(myFileName, serial);
         }
 
         public Boolean verifyUser(String theUsername, String thePassword)
