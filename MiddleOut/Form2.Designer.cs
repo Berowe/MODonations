@@ -171,6 +171,5 @@ namespace MiddleOut
         private System.Windows.Forms.MaskedTextBox confirmPasswordTwoBox;
         private System.Windows.Forms.Button signUpSubmit;
         private System.Windows.Forms.Button backButtonToLogin;
-
     }
 }

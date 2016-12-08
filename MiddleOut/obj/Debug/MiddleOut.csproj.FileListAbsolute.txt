@@ -154,3 +154,5 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AddServicePage.g
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ListPage1.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MapPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\NotificationPage.g.cs
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.baml
+C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\AddService.g.cs
