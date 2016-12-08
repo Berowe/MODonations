@@ -11,6 +11,7 @@
         <mui:ModernTab x:Name="ListPageHome" Layout="List" Margin="0,0,75,0">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
+                <mui:Link DisplayName="Home" Source="Pages/Home.xaml" />
                 <mui:Link DisplayName="Add A Service" Source="ChooseServicePage.xaml" />
                 <mui:Link DisplayName="Mapping" Source="MapPage.xaml" />
                 <mui:Link DisplayName="Notifications" Source="NotificationPage.xaml" />
