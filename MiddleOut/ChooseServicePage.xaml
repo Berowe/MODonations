@@ -7,8 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <Button x:Name="nextPage" Content="Button" Width="76" Height="26" Click="nextPage_Click"/>
-        </ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="HeadingGrid" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Text="Choose a service:" FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Name="RadioButtonGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <RadioButton Name="DriverRadioButton" Content="Driver" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="DonateRadioButton" Content="Donate" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="EducateRadioButton" Content="Educate" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <RadioButton Name="RequestGoodsButton" Content="Request Goods" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Name="ButtonGrid" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="nextPage" Content="Continue" Click="nextPage_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>
