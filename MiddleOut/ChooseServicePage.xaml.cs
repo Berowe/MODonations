@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstFloor.ModernUI.Windows.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,8 @@ namespace MiddleOut
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
-            InformationPage infoPage = new InformationPage();
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
         }
     }
 }
