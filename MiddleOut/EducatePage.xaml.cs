@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FirstFloor.ModernUI.Windows.Navigation;
 
 namespace MiddleOut
 {
@@ -36,7 +37,11 @@ namespace MiddleOut
 
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
+            //Set service to have this subject
 
+            //Direct to thank you page 
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
         private string GetChosenSubject()
@@ -51,7 +56,7 @@ namespace MiddleOut
 
         private void InitializeButtons()
         {
-            ContinueButton.IsEnabled = false;
+            ContinueButton.IsEnabled = true;
         }
 
         private void InitializeComboBoxes()

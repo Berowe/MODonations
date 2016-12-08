@@ -42,7 +42,8 @@ namespace MiddleOut
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             } else if ((bool)EducateRadioButton.IsChecked)
             {
-
+                IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+                NavigationCommands.GoToPage.Execute("/EducatePage.xaml", target);
             } else if ((bool)RequestGoodsButton.IsChecked)
             {
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
