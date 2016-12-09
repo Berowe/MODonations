@@ -29,6 +29,9 @@ namespace MiddleOut
         private Boolean mySelected;
         [JsonProperty("myReview")]
         private ReviewService myReview;
+        [JsonProperty("myDonationRequest")]
+        private EnumTypes myDonationRequest;
+
 
         public Service(String theName, String theEmail)
         {
@@ -66,9 +69,19 @@ namespace MiddleOut
             return mySelected;
         }
 
+        public int[] getLocation()
+        {
+            return myLocation;
+        }
+
         public ReviewService getReview()
         {
             return myReview;
+        }
+
+        public EnumTypes getDonationRequest()
+        {
+            return myDonationRequest;
         }
 
         public void setUserID(String theID)
@@ -91,6 +104,11 @@ namespace MiddleOut
         {
             myLocation[0] = theX;
             myLocation[1] = theY;
+        }
+
+        public void setDonationRequest(EnumTypes theType)
+        {
+            myDonationRequest = theType;
         }
 
         public void setTax(double theTaxCredit)
