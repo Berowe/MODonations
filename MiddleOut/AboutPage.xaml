@@ -13,14 +13,14 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <StackPanel MinWidth="200" Grid.Row="0">
-            <TextBlock HorizontalAlignment="Left" Text="About" Style="{StaticResource Heading2}" />
+            <TextBlock HorizontalAlignment="Left" Text="About Us" Style="{StaticResource Heading2}" />
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="About our Service" FontWeight="Bold"/>
+            <TextBlock Grid.Column="0" Text="Our Mission" FontWeight="Bold"/>
             <TextBlock Grid.Column="1" Text="Meet the Team" FontWeight="Bold"/>
         </Grid>
         <Grid Grid.Row="2">
@@ -29,7 +29,18 @@
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <TextBlock Text="Hello" HorizontalAlignment="Left"/>
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock Text="Our mission is to provide a simple " />
+                    <TextBlock Text="and alternative method to donate to those" />
+                    <TextBlock Text="in need. Especially those who need "/>
+                    <TextBlock Text="a quick way to receive goods or"/>
+                    <TextBlock Text="tutoring from good samaritans."/>
+                    <TextBlock Text="Besides helping individuals directly,"/>
+                    <TextBlock Text="users can also drive goods from users who"/>
+                    <TextBlock Text="donate, directly to organizations that can"/>
+                    <TextBlock Text="distribute goods to people who need them."/>
+                </StackPanel>
+                
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel HorizontalAlignment="Left">
