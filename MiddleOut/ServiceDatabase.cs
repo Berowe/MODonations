@@ -223,8 +223,6 @@ namespace MiddleOut
                 pullDictionary(myDictionaryFileStrings[10], 11);
                 pullDictionary(myDictionaryFileStrings[11], 12);
                 pullDictionary(myDictionaryFileStrings[12], 13);
-                pullDictionary(myDictionaryFileStrings[13], 14);
-                pullDictionary(myDictionaryFileStrings[14], 15);
             }
         }
 
