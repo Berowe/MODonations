@@ -85,6 +85,9 @@
     <Compile Include="ChooseServicePage.xaml.cs">
       <DependentUpon>ChooseServicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EducatePage.xaml.cs">
+      <DependentUpon>EducatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +114,9 @@
       <DependentUpon>NotificationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reports.cs" />
+    <Compile Include="RequestGoodsPage.xaml.cs">
+      <DependentUpon>RequestGoodsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReviewService.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
@@ -118,6 +124,7 @@
       <DependentUpon>ThankYou.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserDatabase.cs" />
     <Page Include="AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +132,10 @@
     <Page Include="ChooseServicePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EducatePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="InformationPage.xaml">
       <SubType>Designer</SubType>
@@ -181,6 +192,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="RequestGoodsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ThankYou.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,6 +211,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WorldMap-Elwynn.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

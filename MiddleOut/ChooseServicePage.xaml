@@ -18,7 +18,7 @@
         </Grid>
 
         <Grid Name="RadioButtonGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <StackPanel Name ="SelectServiceGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <RadioButton Name="DriverRadioButton" Content="Driver" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 <RadioButton Name="DonateRadioButton" Content="Donate" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 <RadioButton Name="EducateRadioButton" Content="Educate" FontSize="27" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>

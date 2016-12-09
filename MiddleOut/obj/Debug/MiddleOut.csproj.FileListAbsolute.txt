@@ -167,3 +167,7 @@ C:\Users\Charlton\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\Charlton\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\Charlton\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\Charlton\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.g.cs
