@@ -33,8 +33,8 @@ namespace MiddleOut
             Console.WriteLine(review.ToString());
             
             // Karan region
-            //ServiceDatabase serviceDatabase = new ServiceDatabase();
-            //UserDatabase userDatabase = new UserDatabase();
+            ServiceDatabase serviceDatabase = new ServiceDatabase();
+            UserDatabase userDatabase = new UserDatabase();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
