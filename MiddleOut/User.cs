@@ -3,6 +3,7 @@ using System.Collections;
 using System.Windows;
 using System.Text;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace MiddleOut
 {
@@ -18,22 +19,35 @@ namespace MiddleOut
         private String userName;
         #endregion
         #endregion
+        [JsonProperty("myName")]
         private String myName;
+        [JsonProperty("myPassword")]
         private String myPassword;
+        [JsonProperty("myEmail")]
         private String myEmail;
+        [JsonProperty("myStreet")]
         private String myStreet;
+        [JsonProperty("myApartment")]
         private String myApartment;
+        [JsonProperty("myCity")]
         private String myCity;
+        [JsonProperty("myState")]
         private String myState;
+        [JsonProperty("myZipCode")]
         private String myZipCode;
-        private String myUserID;
+        [JsonProperty("myVehichleType")]
         private String myVehichleType;
+        [JsonProperty("myCapacity")]
         private String myCapacity;
+        [JsonProperty("myTimeStart")]
         private String myTimeStart;
+        [JsonProperty("myTimeStop")]
         private String myTimeStop;
+        [JsonProperty("myLicenseFilePath")]
         private String myLicenseFilePath;
+        [JsonProperty("myAdmin")]
         private Boolean myAdmin = false;
-        private int mySerialNumber;
+        [JsonProperty("myServices")]
         private List<Service> myServices;
 
         //The user object
