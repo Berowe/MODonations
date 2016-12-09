@@ -21,11 +21,17 @@ namespace MiddleOut
     /// </summary>
     public partial class MainWindow : ModernWindow
     {
-        
+        UserDatabase USER_DATABASE { get; set;}
+        ServiceDatabase SERVICE_DATABASE { get; set; }
+        public string test { get; set; }
         public MainWindow()
         {
+            
+            SERVICE_DATABASE = new ServiceDatabase();
+            USER_DATABASE = new UserDatabase();
             this.Hide();
             InitializeComponent();
+
             Form1 login = new Form1(this);
             login.Show();
             ReviewService review = new ReviewService(4, "the best");
@@ -33,14 +39,13 @@ namespace MiddleOut
             Console.WriteLine(review.ToString());
             
             // Karan region
-            ServiceDatabase serviceDatabase = new ServiceDatabase();
-            UserDatabase userDatabase = new UserDatabase();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
 
     }
 }
