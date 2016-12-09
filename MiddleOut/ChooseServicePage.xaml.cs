@@ -18,31 +18,37 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for BasicPage1.xaml
+    /// 
     /// </summary>
     public partial class BasicPage1 : UserControl
     {
+        private ServiceTypes _serviceTypes;
         public BasicPage1()
         {
             InitializeComponent();
+            _serviceTypes = ServiceTypes.Donor;
         }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {   
             if ((bool)DriverRadioButton.IsChecked)
             {
+                _serviceTypes = ServiceTypes.Driver;
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
             } else if ((bool)DonateRadioButton.IsChecked)
             {
+                _serviceTypes = ServiceTypes.Donor;
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             } else if ((bool)EducateRadioButton.IsChecked)
             {
+                _serviceTypes = ServiceTypes.Educator;
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/EducatePage.xaml", target);
             } else if ((bool)RequestGoodsButton.IsChecked)
             {
+                _serviceTypes = ServiceTypes.Requester;
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             }

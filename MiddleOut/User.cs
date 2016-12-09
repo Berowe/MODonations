@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Windows;
 using System.Text;
+using System.Collections.Generic;
 
 namespace MiddleOut
 {
@@ -26,9 +27,14 @@ namespace MiddleOut
         private String myState;
         private String myZipCode;
         private String myUserID;
+        private String myVehichleType;
+        private String myCapacity;
+        private String myTimeStart;
+        private String myTimeStop;
+        private String myLicenseFilePath;
         private Boolean myAdmin = false;
         private int mySerialNumber;
-        private ArrayList myServices;
+        private List<Service> myServices;
 
         //The user object
         public User(String name, String password, String email, String street, String apartment, String city, 
@@ -42,8 +48,7 @@ namespace MiddleOut
             myCity = city;
             myState = state;
             myZipCode = zipcode;
-            //mySerialNumber = UserDatabase.getUserID();
-            myServices = new ArrayList();
+            myServices = new List<Service>();            
         }
 
         public String getName()
@@ -66,6 +71,31 @@ namespace MiddleOut
             return myEmail;
         }
 
+        public String getVehicleType()
+        {
+            return myVehichleType;
+        }
+
+        public String getCapacity()
+        {
+            return myCapacity;
+        }
+
+        public String getTimeStart()
+        {
+            return myTimeStart;
+        }
+
+        public String getTimeStop()
+        {
+            return myTimeStop;
+        }
+
+        public String getLicenseFilePath()
+        {
+            return myLicenseFilePath;
+        }
+
         public String getAddress()
         {
             StringBuilder address = new StringBuilder();
@@ -85,7 +115,7 @@ namespace MiddleOut
             return myAdmin;
         }
 
-        public ArrayList getServices()
+        public List<Service> getServices()
         {
             return myServices;
         }
@@ -119,9 +149,43 @@ namespace MiddleOut
             myAdmin = admin;
         }
 
-        public void addService(String serviceID)
+        public void setVehicleType(String type)
         {
-            myServices.Add(serviceID);
+            myVehichleType = type;
+        }
+
+        public void setCapacity(String capacity)
+        {
+            myCapacity = capacity;
+        }
+
+        public void setTimeStart(String start)
+        {
+            myTimeStart = start;
+        }
+
+        public void setTimeStop(String stop)
+        {
+            myTimeStop = stop;
+        }
+
+        public void setLicenseFilePath(String licence)
+        {
+            myLicenseFilePath = licence;
+        }
+
+        public void addDriver(String type, String capacity, String start, String stop, String filePath)
+        {
+            myVehichleType = type;
+            myCapacity = capacity;
+            myTimeStart = start;
+            myTimeStop = stop;
+            myLicenseFilePath = filePath;
+        }
+
+        public void addService(Service service)
+        {
+            myServices.Add(service);
         }
 
         #region Service handling (User can only handle their own services)
