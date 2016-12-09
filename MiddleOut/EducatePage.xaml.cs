@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using FirstFloor.ModernUI.Windows.Navigation;
 
 namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for EducatePage.xaml
+    /// Author: Ameet Toor
     /// </summary>
     public partial class EducatePage : UserControl
     {
-        private string _subject;
+        private DonationTypes _donationType;
         public EducatePage()
         {
             InitializeComponent();
@@ -32,7 +23,19 @@ namespace MiddleOut
 
         private void SubjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _subject = SubjectComboBox.SelectedItem.ToString();
+            var subject = SubjectComboBox.SelectedItem.ToString();
+            if (subject.Equals("Writing"))
+            {
+                _donationType = DonationTypes.WritingEducator;
+            }
+            else if (subject.Equals("Reading"))
+            {
+                _donationType = DonationTypes.ReadingEducator;
+            }
+            else
+            {
+                _donationType = DonationTypes.MathEducator;
+            }
         }
 
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
@@ -44,14 +47,14 @@ namespace MiddleOut
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
-        private string GetChosenSubject()
+        public DonationTypes GetChosenSubjectAsDonationType()
         {
-            return _subject;
+            return _donationType;
         }
 
         private void InitializeFields()
         {
-            _subject = "Math";
+            _donationType = DonationTypes.MathEducator;
         }
 
         private void InitializeButtons()
