@@ -13,6 +13,7 @@ namespace MiddleOut
     public partial class EducatePage : UserControl
     {
         private DonationTypes _donationType;
+        //TODO add other subjects to fit user story
         public EducatePage()
         {
             InitializeComponent();
