@@ -15,10 +15,14 @@ namespace MiddleOut
 {
     public partial class Form1 : Form
     {
+        UserDatabase USER_DATABASE;
+        ServiceDatabase SERVICE_DATABASE;
         private MainWindow main;
+
         public Form1(MainWindow theMain)
         {
             main = theMain;
+
             InitializeComponent();
             this.CenterToScreen();
         }

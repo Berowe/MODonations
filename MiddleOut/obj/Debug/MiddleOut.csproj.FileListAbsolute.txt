@@ -178,3 +178,4 @@ C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut_Content.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
