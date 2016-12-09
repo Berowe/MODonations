@@ -86,7 +86,6 @@ namespace MiddleOut
                 subjectList = new List<string>() { "Algebra", "Calculus", "Geometry" };
             }
             SpecificSubjectComboBox.ItemsSource = subjectList;
-            SpecificSubjectComboBox.SelectedIndex = 0;
         }
 
         private void InitializeComboBoxes()
@@ -94,9 +93,9 @@ namespace MiddleOut
             var subjectList = new List<string>() { "Math", "Writing", "Reading" };
 
             SubjectComboBox.ItemsSource = subjectList;
-            SubjectComboBox.SelectedIndex = 0;
 
             SetSpecificSubjectComboBox("Math");
+
             //SpecificSubjectComboBox.IsEnabled = true;
         }
     }
