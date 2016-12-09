@@ -47,7 +47,6 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.D
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.dll
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\FirstFloor.ModernUI.xml
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\AboutPage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ChooseServicePage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\InformationPage.baml
@@ -171,7 +170,6 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.g.cs
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut_Content.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.dll
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.xml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
