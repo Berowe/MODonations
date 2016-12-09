@@ -13,9 +13,14 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid Name="HeadingGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Image Source="/Images/WorldMap-Elwynn.jpg" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <TextBlock Text="Choose a donation:" FontSize="30" />
+        <Grid Name="HeadingGrid" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Left" Width="90" Height="15" FontSize="11">Start Coordinate</TextBlock>
+            <TextBox Name="StartXY" Width="50" Height="20" FontSize="12" HorizontalAlignment="Left" Margin="90,8,0,8.667">(X,Y)</TextBox>
+            <TextBlock HorizontalAlignment="Right" Width="90" Height="15" FontSize="11" Margin="0,12,49,9.667">End Coordinate</TextBlock>
+            <TextBox Name="EndXY" Width="50" Height="20" FontSize="12" HorizontalAlignment="Right" Margin="0,8,4,8.667">(X,Y)</TextBox>
+        </Grid>
+        <Grid Name="BodyGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Image Source="/images/WorldMap-Elwynn.jpg" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         </Grid>
         
     </Grid>
