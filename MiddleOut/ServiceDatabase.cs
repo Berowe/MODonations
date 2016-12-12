@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿//Author: Braxton Rowe
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +9,12 @@ using System.Web.Script.Serialization;
 
 namespace MiddleOut
 {
+    /// <summary>
+    /// The Service Database class is where all Service objects are stored into their respective Dictionaries, sorted by  EnumTypes.
+    /// </summary>
     class ServiceDatabase
     {
-
+        #region fields
         private Dictionary<String, Service> myToys;
         private Dictionary<String, Service> myClothes;
         private Dictionary<String, Service> myTech;
@@ -29,14 +33,21 @@ namespace MiddleOut
         private String myPath;
         private String myResourcePath;
         private String myFileName;
+        // myStrings are the strings used to label the serial numbers in the serial.txt file.
         private String[] myStrings = new string[] {"toy_serial", "clothes_serial", "tech_serial", "first_aid_serial",
         "hygene_serial", "tools_serial", "food_serial", "other_serial", "goods_serial", "math_serial",
         "reading_serial", "writing_serial", "donation_serial", "driver_serial", "educator_serial"};
+        // myDictionaryFileStrings are the strings that are used to create, read, write the files for their respective Service Dictionary.
         private String[] myDictionaryFileStrings = new string[] {
                     "Toy_Dictionary.txt", "Clothes_Dictionary.txt", "Tech_Dictionary.txt", "FirstAid_Dictionary.txt", "Hygene_Dictionary.txt",
                     "Tools_Dictionary.txt", "Food_Dictionary.txt", "Other_Dictionary.txt", "Goods_Dictionary.txt",
                     "Math_Dictionary.txt", "Reading_Dictionary.txt", "Writing_Dictionary.txt", "Donation_Dictionary.txt"};
+        #endregion
 
+        #region constructor
+        /// <summary>
+        /// Constructor for the Service Database.
+        /// </summary>
         public ServiceDatabase()
         {
             createFilePath();
@@ -44,7 +55,16 @@ namespace MiddleOut
             readSerialNumbers();
             myServiceIDs = new List<string>();
         }
+        #endregion
 
+        #region dominant method
+        /// <summary>
+        /// Creates a Service ID, updates the serial number file, adds the new Service object to it's respective dictionary, and updates the Service Dictionary's file.
+        /// </summary>
+        /// <param name="sType">The Service Type Enum.</param>
+        /// <param name="dType">The Donation Type Enum.</param>
+        /// <param name="theUser">The User object.</param>
+        /// <param name="theService">The Service object.</param>
         public void createService(ServiceTypes sType, DonationTypes dType, User theUser, Service theService)
         {
             String serial;
@@ -163,155 +183,14 @@ namespace MiddleOut
                     break;
             }
         }
+        #endregion
 
-        private string serializeDictionary(Dictionary<String, Service> theDictionary)
-        {
-
-            string serial = JsonConvert.SerializeObject(theDictionary, Formatting.Indented, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.All,
-                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
-            });
-
-            return serial;
-        }
-
-        private void writeFile(String fileName, String serialization)
-        {
-            File.WriteAllText(fileName, serialization);
-        }
-
-        private void initializeDictionaries()
-        {
-            myToys = new Dictionary<String, Service>();
-            myClothes = new Dictionary<String, Service>();
-            myTech = new Dictionary<String, Service>();
-            myFirstAid = new Dictionary<String, Service>();
-            myHygene = new Dictionary<String, Service>();
-            myTools = new Dictionary<String, Service>();
-            myFood = new Dictionary<String, Service>();
-            myOthers = new Dictionary<String, Service>();
-            myGoodsDrivers = new Dictionary<String, Service>();
-            myMathEducators = new Dictionary<String, Service>();
-            myReadingEducators = new Dictionary<String, Service>();
-            myWritingEducators = new Dictionary<String, Service>();
-            myDonationRequests = new Dictionary<String, Service>();
-            mySerialNumbers = new Dictionary<string, string>();
-
-            if (!File.Exists(myFileName))
-            {
-
-                for (int i = 0; i < myStrings.Length; i++)
-                {
-                    mySerialNumbers.Add(myStrings[i], "10000");
-                }
-
-                createFiles();
-            }
-            else
-            {
-                pullDictionary(myDictionaryFileStrings[0], 1);
-                pullDictionary(myDictionaryFileStrings[1], 2);
-                pullDictionary(myDictionaryFileStrings[2], 3);
-                pullDictionary(myDictionaryFileStrings[3], 4);
-                pullDictionary(myDictionaryFileStrings[4], 5);
-                pullDictionary(myDictionaryFileStrings[5], 6);
-                pullDictionary(myDictionaryFileStrings[6], 7);
-                pullDictionary(myDictionaryFileStrings[7], 8);
-                pullDictionary(myDictionaryFileStrings[8], 9);
-                pullDictionary(myDictionaryFileStrings[9], 10);
-                pullDictionary(myDictionaryFileStrings[10], 11);
-                pullDictionary(myDictionaryFileStrings[11], 12);
-                pullDictionary(myDictionaryFileStrings[12], 13);
-            }
-        }
-
-        private void pullDictionary(String filePath, int theDictionary)
-        {
-            if (File.Exists(filePath))
-            {
-                String deSerial = File.ReadAllText(filePath);
-                deSerializeDictionary(deSerial, theDictionary);
-            }
-        }
-
-        private void deSerializeDictionary(String theSerial, int theDictionary)
-        {
-            object dictionary = JsonConvert.DeserializeObject(theSerial, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.All,
-                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
-            });
-            switch (theDictionary)
-            {
-                case 1:
-                    myToys = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 2:
-                    myClothes = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 3:
-                    myTech = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 4:
-                    myFirstAid = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 5:
-                    myHygene = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 6:
-                    myTools = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 7:
-                    myFood = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 8:
-                    myOthers = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 9:
-                    myGoodsDrivers = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 10:
-                    myMathEducators = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 11:
-                    myReadingEducators = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 12:
-                    myWritingEducators = (Dictionary<String, Service>)dictionary;
-                    break;
-                case 13:
-                    myDonationRequests = (Dictionary<String, Service>)dictionary;
-                    break;
-            }
-
-        }
-
-        private void createFilePath()
-        {
-            myPath = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
-            myResourcePath = Path.Combine(myPath, "Resources");
-            myFileName = Path.Combine(myPath, "serial_list.txt");
-        }
-
-        private void readSerialNumbers()
-        {
-            mySerialNumbers = new JavaScriptSerializer()
-                    .Deserialize<Dictionary<string, string>>(File.ReadAllText(myFileName));
-        }
-
-        private void saveSerialNumbers()
-        {
-            File.Delete(myFileName);
-            File.WriteAllText(myFileName, new JavaScriptSerializer().Serialize(mySerialNumbers));
-        }
-
-        private void createFiles()
-        {
-
-            File.WriteAllText(myFileName, new JavaScriptSerializer().Serialize(mySerialNumbers));
-        }
-
+        #region private methods
+        /// <summary>
+        /// Helper method for the createService method that creates the Service ID for the Service object.
+        /// </summary>
+        /// <param name="theType">The Donation EnumType of the Service object.</param>
+        /// <returns></returns>
         private String createServiceID(DonationTypes theType)
         {
             StringBuilder builder = new StringBuilder();
@@ -386,6 +265,10 @@ namespace MiddleOut
             return builder.ToString();
         }
 
+        /// <summary>
+        /// Helper method for the createServiceID method to update the seral number file with the next serial numbers.
+        /// </summary>
+        /// <param name="theType">The type of Service object used as a key for the mySerialNumbers dictionary.</param>
         private void updateSerial(String theType)
         {
             int serial = Convert.ToInt32(mySerialNumbers[theType]);
@@ -397,111 +280,197 @@ namespace MiddleOut
             File.WriteAllText(myFileName, new JavaScriptSerializer().Serialize(mySerialNumbers));
         }
 
-        public String printServices(ServiceTypes sType)
+        /// <summary>
+        /// Helper method for the createService method to serialize the Service Dictionary to write to its respective file.
+        /// </summary>
+        /// <param name="theDictionary">The dicionary to be serialized.</param>
+        /// <returns></returns>
+        private string serializeDictionary(Dictionary<String, Service> theDictionary)
         {
-            String print = "";
-            switch (sType)
+
+            string serial = JsonConvert.SerializeObject(theDictionary, Formatting.Indented, new JsonSerializerSettings
             {
-                case ServiceTypes.Donor:
-                    print = getServices(myToys);
-                    print = getServices(myClothes);
-                    print = getServices(myTech);
-                    print = getServices(myFirstAid);
-                    print = getServices(myFood);
-                    print = getServices(myHygene);
-                    print = getServices(myTools);
-                    print = getServices(myOthers);
-                    break;
-                case ServiceTypes.Educator:
-                    print = getServices(myMathEducators);
-                    print = getServices(myReadingEducators);
-                    print = getServices(myWritingEducators);
-                    break;
-                case ServiceTypes.Requester:
-                    print = getServices(myDonationRequests);
-                    break;
-            }
-            return print;
+                TypeNameHandling = TypeNameHandling.All,
+                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+            });
+
+            return serial;
         }
 
-        public String printServices(ServiceTypes sType, DonationTypes dType)
+        /// <summary>
+        /// Helper method for the createService method to write the serialized string to its respective file.
+        /// </summary>
+        /// <param name="fileName">The file name to be written/overwritten.</param>
+        /// <param name="serialization">The serialized string representing the dictionary being written.</param>
+        private void writeFile(String fileName, String serialization)
         {
-            String print = "";
-            switch (sType)
-            {
-                case ServiceTypes.Donor:
-                    switch (dType)
-                    {
-                        case DonationTypes.Toys:
-                            print = getServices(myToys);
-                            break;
-                        case DonationTypes.Clothes:
-                            print = getServices(myClothes);
-                            break;
-                        case DonationTypes.Tech:
-                            print = getServices(myTech);
-                            break;
-                        case DonationTypes.FirstAid:
-                            print = getServices(myFirstAid);
-                            break;
-                        case DonationTypes.Food:
-                            print = getServices(myFood);
-                            break;
-                        case DonationTypes.Hygene:
-                            print = getServices(myHygene);
-                            break;
-                        case DonationTypes.Tools:
-                            print = getServices(myTools);
-                            break;
-                        case DonationTypes.Other:
-                            print = getServices(myOthers);
-                            break;
-                    }
-                    break;
-                case ServiceTypes.Driver:
-                    switch (dType)
-                    {
-                        case DonationTypes.TransportGoods:
-                            print = getServices(myGoodsDrivers);
-                            break;
-                    }
-                    break;
-                case ServiceTypes.Educator:
-                    switch (dType)
-                    {
-                        case DonationTypes.MathEducator:
-                            print = getServices(myMathEducators);
-                            break;
-                        case DonationTypes.WritingEducator:
-                            print = getServices(myWritingEducators);
-                            break;
-                        case DonationTypes.ReadingEducator:
-                            print = getServices(myReadingEducators);
-                            break;
-                    }
-                    break;
-                case ServiceTypes.Requester:
-                    print = getServices(myDonationRequests);
-                    break;
-            }
-            return print;
+            File.WriteAllText(fileName, serialization);
         }
 
-        private String getServices(Dictionary<String, Service> theDictionary)
+        /// <summary>
+        /// Helper method for the constructor to build the file paths for new files.
+        /// </summary>
+        private void createFilePath()
         {
-            StringBuilder builder = new StringBuilder();
-            foreach (KeyValuePair<String, Service> entry in myTech)
-            {
-                builder.Append(entry.Value.getServiceID() + "\n");
-            }
-            return builder.ToString();
+            myPath = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
+            myResourcePath = Path.Combine(myPath, "Resources");
+            myFileName = Path.Combine(myPath, "serial_list.txt");
         }
 
+        /// <summary>
+        /// Helper method for the constructor to initialize the Dictionaries when a new database is created.
+        /// This method calls the pullDictionary method if the program has been run on the machine before.
+        /// </summary>
+        private void initializeDictionaries()
+        {
+            myToys = new Dictionary<String, Service>();
+            myClothes = new Dictionary<String, Service>();
+            myTech = new Dictionary<String, Service>();
+            myFirstAid = new Dictionary<String, Service>();
+            myHygene = new Dictionary<String, Service>();
+            myTools = new Dictionary<String, Service>();
+            myFood = new Dictionary<String, Service>();
+            myOthers = new Dictionary<String, Service>();
+            myGoodsDrivers = new Dictionary<String, Service>();
+            myMathEducators = new Dictionary<String, Service>();
+            myReadingEducators = new Dictionary<String, Service>();
+            myWritingEducators = new Dictionary<String, Service>();
+            myDonationRequests = new Dictionary<String, Service>();
+            mySerialNumbers = new Dictionary<string, string>();
+
+            if (!File.Exists(myFileName))
+            {
+
+                for (int i = 0; i < myStrings.Length; i++)
+                {
+                    mySerialNumbers.Add(myStrings[i], "10000");
+                }
+
+                createSerialFile();
+            }
+            else
+            {
+                pullDictionary(myDictionaryFileStrings[0], 1);
+                pullDictionary(myDictionaryFileStrings[1], 2);
+                pullDictionary(myDictionaryFileStrings[2], 3);
+                pullDictionary(myDictionaryFileStrings[3], 4);
+                pullDictionary(myDictionaryFileStrings[4], 5);
+                pullDictionary(myDictionaryFileStrings[5], 6);
+                pullDictionary(myDictionaryFileStrings[6], 7);
+                pullDictionary(myDictionaryFileStrings[7], 8);
+                pullDictionary(myDictionaryFileStrings[8], 9);
+                pullDictionary(myDictionaryFileStrings[9], 10);
+                pullDictionary(myDictionaryFileStrings[10], 11);
+                pullDictionary(myDictionaryFileStrings[11], 12);
+                pullDictionary(myDictionaryFileStrings[12], 13);
+            }
+        }
+
+        /// <summary>
+        /// Helper method for the initializeDictionaries method that creats the serial number file.
+        /// </summary>
+        private void createSerialFile()
+        {
+            File.WriteAllText(myFileName, new JavaScriptSerializer().Serialize(mySerialNumbers));
+        }
+
+        /// <summary>
+        /// Helper method for the initializeDirectories method to pull information from files of existing Service object created.
+        /// </summary>
+        /// <param name="filePath">The file name for the dictionary.</param>
+        /// <param name="theDictionary">The dictionary being populated.</param>
+        private void pullDictionary(String filePath, int theDictionary)
+        {
+            if (File.Exists(filePath))
+            {
+                String deSerial = File.ReadAllText(filePath);
+                deSerializeDictionary(deSerial, theDictionary);
+            }
+        }
+
+        /// <summary>
+        /// Helper method for the pullDictionary method to deserialize the string from the file into its respective dictionary.
+        /// </summary>
+        /// <param name="theSerial">The string representing the dictionary.</param>
+        /// <param name="theDictionary">The dictionary being updated.</param>
+        private void deSerializeDictionary(String theSerial, int theDictionary)
+        {
+            object dictionary = JsonConvert.DeserializeObject(theSerial, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All,
+                TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+            });
+            switch (theDictionary)
+            {
+                case 1:
+                    myToys = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 2:
+                    myClothes = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 3:
+                    myTech = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 4:
+                    myFirstAid = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 5:
+                    myHygene = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 6:
+                    myTools = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 7:
+                    myFood = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 8:
+                    myOthers = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 9:
+                    myGoodsDrivers = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 10:
+                    myMathEducators = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 11:
+                    myReadingEducators = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 12:
+                    myWritingEducators = (Dictionary<String, Service>)dictionary;
+                    break;
+                case 13:
+                    myDonationRequests = (Dictionary<String, Service>)dictionary;
+                    break;
+            }
+
+        }
+
+        /// <summary>
+        /// Helper method for the constructor to populate the serial numbers for the Service objects.
+        /// </summary>
+        private void readSerialNumbers()
+        {
+            mySerialNumbers = new JavaScriptSerializer()
+                    .Deserialize<Dictionary<string, string>>(File.ReadAllText(myFileName));
+        }
+        #endregion
+
+        #region public methods
+        /// <summary>
+        /// Checks to see if the Service ID exists.
+        /// </summary>
+        /// <param name="serviceID">The Service ID.</param>
+        /// <returns>Returns true if it exists, false if it does not.</returns>
         public Boolean isService(String serviceID)
         {
             return myServiceIDs.Contains(serviceID);
         }
 
+        /// <summary>
+        /// Sends a Service object correlated with the Service ID.
+        /// </summary>
+        /// <param name="serviceID">The Service ID.</param>
+        /// <returns>Returns the Service object.</returns>
         public Service retrieveService(String serviceID)
         {
             Service service = new Service(null, null);
@@ -567,6 +536,122 @@ namespace MiddleOut
             return service;
         }
 
+        /// <summary>
+        /// Provides a string of all of the Service object IDs in their respective dictionaries.
+        /// </summary>
+        /// <param name="sType">The service type requested.</param>
+        /// <returns></returns>
+        public String printServices(ServiceTypes sType)
+        {
+            String print = "";
+            switch (sType)
+            {
+                case ServiceTypes.Donor:
+                    print = getServices(myToys);
+                    print = getServices(myClothes);
+                    print = getServices(myTech);
+                    print = getServices(myFirstAid);
+                    print = getServices(myFood);
+                    print = getServices(myHygene);
+                    print = getServices(myTools);
+                    print = getServices(myOthers);
+                    break;
+                case ServiceTypes.Educator:
+                    print = getServices(myMathEducators);
+                    print = getServices(myReadingEducators);
+                    print = getServices(myWritingEducators);
+                    break;
+                case ServiceTypes.Requester:
+                    print = getServices(myDonationRequests);
+                    break;
+            }
+            return print;
+        }
+
+        /// <summary>
+        /// Provides all of the Service object IDs in their respective dictionaries.
+        /// </summary>
+        /// <param name="sType">The Service type requested.</param>
+        /// <param name="dType">The Donation type requested.</param>
+        /// <returns></returns>
+        public String printServices(ServiceTypes sType, DonationTypes dType)
+        {
+            String print = "";
+            switch (sType)
+            {
+                case ServiceTypes.Donor:
+                    switch (dType)
+                    {
+                        case DonationTypes.Toys:
+                            print = getServices(myToys);
+                            break;
+                        case DonationTypes.Clothes:
+                            print = getServices(myClothes);
+                            break;
+                        case DonationTypes.Tech:
+                            print = getServices(myTech);
+                            break;
+                        case DonationTypes.FirstAid:
+                            print = getServices(myFirstAid);
+                            break;
+                        case DonationTypes.Food:
+                            print = getServices(myFood);
+                            break;
+                        case DonationTypes.Hygene:
+                            print = getServices(myHygene);
+                            break;
+                        case DonationTypes.Tools:
+                            print = getServices(myTools);
+                            break;
+                        case DonationTypes.Other:
+                            print = getServices(myOthers);
+                            break;
+                    }
+                    break;
+                case ServiceTypes.Driver:
+                    switch (dType)
+                    {
+                        case DonationTypes.TransportGoods:
+                            print = getServices(myGoodsDrivers);
+                            break;
+                    }
+                    break;
+                case ServiceTypes.Educator:
+                    switch (dType)
+                    {
+                        case DonationTypes.MathEducator:
+                            print = getServices(myMathEducators);
+                            break;
+                        case DonationTypes.WritingEducator:
+                            print = getServices(myWritingEducators);
+                            break;
+                        case DonationTypes.ReadingEducator:
+                            print = getServices(myReadingEducators);
+                            break;
+                    }
+                    break;
+                case ServiceTypes.Requester:
+                    print = getServices(myDonationRequests);
+                    break;
+            }
+            return print;
+        }
+
+        /// <summary>
+        /// Helper method for the printServices methods that prints out each Service ID of each Service object from the dictionary requested.
+        /// </summary>
+        /// <param name="theDictionary">The dictionary requested.</param>
+        /// <returns></returns>
+        private String getServices(Dictionary<String, Service> theDictionary)
+        {
+            StringBuilder builder = new StringBuilder();
+            foreach (KeyValuePair<String, Service> entry in myTech)
+            {
+                builder.Append(entry.Value.getServiceID() + "\n");
+            }
+            return builder.ToString();
+        }
+        #endregion
     }
 
 }
