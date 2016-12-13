@@ -43,6 +43,11 @@ namespace MiddleOut
             passwordBox.Text = "password";
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        { 
+
+        } 
+
         /// <summary>
         /// Promps the user to sign up as a new user by initializing Form2. 
         /// @Author Karanbir
