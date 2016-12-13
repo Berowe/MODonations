@@ -51,6 +51,7 @@ namespace MiddleOut
         /// <summary>
         /// Direct the user to the next page (Thank you page). 
         /// @Author Ameet and Karanbir
+        /// Grabs user from mainwindow, adds driver information and adds service.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -77,11 +78,23 @@ namespace MiddleOut
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the _capacity field to the text in the CapacityTextbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void capacityBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             _capacity = new TextRange(capacityBox.Document.ContentStart, capacityBox.Document.ContentEnd).Text;
         }
 
+        /// <summary>
+        /// Author: Karanbir Toor
+        /// Opens the file browser to let the user choose the file to upload.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //Process.Start(@"c:\"); @Karan
@@ -112,21 +125,45 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the _startTime field to the text in the startTimeBox text box.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             _startTime = new TextRange(startTimeBox.Document.ContentStart, startTimeBox.Document.ContentEnd).Text;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the _stopTime fields to the text in the endTimebox text box.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void endTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             _stopTime = new TextRange(endTimeBox.Document.ContentStart, endTimeBox.Document.ContentEnd).Text;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the _vehicleType to the chosen ComboBox selectedItem.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             _vehicleType = vehicleList.SelectedItem.ToString();
         }
 
+        /// <summary>
+        /// Author: Charlton Smith
+        /// If startTimeBox is selected the text is changed to empty.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startTimeBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (startTime.Text == "Start Time")
@@ -135,6 +172,12 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// Author: Charlton Smith
+        /// If endTimeBox is selected the text in changed to empty.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void endTimeBox_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (endTime.Text == "End Time")
@@ -143,6 +186,12 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// Author: Charlton Smith
+        /// If CapacityTextBox is selected the string inside of the text box is set to empty.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Paragraph_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (capacity.Text == "Capacity")

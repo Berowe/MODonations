@@ -29,11 +29,12 @@
                 </Grid>
                 <Grid Name="SpecificSubjectTextBoxAndComboGrid">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="67*"/>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="40*"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Name="SpecificSubjectTextBox" Text="Specific Subject:" Grid.Column="0"/>
-                    <ComboBox Name="SpecificSubjectComboBox" Text="Specific Subject" Grid.Column="1" SelectionChanged="SubjectComboBox_SelectionChanged"/>
+                    <ComboBox Name="SpecificSubjectComboBox" Text="Specific Subject" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="SpecificSubjectComboBox_SelectionChanged"/>
                 </Grid>
             </StackPanel>
         </Grid>
