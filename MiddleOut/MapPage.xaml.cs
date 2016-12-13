@@ -17,6 +17,7 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for MapPage.xaml
+    /// @Author Karanbir
     /// </summary>
     public partial class MapPage : UserControl
     {

@@ -30,6 +30,7 @@ namespace MiddleOut
 
         public InformationPage()
         {
+            /// Set vehicle field options. @Author Karanbir 
             InitializeComponent();
             nextPage.IsEnabled = false;
             List<String> vehicles = new List<String>();
@@ -47,6 +48,12 @@ namespace MiddleOut
             _filePath = string.Empty;
         }
 
+        /// <summary>
+        /// Direct the user to the next page (Thank you page). 
+        /// @Author Ameet and Karanbir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
 

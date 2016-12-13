@@ -26,6 +26,11 @@ namespace MiddleOut
         UserDatabase USER_DATABASE { get; set;}
         ServiceDatabase SERVICE_DATABASE { get; set; }
         public string test { get; set; }
+
+        /// <summary>
+        /// Constructs a MainWindow and hides it. 
+        /// @Author Karanbir and Ameet
+        /// </summary>
         public MainWindow()
         {
             
@@ -39,27 +44,34 @@ namespace MiddleOut
             ReviewService review = new ReviewService(4, "the best");
 
             Console.WriteLine(review.ToString());
-
-
-            // Karan region
+            
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Sets the User for this session by getting the user from the UserDatabase via his/her email. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="theUsername"></param>
         public void setUsername(string theUsername)
         {
             myUser = USER_DATABASE.getUser(theUsername);
         }
 
+        /// <summary>
+        /// Returns the User for this session.
+        /// @Author Karanbir
+        /// </summary>
+        /// <returns></returns>
         public User getUser()
         {
-            User temp = myUser;
-            return temp;
+            return myUser;
         }
 
+        /// <summary>
+        /// Sets the user for this session. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="theUser"></param>
         public void setUser(User theUser)
         {
             myUser = theUser;
