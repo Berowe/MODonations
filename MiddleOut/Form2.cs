@@ -49,6 +49,7 @@ namespace MiddleOut
                 User toAdd = new User(myName, myPassword1, myEmail, myAddress, myAppartment, myCity, myState, myZip);
                 USER_DATABASE.addUser(toAdd);
                 UserDatabase.updateDatabase();
+                main.setUser(toAdd);
             } else
             {
                 errorTextBox.Text = "Passwords don't match!";

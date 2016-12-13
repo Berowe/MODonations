@@ -59,6 +59,11 @@ namespace MiddleOut
             return temp;
         }
 
+        public void setUser(User theUser)
+        {
+            myUser = theUser;
+        }
+
 
     }
 }
