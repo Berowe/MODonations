@@ -57,6 +57,7 @@ namespace MiddleOut
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
+            this.errorTextBox = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -94,6 +95,7 @@ namespace MiddleOut
             this.newEmailBox.TabIndex = 0;
             this.newEmailBox.Text = "Full Name";
             this.newEmailBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.newEmailBox_MaskInputRejected);
+            this.newEmailBox.TextChanged += new System.EventHandler(this.newEmailBox_TextChanged);
             // 
             // panel2
             // 
@@ -119,6 +121,7 @@ namespace MiddleOut
             this.confirmPasswordOneBox.Size = new System.Drawing.Size(219, 20);
             this.confirmPasswordOneBox.TabIndex = 0;
             this.confirmPasswordOneBox.Text = "password";
+            this.confirmPasswordOneBox.TextChanged += new System.EventHandler(this.confirmPasswordOneBox_TextChanged);
             // 
             // panel1
             // 
@@ -198,6 +201,7 @@ namespace MiddleOut
             this.maskedTextBox1.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox1.TabIndex = 0;
             this.maskedTextBox1.Text = "Zipcode";
+            this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
             // 
             // panel5
             // 
@@ -221,6 +225,7 @@ namespace MiddleOut
             this.maskedTextBox2.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox2.TabIndex = 0;
             this.maskedTextBox2.Text = "Address 1";
+            this.maskedTextBox2.TextChanged += new System.EventHandler(this.maskedTextBox2_TextChanged);
             // 
             // panel6
             // 
@@ -244,6 +249,7 @@ namespace MiddleOut
             this.maskedTextBox3.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox3.TabIndex = 0;
             this.maskedTextBox3.Text = "Address 2";
+            this.maskedTextBox3.TextChanged += new System.EventHandler(this.maskedTextBox3_TextChanged);
             // 
             // panel7
             // 
@@ -267,6 +273,7 @@ namespace MiddleOut
             this.maskedTextBox4.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox4.TabIndex = 0;
             this.maskedTextBox4.Text = "City";
+            this.maskedTextBox4.TextChanged += new System.EventHandler(this.maskedTextBox4_TextChanged);
             // 
             // panel8
             // 
@@ -339,6 +346,7 @@ namespace MiddleOut
             this.maskedTextBox7.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox7.TabIndex = 0;
             this.maskedTextBox7.Text = "password";
+            this.maskedTextBox7.TextChanged += new System.EventHandler(this.maskedTextBox7_TextChanged);
             // 
             // panel11
             // 
@@ -386,6 +394,18 @@ namespace MiddleOut
             this.maskedTextBox9.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox9.TabIndex = 0;
             this.maskedTextBox9.Text = "Email Address";
+            this.maskedTextBox9.TextChanged += new System.EventHandler(this.maskedTextBox9_TextChanged);
+            // 
+            // errorTextBox
+            // 
+            this.errorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
+            this.errorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.errorTextBox.ForeColor = System.Drawing.Color.White;
+            this.errorTextBox.Location = new System.Drawing.Point(351, 111);
+            this.errorTextBox.Name = "errorTextBox";
+            this.errorTextBox.Size = new System.Drawing.Size(125, 13);
+            this.errorTextBox.TabIndex = 7;
             // 
             // Form2
             // 
@@ -393,6 +413,7 @@ namespace MiddleOut
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(488, 470);
+            this.Controls.Add(this.errorTextBox);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.signUpSubmit);
@@ -432,6 +453,7 @@ namespace MiddleOut
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -468,5 +490,6 @@ namespace MiddleOut
         private System.Windows.Forms.MaskedTextBox maskedTextBox8;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.MaskedTextBox maskedTextBox9;
+        private TextBox errorTextBox;
     }
 }

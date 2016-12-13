@@ -66,7 +66,7 @@
             this.passwordBox.PasswordChar = '•';
             this.passwordBox.Size = new System.Drawing.Size(219, 19);
             this.passwordBox.TabIndex = 0;
-            this.passwordBox.Text = "password";
+            this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
             // 
             // signInSubmit
             // 
@@ -105,7 +105,7 @@
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(219, 19);
             this.emailBox.TabIndex = 0;
-            this.emailBox.Text = "john@doe.com";
+            this.emailBox.TextChanged += new System.EventHandler(this.emailBox_TextChanged);
             this.emailBox.Enter += new System.EventHandler(this.emailBox_Enter);
             this.emailBox.Leave += new System.EventHandler(this.emailBox_Leave);
             // 
@@ -144,9 +144,11 @@
             // 
             this.errorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
             this.errorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.errorTextBox.ForeColor = System.Drawing.Color.White;
             this.errorTextBox.Location = new System.Drawing.Point(110, 139);
             this.errorTextBox.Name = "errorTextBox";
+            this.errorTextBox.ReadOnly = true;
             this.errorTextBox.Size = new System.Drawing.Size(263, 13);
             this.errorTextBox.TabIndex = 5;
             // 

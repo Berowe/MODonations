@@ -1,0 +1,45 @@
+{
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MiddleOut.User, MiddleOut]], mscorlib",
+  "": {
+    "$type": "MiddleOut.User, MiddleOut",
+    "myName": "",
+    "myPassword": "",
+    "myEmail": "",
+    "myStreet": "",
+    "myApartment": "",
+    "myCity": "",
+    "myState": "",
+    "myZipCode": "",
+    "myVehichleType": null,
+    "myCapacity": null,
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLicenseFilePath": null,
+    "myAdmin": false,
+    "myServices": {
+      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
+      "$values": []
+    }
+  },
+  "john@doe.com": {
+    "$type": "MiddleOut.User, MiddleOut",
+    "myName": "John Doe",
+    "myPassword": "password",
+    "myEmail": "john@doe.com",
+    "myStreet": "123 12nd Lane",
+    "myApartment": "111",
+    "myCity": "Tacoma",
+    "myState": null,
+    "myZipCode": "98405",
+    "myVehichleType": null,
+    "myCapacity": null,
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLicenseFilePath": null,
+    "myAdmin": false,
+    "myServices": {
+      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
+      "$values": []
+    }
+  }
+}
