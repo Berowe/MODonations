@@ -321,6 +321,7 @@ namespace MiddleOut
             this.maskedTextBox5.Size = new System.Drawing.Size(219, 20);
             this.maskedTextBox5.TabIndex = 0;
             this.maskedTextBox5.Text = "State";
+            this.maskedTextBox5.TextChanged += new System.EventHandler(this.maskedTextBox5_TextChanged);
             // 
             // panel10
             // 
