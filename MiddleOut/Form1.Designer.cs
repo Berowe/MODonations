@@ -39,6 +39,7 @@
             this.emailBox = new System.Windows.Forms.MaskedTextBox();
             this.signUpButton = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
+            this.errorTextBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -105,8 +106,8 @@
             this.emailBox.Size = new System.Drawing.Size(219, 19);
             this.emailBox.TabIndex = 0;
             this.emailBox.Text = "john@doe.com";
-            this.emailBox.Leave += new System.EventHandler(this.emailBox_Leave);
             this.emailBox.Enter += new System.EventHandler(this.emailBox_Enter);
+            this.emailBox.Leave += new System.EventHandler(this.emailBox_Leave);
             // 
             // signUpButton
             // 
@@ -139,12 +140,23 @@
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = false;
             // 
+            // errorTextBox
+            // 
+            this.errorTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
+            this.errorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.errorTextBox.ForeColor = System.Drawing.Color.White;
+            this.errorTextBox.Location = new System.Drawing.Point(110, 139);
+            this.errorTextBox.Name = "errorTextBox";
+            this.errorTextBox.Size = new System.Drawing.Size(263, 13);
+            this.errorTextBox.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(163)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(488, 470);
+            this.Controls.Add(this.errorTextBox);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.panel3);
@@ -159,6 +171,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -170,5 +183,6 @@
         private System.Windows.Forms.MaskedTextBox emailBox;
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Button aboutButton;
+        private System.Windows.Forms.TextBox errorTextBox;
     }
 }

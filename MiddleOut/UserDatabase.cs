@@ -16,7 +16,7 @@ namespace MiddleOut
 
         public UserDatabase()
         {
-            myUsers = new Dictionary<string, User>();
+            myUsers = new Dictionary<String, User>();
             buildPaths();
             pullUsers();
         }

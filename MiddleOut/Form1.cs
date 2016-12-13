@@ -25,6 +25,9 @@ namespace MiddleOut
 
             InitializeComponent();
             this.CenterToScreen();
+
+            USER_DATABASE = new UserDatabase();
+            SERVICE_DATABASE = new ServiceDatabase();
         }
 
         public Form1()
@@ -56,8 +59,15 @@ namespace MiddleOut
 
         private void signInSubmit_Click(object sender, EventArgs e)
         {
-            main.Show();
-            this.Close();
+            if (USER_DATABASE.verifyUser(emailBox.Text, passwordBox.Text))
+            {
+                main.Show();
+                this.Close();
+                main.setUsername(emailBox.Text);
+            } else
+            {
+                errorTextBox.Text = "Invalid E-mail or Password";
+            }
 
         }
 

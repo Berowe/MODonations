@@ -21,6 +21,8 @@ namespace MiddleOut
     /// </summary>
     public partial class MainWindow : ModernWindow
     {
+
+        private User myUser;
         UserDatabase USER_DATABASE { get; set;}
         ServiceDatabase SERVICE_DATABASE { get; set; }
         public string test { get; set; }
@@ -43,6 +45,12 @@ namespace MiddleOut
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        public void setUsername(string theUsername)
+        {
+            //myUser = new User()
 
         }
 
