@@ -91,7 +91,7 @@ namespace MiddleOut
         /// </summary>
         /// <param name="theUsername">The User ID.</param>
         /// <param name="thePassword">The User's Password.</param>
-        /// <returns></returns>
+        /// <returns>Returns true if both the username is in the database and the password matches, false if not.</returns>
         public Boolean verifyUser(String theUsername, String thePassword)
         {
             Boolean verify = false;
@@ -110,8 +110,8 @@ namespace MiddleOut
         /// @Author Karanbir TOor
         /// Gets the user from the database. 
         /// </summary>
-        /// <param name="theUsername"></param>
-        /// <returns></returns>
+        /// <param name="theUsername">The User ID.</param>
+        /// <returns>Returns User object.</returns>
         public User getUser(String theUsername)
         {
             User temp;
@@ -123,7 +123,7 @@ namespace MiddleOut
         /// Checks to see if the User is in the database.
         /// </summary>
         /// <param name="theUsername">The UserID being checked.</param>
-        /// <returns></returns>
+        /// <returns>Returns tre if the user is in the database, false if not.</returns>
         public Boolean checkUser(String theUsername)
         {
             Boolean verify = false;
