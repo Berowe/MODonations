@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -12,8 +13,22 @@ namespace MiddleOut
     /// </summary>
     public partial class EducatePage : UserControl
     {
+        /// <summary>
+        /// Author: Ameet Toor
+        /// The donation type for the education service.
+        /// </summary>
         private DonationTypes _donationType;
-        //TODO add other subjects to fit user story
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// The description of the service.
+        /// </summary>
+        private string _description;
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// The constructor that initializes the fields.
+        /// </summary>
         public EducatePage()
         {
             InitializeComponent();
@@ -22,6 +37,12 @@ namespace MiddleOut
             InitializeComboBoxes();
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Changes _donationType depending on which subject was chosen. And changes the secondary combobox content depending on the subject chosen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var subject = SubjectComboBox.SelectedItem.ToString();
@@ -42,6 +63,24 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Changes the desciption string to what is selected in the SpecificSubjectComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SpecificSubjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _description = SpecificSubjectComboBox.SelectedItem.ToString();
+        }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Creates the service and adds the service to the user that is currently logged in.
+        /// And directs the page to the Thank you page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
             //Set service to have this subject
@@ -52,6 +91,7 @@ namespace MiddleOut
 
             service.setServiceType(ServiceTypes.Educator);
             service.setDonationRequest(_donationType);
+            service.setDescription(_description);
 
             user.addService(service);
 
@@ -60,21 +100,40 @@ namespace MiddleOut
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Returns the donationType that is associated with this service.
+        /// </summary>
+        /// <returns>The donationType associated with this service.</returns>
         public DonationTypes GetChosenSubjectAsDonationType()
         {
             return _donationType;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Initializes fields.
+        /// </summary>
         private void InitializeFields()
         {
             _donationType = DonationTypes.MathEducator;
+            _description = string.Empty;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Initializes Buttons as enabled.
+        /// </summary>
         private void InitializeButtons()
         {
             ContinueButton.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Changes the content of the SpecificSubjectComboBox.
+        /// </summary>
+        /// <param name="theKey">The subject as a string.</param>
         private void SetSpecificSubjectComboBox(string theKey)
         {
 
@@ -96,6 +155,10 @@ namespace MiddleOut
             SpecificSubjectComboBox.ItemsSource = subjectList;
         }
 
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Initializes the SubjectComboBox.
+        /// </summary>
         private void InitializeComboBoxes()
         {
             var subjectList = new List<string>() { "Math", "Writing", "Reading" };
@@ -105,5 +168,7 @@ namespace MiddleOut
             SetSpecificSubjectComboBox("Math");
 
         }
+
+
     }
 }
