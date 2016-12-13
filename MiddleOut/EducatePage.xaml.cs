@@ -49,16 +49,11 @@ namespace MiddleOut
             User user = mainWindow.getUser();
 
             Service service = new Service(user.getName(), user.getEmail());
-            //Set ServiceType as Educator
-            //Set DonationType as ReadingEducator, MathEducator, or WritingEducator
 
-            //TODO change service class to have setServiceType(ServiceTypes theServiceType) method 
-            //TODO change service class to have setDonationType(DonationTypes theDonationType) method
+            service.setServiceType(ServiceTypes.Educator);
+            service.setDonationRequest(_donationType);
 
-            //service.setServiceType(ServiceTypes.Educator);
-            //service.setDonationType(_donationType);
-
-
+            user.addService(service);
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);

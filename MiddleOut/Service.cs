@@ -146,6 +146,16 @@ namespace MiddleOut
         {
             return myDonationRequest;
         }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Returns the service type.
+        /// </summary>
+        /// <returns>ServiceTypes</returns>
+        public ServiceTypes getDonationType()
+        {
+            return myServiceType;
+        }
         #endregion
 
         #region setters
@@ -203,7 +213,7 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// Sets the Service Type.
         /// </summary>
-        /// <param name="theServiceType"></param>
+        /// <param name="theServiceType">The Service Type.</param>
         public void setServiceType(ServiceTypes theServiceType) //Added this method
         {
             myServiceType = theServiceType;
