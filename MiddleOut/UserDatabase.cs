@@ -74,6 +74,9 @@ namespace MiddleOut
         /// <param name="theUser">The User object.</param>
         public void addUser(User theUser)
         {
+            if (checkUser(theUser.getEmail())) {
+                throw new Exception("Email already exists");
+            }
             myUsers.Add(theUser.getEmail(), theUser);
             string serial = JsonConvert.SerializeObject(myUsers, Formatting.Indented, new JsonSerializerSettings
             {

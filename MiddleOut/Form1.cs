@@ -18,6 +18,8 @@ namespace MiddleOut
         UserDatabase USER_DATABASE;
         ServiceDatabase SERVICE_DATABASE;
         private MainWindow main;
+        private string myEmail;
+        private string myPassword;
 
         public Form1(MainWindow theMain)
         {
@@ -28,6 +30,8 @@ namespace MiddleOut
 
             USER_DATABASE = new UserDatabase();
             SERVICE_DATABASE = new ServiceDatabase();
+            emailBox.Text = "john@doe.com";
+            passwordBox.Text = "password";
         }
 
         public Form1()
@@ -63,7 +67,7 @@ namespace MiddleOut
             {
                 main.Show();
                 this.Close();
-                main.setUsername(emailBox.Text);
+                main.setUsername(myEmail);
             } else
             {
                 errorTextBox.Text = "Invalid E-mail or Password";
@@ -86,6 +90,16 @@ namespace MiddleOut
                 emailBox.Text = "";
                 emailBox.ForeColor = Color.White;
             }
+        }
+
+        private void emailBox_TextChanged(object sender, EventArgs e)
+        {
+            myEmail = emailBox.Text;
+        }
+
+        private void passwordBox_TextChanged(object sender, EventArgs e)
+        {
+            myPassword = passwordBox.Text;
         }
     }
 }
