@@ -13,6 +13,10 @@ using System.Windows.Input;
 
 namespace MiddleOut
 {
+    /// <summary>
+    /// The sign in page for an existing user. 
+    /// @Author Karanbir
+    /// </summary>
     public partial class Form1 : Form
     {
         UserDatabase USER_DATABASE;
@@ -21,6 +25,11 @@ namespace MiddleOut
         private string myEmail;
         private string myPassword;
 
+        /// <summary>
+        /// Constructs a sign in form for an existing user to sign in with. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="theMain"></param>
         public Form1(MainWindow theMain)
         {
             main = theMain;
@@ -34,33 +43,24 @@ namespace MiddleOut
             passwordBox.Text = "password";
         }
 
-        public Form1()
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void signIn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void about_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Promps the user to sign up as a new user by initializing Form2. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void signUpButton_Click(object sender, EventArgs e)
         {
             Form2 signUpForm = new Form2(this, main);
             this.Hide();
-            
         }
 
+        /// <summary>
+        /// Existing user attempts to sign in. If successful, show the MainWindow. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void signInSubmit_Click(object sender, EventArgs e)
         {
             if (USER_DATABASE.verifyUser(emailBox.Text, passwordBox.Text))
@@ -75,6 +75,12 @@ namespace MiddleOut
 
         }
 
+        /// <summary>
+        /// Sets text to Email so the user knows what to input. 
+        /// @Author Charlton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void emailBox_Leave(object sender, EventArgs e)
         {
             if (emailBox.Text == "")
@@ -83,6 +89,13 @@ namespace MiddleOut
                 emailBox.ForeColor = Color.LightGray;
             }
         }
+
+        /// <summary>
+        /// Clears the field so the user can type. 
+        /// @Author Charlton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void emailBox_Enter(object sender, EventArgs e)
         {
             if (emailBox.Text == "Email")
@@ -92,11 +105,23 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// Saves the email entered. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void emailBox_TextChanged(object sender, EventArgs e)
         {
             myEmail = emailBox.Text;
         }
 
+        /// <summary>
+        /// Saves the password entered. 
+        /// @Author Karanbir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void passwordBox_TextChanged(object sender, EventArgs e)
         {
             myPassword = passwordBox.Text;
