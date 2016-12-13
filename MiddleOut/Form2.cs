@@ -101,5 +101,10 @@ namespace MiddleOut
         {
             myZip = maskedTextBox1.Text;
         }
+
+        private void maskedTextBox5_TextChanged(object sender, EventArgs e)
+        {
+            myState = maskedTextBox5.Text;
+        }
     }
 }
