@@ -7,7 +7,7 @@ namespace MiddleOut
     /// The ReviewService class associates a rating and a summary with a 
     /// user and a service.
     /// </summary>
-    internal class ReviewService
+    public class ReviewService
     {
         #region fields
         [JsonProperty("_summary")]

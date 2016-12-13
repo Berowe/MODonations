@@ -10,7 +10,7 @@ namespace MiddleOut
     /// <summary>
     /// The User database containing all User objects.
     /// </summary>
-    class UserDatabase
+    public class UserDatabase
     {
         #region fields
         private Dictionary<String, User> myUsers;
@@ -101,6 +101,19 @@ namespace MiddleOut
 
             }
             return verify;
+        }
+
+        /// <summary>
+        /// @Author Karanbir TOor
+        /// Gets the user from the database. 
+        /// </summary>
+        /// <param name="theUsername"></param>
+        /// <returns></returns>
+        public User getUser(String theUsername)
+        {
+            User temp;
+            myUsers.TryGetValue(theUsername, out temp);
+            return temp;
         }
 
         /// <summary>

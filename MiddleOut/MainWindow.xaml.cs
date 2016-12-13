@@ -50,8 +50,13 @@ namespace MiddleOut
 
         public void setUsername(string theUsername)
         {
-            //myUser = new User()
+            myUser = USER_DATABASE.getUser(theUsername);
+        }
 
+        public User getUser()
+        {
+            User temp = myUser;
+            return temp;
         }
 
 

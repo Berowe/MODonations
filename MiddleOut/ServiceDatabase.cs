@@ -12,7 +12,7 @@ namespace MiddleOut
     /// <summary>
     /// The Service Database class is where all Service objects are stored into their respective Dictionaries, sorted by  EnumTypes.
     /// </summary>
-    class ServiceDatabase
+    public class ServiceDatabase
     {
         #region fields
         private Dictionary<String, Service> myToys;

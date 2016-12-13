@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiddleOut
+ namespace MiddleOut
 {
     /// <summary>
     /// Donation type enumerations
@@ -21,5 +21,5 @@ namespace MiddleOut
     /// </summary>
     public enum UserTypes { User, Admin }
 
-    class EnumTypes { }
+    public class EnumTypes { }
 }

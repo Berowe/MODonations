@@ -9,7 +9,7 @@ namespace MiddleOut
     /// <summary>
     /// The User object class.
     /// </summary>
-    class User
+    public class User
     {
         #region fields
         [JsonProperty("myName")]

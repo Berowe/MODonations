@@ -7,7 +7,7 @@ namespace MiddleOut
     /// <summary>
     /// The Reports class creates a report for the given user.
     /// </summary>
-    internal class Reports
+    public class Reports
     {
         #region fields
         private List<Service> _listOfServices;

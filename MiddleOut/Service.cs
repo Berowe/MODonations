@@ -8,7 +8,7 @@ namespace MiddleOut
     /// <summary>
     /// The Service class is an object class for the Service object.
     /// </summary>
-    class Service
+    public class Service
     {
         #region private fields
         [JsonProperty("myName")]
