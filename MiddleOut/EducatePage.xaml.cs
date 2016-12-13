@@ -40,12 +40,25 @@ namespace MiddleOut
                 SetSpecificSubjectComboBox("Math");
                 _donationType = DonationTypes.MathEducator;
             }
-            //SpecificSubjectComboBox.IsEnabled = true;
         }
 
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
         {
             //Set service to have this subject
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+
+            Service service = new Service(user.getName(), user.getEmail());
+            //Set ServiceType as Educator
+            //Set DonationType as ReadingEducator, MathEducator, or WritingEducator
+
+            //TODO change service class to have setServiceType(ServiceTypes theServiceType) method 
+            //TODO change service class to have setDonationType(DonationTypes theDonationType) method
+
+            //service.setServiceType(ServiceTypes.Educator);
+            //service.setDonationType(_donationType);
+
+
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
@@ -96,7 +109,6 @@ namespace MiddleOut
 
             SetSpecificSubjectComboBox("Math");
 
-            //SpecificSubjectComboBox.IsEnabled = true;
         }
     }
 }
