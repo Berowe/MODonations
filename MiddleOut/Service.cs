@@ -34,7 +34,9 @@ namespace MiddleOut
         [JsonProperty("myReview")]
         private ReviewService myReview;
         [JsonProperty("myDonationRequest")]
-        private EnumTypes myDonationRequest;
+        private DonationTypes myDonationRequest; ///changes from EnumTypes to DonationTypes
+        [JsonProperty("myServiceType")]
+        private ServiceTypes myServiceType; //added ServiceTypes
         #endregion
 
         #region constructor
@@ -140,9 +142,19 @@ namespace MiddleOut
         /// Gets the Donation Request Type for the Service.
         /// </summary>
         /// <returns>Returns an EnumType of the Service object with the type of Donation it is.</returns>
-        public EnumTypes getDonationRequest()
+        public DonationTypes getDonationRequest()
         {
             return myDonationRequest;
+        }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Returns the service type.
+        /// </summary>
+        /// <returns>ServiceTypes</returns>
+        public ServiceTypes getDonationType()
+        {
+            return myServiceType;
         }
         #endregion
 
@@ -192,9 +204,19 @@ namespace MiddleOut
         /// Sets the type of Donation of the Service Object.
         /// </summary>
         /// <param name="theType">The type of donation.</param>
-        public void setDonationRequest(EnumTypes theType)
+        public void setDonationRequest(DonationTypes theType) //Changed this to DonationTypes
         {
             myDonationRequest = theType;
+        }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the Service Type.
+        /// </summary>
+        /// <param name="theServiceType">The Service Type.</param>
+        public void setServiceType(ServiceTypes theServiceType) //Added this method
+        {
+            myServiceType = theServiceType;
         }
 
         /// <summary>
