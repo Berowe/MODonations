@@ -27,6 +27,14 @@
                     <TextBlock Name="SubjectTextBox" Text="Subject:" Grid.Column="0"/>
                     <ComboBox Name="SubjectComboBox" Text="Subject" Grid.Column="1" SelectionChanged="SubjectComboBox_SelectionChanged"/>
                 </Grid>
+                <Grid Name="SpecificSubjectTextBoxAndComboGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Name="SpecificSubjectTextBox" Text="Specific Subject:" Grid.Column="0"/>
+                    <ComboBox Name="SpecificSubjectComboBox" Text="Specific Subject" Grid.Column="1" SelectionChanged="SubjectComboBox_SelectionChanged"/>
+                </Grid>
             </StackPanel>
         </Grid>
 

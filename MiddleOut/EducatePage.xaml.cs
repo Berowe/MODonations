@@ -13,6 +13,7 @@ namespace MiddleOut
     public partial class EducatePage : UserControl
     {
         private DonationTypes _donationType;
+        //TODO add other subjects to fit user story
         public EducatePage()
         {
             InitializeComponent();
@@ -27,15 +28,19 @@ namespace MiddleOut
             if (subject.Equals("Writing"))
             {
                 _donationType = DonationTypes.WritingEducator;
+                SetSpecificSubjectComboBox("Writing");
             }
             else if (subject.Equals("Reading"))
             {
+                SetSpecificSubjectComboBox("Reading");
                 _donationType = DonationTypes.ReadingEducator;
             }
             else
             {
+                SetSpecificSubjectComboBox("Math");
                 _donationType = DonationTypes.MathEducator;
             }
+            //SpecificSubjectComboBox.IsEnabled = true;
         }
 
         private void ContinueButton_Click(object sender, RoutedEventArgs e)
@@ -62,11 +67,36 @@ namespace MiddleOut
             ContinueButton.IsEnabled = true;
         }
 
+        private void SetSpecificSubjectComboBox(string theKey)
+        {
+
+            List<string> subjectList;
+
+            if (theKey.Equals("Writing"))
+            {
+                subjectList = new List<string>() { "Persuasive", "Research", "Explanatory", "Narrative" };
+
+            }
+            else if (theKey.Equals("Reading"))
+            {
+                subjectList = new List<string>() { "Fiction", "NonFiction" };
+            }
+            else //If theKey is equal to Math
+            {
+                subjectList = new List<string>() { "Algebra", "Calculus", "Geometry" };
+            }
+            SpecificSubjectComboBox.ItemsSource = subjectList;
+        }
+
         private void InitializeComboBoxes()
         {
-            var subjectList = new List<string>() {"Math", "Reading", "Writing" };
+            var subjectList = new List<string>() { "Math", "Writing", "Reading" };
+
             SubjectComboBox.ItemsSource = subjectList;
-            SubjectComboBox.SelectedIndex = 0;
+
+            SetSpecificSubjectComboBox("Math");
+
+            //SpecificSubjectComboBox.IsEnabled = true;
         }
     }
 }
