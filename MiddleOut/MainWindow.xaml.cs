@@ -21,7 +21,7 @@ namespace MiddleOut
     /// </summary>
     public partial class MainWindow : ModernWindow
     {
-
+        private ServiceTypes myServiceType;
         private User myUser;
         UserDatabase USER_DATABASE { get; set;}
         ServiceDatabase SERVICE_DATABASE { get; set; }
@@ -39,7 +39,8 @@ namespace MiddleOut
             ReviewService review = new ReviewService(4, "the best");
 
             Console.WriteLine(review.ToString());
-            
+
+
             // Karan region
         }
 
@@ -62,6 +63,26 @@ namespace MiddleOut
         public void setUser(User theUser)
         {
             myUser = theUser;
+        }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Gets the service type of the Service being added.
+        /// </summary>
+        /// <returns>The service type of the current Service.</returns>
+        public ServiceTypes getServiceType()
+        {
+            return myServiceType;
+        }
+
+        /// <summary>
+        /// Author: Ameet Toor
+        /// Sets the service type of the Service being added.
+        /// </summary>
+        /// <param name="theServiceType">The current service type.</param>
+        public void setServiceType(ServiceTypes theServiceType)
+        {
+            myServiceType = theServiceType;
         }
 
 

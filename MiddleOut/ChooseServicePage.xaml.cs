@@ -30,25 +30,31 @@ namespace MiddleOut
         }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
-        {   
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+
             if ((bool)DriverRadioButton.IsChecked)
             {
                 _serviceTypes = ServiceTypes.Driver;
+                mainWindow.setServiceType(_serviceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
             } else if ((bool)DonateRadioButton.IsChecked)
             {
                 _serviceTypes = ServiceTypes.Donor;
+                mainWindow.setServiceType(_serviceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             } else if ((bool)EducateRadioButton.IsChecked)
             {
                 _serviceTypes = ServiceTypes.Educator;
+                mainWindow.setServiceType(_serviceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/EducatePage.xaml", target);
             } else if ((bool)RequestGoodsButton.IsChecked)
             {
                 _serviceTypes = ServiceTypes.Requester;
+                mainWindow.setServiceType(_serviceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             }

@@ -22,6 +22,12 @@ namespace MiddleOut
     /// </summary>
     public partial class InformationPage : UserControl
     {
+        private string _vehicleType;
+        private string _capacity;
+        private string _startTime;
+        private string _stopTime;
+        private string _filePath;
+
         public InformationPage()
         {
             InitializeComponent();
@@ -34,18 +40,39 @@ namespace MiddleOut
             
             vehicleList.ItemsSource = vehicles;
             vehicleList.SelectedIndex = 0;
+            _vehicleType = string.Empty;
+            _capacity = string.Empty;
+            _startTime = string.Empty;
+            _stopTime = string.Empty;
+            _filePath = string.Empty;
         }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+
+            //Add driver info to user
+            user.addDriver(_vehicleType, _capacity, _startTime, _stopTime, _filePath);
+
+            //Add driving service to user
+            Service service = new Service(user.getName(), user.getEmail());
+
+            service.setServiceType(ServiceTypes.Driver);
+            service.setDonationRequest(DonationTypes.TransportGoods);
+
+            user.addService(service);
+
+
+
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
 
         private void capacityBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            _capacity = new TextRange(capacityBox.Document.ContentStart, capacityBox.Document.ContentEnd).Text;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -74,23 +101,23 @@ namespace MiddleOut
                 String[] temp = filename.Split('\\');
                 textBlock1.Text = temp[temp.Length - 1];
                 nextPage.IsEnabled = true;
+                _filePath = filename;
             }
         }
 
         private void startTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            _startTime = new TextRange(startTimeBox.Document.ContentStart, startTimeBox.Document.ContentEnd).Text;
         }
 
         private void endTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            _stopTime = new TextRange(endTimeBox.Document.ContentStart, endTimeBox.Document.ContentEnd).Text;
         }
 
         private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Console.WriteLine(vehicleList.SelectedItem as String);
-            
+            _vehicleType = vehicleList.SelectedItem.ToString();
         }
 
         private void startTimeBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
