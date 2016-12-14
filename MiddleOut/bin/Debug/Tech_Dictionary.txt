@@ -20,6 +20,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310021": {
@@ -42,6 +43,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310022": {
@@ -64,6 +66,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310023": {
@@ -86,6 +89,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310024": {
@@ -108,6 +112,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310025": {
@@ -130,6 +135,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310026": {
@@ -152,6 +158,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310027": {
@@ -174,6 +181,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310028": {
@@ -196,6 +204,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310029": {
@@ -218,6 +227,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310030": {
@@ -240,6 +250,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310031": {
@@ -262,6 +273,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 0,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310032": {
@@ -284,6 +296,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 2,
+    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1310033": {
@@ -306,6 +319,30 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 2,
+    "myServiceRequest": 0,
+    "myServiceType": 0
+  },
+  "1310034": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "1310034",
+    "myServiceDescription": "Tech",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 2,
+    "myServiceRequest": 0,
     "myServiceType": 0
   }
 }

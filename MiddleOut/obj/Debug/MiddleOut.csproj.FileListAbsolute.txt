@@ -228,3 +228,5 @@ C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.g.cs
+C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.baml
+C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.g.cs

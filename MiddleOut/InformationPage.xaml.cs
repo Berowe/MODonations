@@ -157,7 +157,7 @@ namespace MiddleOut
         /// <param name="e"></param>
         private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //_vehicleType = vehicleList.SelectedItem.ToString();
+            _vehicleType = vehicleList.SelectedItem.ToString();
         }
 
         /// <summary>
