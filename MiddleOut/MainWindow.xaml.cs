@@ -45,7 +45,6 @@ namespace MiddleOut
             ReviewService review = new ReviewService(4, "the best");
 
             Console.WriteLine(review.ToString());
-            
         }
 
         /// <summary>
