@@ -20,6 +20,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 10,
+    "myServiceRequest": 0,
     "myServiceType": 2
   }
 }

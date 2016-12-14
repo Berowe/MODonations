@@ -162,7 +162,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.ReadingEducator:
                             theService.setServiceID(createServiceID(dType));
-                            myReadingEducators.Add(theService.getServiceID(), theService);
+                            if (theService.getServiceID() == null)
+                                myReadingEducators.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myReadingEducators);
                             writeFile(myDictionaryFileStrings[10], serial);
                             myServiceIDs.Add(theService.getServiceID());

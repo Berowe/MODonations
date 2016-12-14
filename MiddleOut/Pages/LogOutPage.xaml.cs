@@ -36,7 +36,7 @@ namespace MiddleOut
         private void noButton_Click(object sender, RoutedEventArgs e)
         {
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
-            NavigationCommands.GoToPage.Execute("/Pages/Home.xaml", target);
+            NavigationCommands.BrowseBack.Execute(null, target);
         }
     }
 }

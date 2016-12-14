@@ -10,11 +10,18 @@
     <Grid Style="{StaticResource ContentRoot}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="4*" />
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Welcome to Middle Out" HorizontalAlignment="Center" Grid.Row="0"/>
-        <TextBlock Name="services"  Text="" HorizontalAlignment="Stretch" Grid.Row="1" />
-        <Image Grid.Row="2" Source="/MiddleOut;component/Images/middleout.jpg" Loaded="Image_Loaded"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Welcome to Middle Out" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock Name="userInfo" Text="" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left"/>
+        <ScrollViewer Grid.Row="1" Grid.Column="1">
+            <TextBlock Name="services"  Text="" HorizontalAlignment="Right"/>
+        </ScrollViewer>
+        <Image Grid.Row="2" Grid.Column="1" Source="/MiddleOut;component/Images/middleout.jpg" Loaded="Image_Loaded" HorizontalAlignment="Right"/>
     </Grid>
 </UserControl>
