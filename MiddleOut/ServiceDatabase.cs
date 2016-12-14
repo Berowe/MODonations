@@ -623,7 +623,7 @@ namespace MiddleOut
                             print.Append(getServices(prefix.ToString(), myFirstAid));
                             break;
                         case DonationTypes.Food:
-                            prefix.Append("16" + mySerialNumbers[myStrings[5]]);
+                            prefix.Append("16" + mySerialNumbers[myStrings[6]]);
                             print.Append(getServices(prefix.ToString(), myFood));
                             break;
                         case DonationTypes.Hygene:
