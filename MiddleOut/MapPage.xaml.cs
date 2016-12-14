@@ -44,10 +44,34 @@ namespace MiddleOut
 
         public List<Street> Dijkstra(Location theStart, Location theEnd)
         {
-            List<Street> toReturn = new List<Street>();
+            List<Street> shortestPath = new List<Street>();
+            Dictionary<Location, int> buildPaths = new Dictionary<Location, int>();
+            buildPaths.Add(theStart, 0);
+            
+            bool foundEnd = false;
+            int count = 0;
+            while (!foundEnd) {
+                //List<Street> neighbors = getNeighbors(buildPaths[count]);
+            }
+            return shortestPath;
+        }
 
-
-            return toReturn;
+        public List<Street> getNeighbors(Location theStart)
+        {
+            List<Street> neighbors = new List<Street>();
+            for (int i = 0; i < myStreets.Count; i ++)
+            {
+                Street temp = myStreets[i];
+                if (temp.myA.Equals(theStart))
+                {
+                    neighbors.Add(temp);
+                }
+                else if (temp.myB.Equals(theStart))
+                {
+                    neighbors.Add(temp);
+                }
+            }
+            return neighbors;
         }
 
         public class Location
@@ -64,9 +88,9 @@ namespace MiddleOut
 
         public class Street
         {
-            private int myWeight { get; }
-            private Location myA { get; }
-            private Location myB { get; }
+            public int myWeight { get; }
+            public Location myA { get; }
+            public Location myB { get; }
 
             public Street(int theWeight, Location theA, Location theB)
             {
