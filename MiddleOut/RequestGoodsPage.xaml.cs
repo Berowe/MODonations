@@ -98,7 +98,15 @@ namespace MiddleOut
 
             service.setServiceType(mainWindow.getServiceType());
             service.setDonationRequest(_donationType);
-            service.setDescription(_description);
+            if (_donationType != DonationTypes.Other)
+            {
+                service.setDescription(_donationType.ToString());
+            }
+            else
+            {
+                service.setDescription(_description);
+
+            }
 
             user.addService(service);
 
