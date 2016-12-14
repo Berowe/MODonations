@@ -170,16 +170,11 @@ namespace MiddleOut
                     }
                     break;
                 case ServiceTypes.Requester:
-                    switch (dType)
-                    {
-                        case DonationTypes.DonationRequest:
-                            theService.setServiceID(createServiceID(dType));
-                            myDonationRequests.Add(theService.getServiceID(), theService);
-                            serial = serializeDictionary(myDonationRequests);
-                            writeFile(myDictionaryFileStrings[12], serial);
-                            myServiceIDs.Add(theService.getServiceID());
-                            break;
-                    }
+                    theService.setServiceID(createServiceID(DonationTypes.DonationRequest));
+                    myDonationRequests.Add(theService.getServiceID(), theService);
+                    serial = serializeDictionary(myDonationRequests);
+                    writeFile(myDictionaryFileStrings[12], serial);
+                    myServiceIDs.Add(theService.getServiceID());
                     break;
             }
         }
