@@ -22,18 +22,18 @@ namespace MiddleOut
     /// </summary>
     public partial class RequestGoodsPage : UserControl
     {
-        private DonationTypes _donationType;
-        private string _description;
+        private DonationTypes myDonationType;
+        private string myDescription;
         public RequestGoodsPage()
         {
             InitializeComponent();
             OtherTextBox.Text = "Donation";
-            _description = string.Empty;
+            myDescription = string.Empty;
         }
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Gets the checkbox that is checked, and assigns the DonationType to _donationType.
+        /// Gets the checkbox that is checked, and assigns the DonationType to myDonationType.
         /// </summary>
         private void checkWhichButtonChecked()
         {
@@ -66,7 +66,7 @@ namespace MiddleOut
             {
                 result = DonationTypes.Other;
             }
-            _donationType =  result;
+            myDonationType =  result;
         }
 
         private void OtherTextBox_LostFocus(object sender, RoutedEventArgs e)
@@ -97,21 +97,21 @@ namespace MiddleOut
             Service service = new Service(user.getName(), user.getEmail());
 
             service.setServiceType(mainWindow.getServiceType());
-            service.setDonationRequest(_donationType);
-            if (_donationType != DonationTypes.Other)
+            service.setDonationRequest(myDonationType);
+            if (myDonationType != DonationTypes.Other)
             {
-                service.setDescription(_donationType.ToString());
+                service.setDescription(myDonationType.ToString());
             }
             else
             {
-                service.setDescription(_description);
+                service.setDescription(myDescription);
 
             }
 
             user.addService(service);
 
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
-            serviceDatabase.createService(mainWindow.getServiceType(), _donationType, user, service);
+            serviceDatabase.createService(mainWindow.getServiceType(), myDonationType, user, service);
 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
@@ -125,7 +125,7 @@ namespace MiddleOut
         /// <param name="e"></param>
         private void OtherTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            _description = OtherTextBox.Text;
+            myDescription = OtherTextBox.Text;
         }
         private void OtherRadioButton_Click(object sender, RoutedEventArgs e)
         {
