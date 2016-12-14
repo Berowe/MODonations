@@ -119,5 +119,14 @@ namespace MiddleOut
         {
             _description = OtherTextBox.Text;
         }
+        private void OtherRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            OtherTextBox.IsEnabled = true;
+        }
+
+        private void OtherRadioButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OtherTextBox.IsEnabled = false;
+        }
     }
 }

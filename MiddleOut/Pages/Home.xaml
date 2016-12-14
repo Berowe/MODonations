@@ -7,10 +7,11 @@
              d:DesignHeight="300" d:DesignWidth="300"
              >
     <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <StackPanel MinWidth="200">
-                <TextBlock Text="TODO: add content" />
-            </StackPanel>
-        </ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Welcome to Middle Out" HorizontalAlignment="Center" Grid.Row="0"/>
+        <Image Grid.Row="1" Source="/MiddleOut;component/Images/middleout.jpg"/>
     </Grid>
 </UserControl>
