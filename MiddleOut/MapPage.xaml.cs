@@ -51,24 +51,24 @@ namespace MiddleOut
             bool foundEnd = false;
             int count = 0;
             while (!foundEnd) {
-                //List<Location> neighbors = getNeighbors(buildPaths[count]);
+                List<Street> neighbors = getNeighbors(buildPaths[count]);
             }
             return shortestPath;
         }
 
-        public List<Location> getNeighbors(Location theStart)
+        public List<Street> getNeighbors(Location theStart)
         {
-            List<Location> neighbors = new List<Location>();
+            List<Street> neighbors = new List<Street>();
             for (int i = 0; i < myStreets.Count; i ++)
             {
                 Street temp = myStreets[i];
                 if (temp.myA.Equals(theStart))
                 {
-                    neighbors.Add(temp.myB);
+                    neighbors.Add(temp);
                 }
                 else if (temp.myB.Equals(theStart))
                 {
-                    neighbors.Add(temp.myA);
+                    neighbors.Add(temp);
                 }
             }
             return neighbors;
