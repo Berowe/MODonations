@@ -23,6 +23,7 @@ namespace MiddleOut.Pages
         public Home()
         {
             InitializeComponent();
+
         }
     }
 }

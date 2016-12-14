@@ -98,7 +98,15 @@ namespace MiddleOut
 
             service.setServiceType(mainWindow.getServiceType());
             service.setDonationRequest(_donationType);
-            service.setDescription(_description);
+            if (_donationType != DonationTypes.Other)
+            {
+                service.setDescription(_donationType.ToString());
+            }
+            else
+            {
+                service.setDescription(_description);
+
+            }
 
             user.addService(service);
 
@@ -118,6 +126,15 @@ namespace MiddleOut
         private void OtherTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             _description = OtherTextBox.Text;
+        }
+        private void OtherRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            OtherTextBox.IsEnabled = true;
+        }
+
+        private void OtherRadioButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            OtherTextBox.IsEnabled = false;
         }
     }
 }
