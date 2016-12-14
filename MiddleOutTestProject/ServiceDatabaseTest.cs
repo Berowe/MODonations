@@ -139,11 +139,7 @@ namespace MiddleOutTestProject
 
             Service request = sBase.retrieveService("4110000");
             Assert.AreEqual(request, sBase.retrieveService("4110000"));
-        } 
 
-        [TestCleanup]
-        private void Delete_Files()
-        {
             string path = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow";
             File.Delete(Path.Combine(path, "Toy_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Clothes_Dictionary.txt"));
@@ -162,6 +158,7 @@ namespace MiddleOutTestProject
             File.Delete(Path.Combine(path, "Request_Dictionary.txt"));
 
             File.Delete(Path.Combine(path, "serial_list.txt"));
+            File.Delete(Path.Combine(path, "userlist.txt"));
         }
     }
 }
