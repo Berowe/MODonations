@@ -51,7 +51,7 @@ namespace MiddleOut
             bool foundEnd = false;
             int count = 0;
             while (!foundEnd) {
-                List<Street> neighbors = getNeighbors(buildPaths[count]);
+                //List<Street> neighbors = getNeighbors(buildPaths[count]);
             }
             return shortestPath;
         }
