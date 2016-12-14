@@ -69,10 +69,12 @@ namespace MiddleOut
 
             service.setServiceType(ServiceTypes.Driver);
             service.setDonationRequest(DonationTypes.TransportGoods);
+            service.setDescription("Driving goods.");
 
             user.addService(service);
 
-
+            ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
+            serviceDatabase.createService(ServiceTypes.Driver, DonationTypes.TransportGoods, user, service);
 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);

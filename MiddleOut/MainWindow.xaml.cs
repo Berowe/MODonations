@@ -68,6 +68,15 @@ namespace MiddleOut
         }
 
         /// <summary>
+        /// Author: Ameet Toor
+        /// Returns the ServiceDatabase.
+        /// </summary>
+        /// <returns>ServiceDatabase</returns>
+        public ServiceDatabase GetServiceDatabase()
+        {
+            return SERVICE_DATABASE;
+        }
+        /// <summary>
         /// Sets the user for this session. 
         /// @Author Karanbir
         /// </summary>

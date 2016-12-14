@@ -102,6 +102,9 @@ namespace MiddleOut
 
             user.addService(service);
 
+            ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
+            serviceDatabase.createService(mainWindow.getServiceType(), _donationType, user, service);
+
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
         }
