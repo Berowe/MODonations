@@ -226,3 +226,5 @@ C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
