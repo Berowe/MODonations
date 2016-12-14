@@ -1,10 +1,10 @@
 {
   "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MiddleOut.Service, MiddleOut]], mscorlib",
-  "1810000": {
+  "3310000": {
     "$type": "MiddleOut.Service, MiddleOut",
     "myName": "John Doe",
     "myUserID": "john@doe.com",
-    "myServiceID": "1810000",
+    "myServiceID": "3310000",
     "myServiceDescription": "",
     "myTimeStart": null,
     "myTimeStop": null,
@@ -19,15 +19,15 @@
     "myCompleted": false,
     "mySelected": false,
     "myReview": null,
-    "myDonationRequest": 7,
-    "myServiceType": 0
+    "myDonationRequest": 11,
+    "myServiceType": 2
   },
-  "1810001": {
+  "3310001": {
     "$type": "MiddleOut.Service, MiddleOut",
     "myName": "John Doe",
     "myUserID": "john@doe.com",
-    "myServiceID": "1810001",
-    "myServiceDescription": "",
+    "myServiceID": "3310001",
+    "myServiceDescription": "Research",
     "myTimeStart": null,
     "myTimeStop": null,
     "myLocation": {
@@ -41,7 +41,7 @@
     "myCompleted": false,
     "mySelected": false,
     "myReview": null,
-    "myDonationRequest": 7,
-    "myServiceType": 0
+    "myDonationRequest": 11,
+    "myServiceType": 2
   }
 }

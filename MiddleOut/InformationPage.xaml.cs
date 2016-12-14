@@ -157,7 +157,7 @@ namespace MiddleOut
         /// <param name="e"></param>
         private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _vehicleType = vehicleList.SelectedItem.ToString();
+            //_vehicleType = vehicleList.SelectedItem.ToString();
         }
 
         /// <summary>
@@ -200,6 +200,18 @@ namespace MiddleOut
             {
                 capacity.Text = "";
             }
+        }
+
+        private void vehicleList_DropDownClosed(object sender, EventArgs e)
+        {
+            if (vehicleList.SelectedItem.ToString() == "Sedan")//"Sedan")
+                vehicleList.SelectedIndex = 0;
+            else if (vehicleList.SelectedItem.ToString() == "Truck") //"Truck")
+                vehicleList.SelectedIndex = 1;
+            else if (vehicleList.SelectedItem.ToString() == "SUV") //== "SUV")
+                vehicleList.SelectedIndex = 2; 
+            else if (vehicleList.SelectedItem.ToString() == "Compact") //== "Compact")
+                vehicleList.SelectedIndex = 3;
         }
     }
 }

@@ -18,7 +18,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310021": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -38,7 +40,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310022": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -58,7 +62,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310023": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -78,7 +84,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310024": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -98,7 +106,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310025": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -118,7 +128,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310026": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -138,7 +150,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310027": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -158,7 +172,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310028": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -178,7 +194,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310029": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -198,7 +216,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310030": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -218,7 +238,9 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
   },
   "1310031": {
     "$type": "MiddleOut.Service, MiddleOut",
@@ -238,6 +260,52 @@
     "myTaxCredit": 0.0,
     "myCompleted": false,
     "mySelected": false,
-    "myReview": null
+    "myReview": null,
+    "myDonationRequest": 0,
+    "myServiceType": 0
+  },
+  "1310032": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "1310032",
+    "myServiceDescription": "Tech",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 2,
+    "myServiceType": 0
+  },
+  "1310033": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "1310033",
+    "myServiceDescription": "Tech",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 2,
+    "myServiceType": 0
   }
 }
