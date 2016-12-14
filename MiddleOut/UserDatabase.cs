@@ -87,6 +87,16 @@ namespace MiddleOut
         }
 
         /// <summary>
+        /// Removes a User object from the Dictionary.
+        /// </summary>
+        /// <param name="theUserID">The User ID.</param>
+        public void deleteUser(String theUserID)
+        {
+            myUsers.Remove(theUserID);
+            updateDatabase();
+        }
+
+        /// <summary>
         /// Verifies whether the User object is in the database, and if it is, verifies the password.
         /// </summary>
         /// <param name="theUsername">The User ID.</param>
@@ -132,6 +142,11 @@ namespace MiddleOut
                 verify = true;
             }
             return verify;
+        }
+
+        public String getFileName()
+        {
+            return myFileName;
         }
         #endregion
 
