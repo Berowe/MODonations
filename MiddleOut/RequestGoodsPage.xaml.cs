@@ -29,15 +29,6 @@ namespace MiddleOut
             InitializeComponent();
             OtherTextBox.Text = "Donation";
             _description = string.Empty;
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            if (mainWindow.getServiceType().ToString().Equals("Donor"))
-            {
-                HeadingTextBlock.Text = "Choose a Donation";
-            }
-            else
-            {
-                HeadingTextBlock.Text = "Choose a Request";
-            }
         }
 
         /// <summary>
