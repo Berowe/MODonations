@@ -19,8 +19,8 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// The summary of the service review.
         /// </summary>
-        [JsonProperty("_summary")]
-        private readonly string _summary;
+        [JsonProperty("mySummary")]
+        private readonly string mySummary;
 
         /// <summary>
         /// Author: Braxton Rowe
@@ -29,8 +29,8 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// The int that holds the rating of the service.
         /// </summary>
-        [JsonProperty("_rating")]
-        private readonly int _rating;
+        [JsonProperty("myRating")]
+        private readonly int myRating;
         #endregion
 
         #region methods
@@ -40,15 +40,15 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// Constructor that sets the fields.
         /// </summary>
-        /// <param name="theRating">The rating of the service, ranges from 0 to 5.</param>
-        /// <param name="theSummary">Summary of the service.</param>
-        public ReviewService(int theRating, string theSummary)
+        /// <param name="theMyRating">The rating of the service, ranges from 0 to 5.</param>
+        /// <param name="theMySummary">Summary of the service.</param>
+        public ReviewService(int theMyRating, string theMySummary)
         {
-            _summary = theSummary;
+            mySummary = theMySummary;
 
-            if (theRating < 0) theRating = 0;
-            if (theRating > 5) theRating = 5;
-            _rating = theRating;
+            if (theMyRating < 0) theMyRating = 0;
+            if (theMyRating > 5) theMyRating = 5;
+            myRating = theMyRating;
         }
 
         /// <summary>
@@ -61,8 +61,8 @@ namespace MiddleOut
         {
             var sb = new StringBuilder();
             sb.Append("Review: \n");
-            sb.Append("Rating: " + _rating + "/5\n");
-            sb.Append("Summary: " + _summary + "\n");
+            sb.Append("Rating: " + myRating + "/5\n");
+            sb.Append("Summary: " + mySummary + "\n");
             return sb.ToString();
         }
         #endregion
