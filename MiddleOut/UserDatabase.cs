@@ -143,11 +143,6 @@ namespace MiddleOut
             }
             return verify;
         }
-
-        public String getFileName()
-        {
-            return myFileName;
-        }
         #endregion
 
         #region static methods

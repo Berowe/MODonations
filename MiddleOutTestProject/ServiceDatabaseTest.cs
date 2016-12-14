@@ -1,4 +1,4 @@
-﻿using System;
+﻿// Author: Braxton Rowe
 using MiddleOut;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
@@ -9,7 +9,7 @@ namespace MiddleOutTestProject
     public class ServiceDatabaseTest
     {
         [TestMethod]
-        public void createServicesTest()
+        public void Service_Database_Test()
         {
             ServiceDatabase sBase = new ServiceDatabase();
             UserDatabase uBase = new UserDatabase();;
@@ -90,8 +90,61 @@ namespace MiddleOutTestProject
         public void Existing_Database_Test()
         {
             ServiceDatabase sBase = new ServiceDatabase();
+
+            Assert.AreEqual("1110000\n1210000\n1310000\n1410000\n1610000\n1510000\n1810000\n", sBase.printServices(ServiceTypes.Donor));
+            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver));
+            Assert.AreEqual("3110000\n3210000\n3310000\n", sBase.printServices(ServiceTypes.Educator));
+            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester));
+
+            Assert.AreEqual("1110000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Toys));
+            Assert.AreEqual("1210000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Clothes));
+            Assert.AreEqual("1310000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Tech));
+            Assert.AreEqual("1410000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.FirstAid));
+            Assert.AreEqual("1510000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Hygene));
+            Assert.AreEqual("1610000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Food));
+            Assert.AreEqual("1810000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Other));
+
+            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver, DonationTypes.TransportGoods));
+
+            Assert.AreEqual("3110000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.MathEducator));
+            Assert.AreEqual("3210000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.ReadingEducator));
+            Assert.AreEqual("3310000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.WritingEducator));
+
+            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester, DonationTypes.DonationRequest));
+
+            Service toy = sBase.retrieveService("1110000");
+            Assert.AreEqual(toy, sBase.retrieveService("1110000"));
+            Service clothes = sBase.retrieveService("1210000");
+            Assert.AreEqual(clothes, sBase.retrieveService("1210000"));
+            Service tech = sBase.retrieveService("1310000");
+            Assert.AreEqual(tech, sBase.retrieveService("1310000"));
+            Service faid = sBase.retrieveService("1410000");
+            Assert.AreEqual(faid, sBase.retrieveService("1410000"));
+            Service hygiene = sBase.retrieveService("1510000");
+            Assert.AreEqual(hygiene, sBase.retrieveService("1510000"));
+            Service food = sBase.retrieveService("1610000");
+            Assert.AreEqual(food, sBase.retrieveService("1610000"));
+            Service other = sBase.retrieveService("1810000");
+            Assert.AreEqual(other, sBase.retrieveService("1810000"));
+
+            Service drive = sBase.retrieveService("2110000");
+            Assert.AreEqual(drive, sBase.retrieveService("2110000"));
+
+            Service math = sBase.retrieveService("3110000");
+            Assert.AreEqual(math, sBase.retrieveService("3110000"));
+            Service read = sBase.retrieveService("3210000");
+            Assert.AreEqual(read, sBase.retrieveService("3210000"));
+            Service write = sBase.retrieveService("3310000");
+            Assert.AreEqual(write, sBase.retrieveService("3310000"));
+
+            Service request = sBase.retrieveService("4110000");
+            Assert.AreEqual(request, sBase.retrieveService("4110000"));
+        } 
+
+        [TestCleanup]
+        private void Delete_Files()
+        {
             string path = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow";
-            Console.WriteLine(path);
             File.Delete(Path.Combine(path, "Toy_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Clothes_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Tech_Dictionary.txt"));
@@ -109,6 +162,6 @@ namespace MiddleOutTestProject
             File.Delete(Path.Combine(path, "Request_Dictionary.txt"));
 
             File.Delete(Path.Combine(path, "serial_list.txt"));
-        } 
+        }
     }
 }
