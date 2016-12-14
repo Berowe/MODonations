@@ -35,6 +35,8 @@ namespace MiddleOut
         private ReviewService myReview;
         [JsonProperty("myDonationRequest")]
         private DonationTypes myDonationRequest; ///changes from EnumTypes to DonationTypes
+        [JsonProperty("myServiceRequest")]
+        private ServiceTypes myServiceRequest;
         [JsonProperty("myServiceType")]
         private ServiceTypes myServiceType; //added ServiceTypes
         #endregion
@@ -91,6 +93,14 @@ namespace MiddleOut
         public String getDescription()
         {
             return myServiceDescription;
+        }
+
+        public String[] getTime()
+        {
+            String[] time = new String[2];
+            time[0] = myTimeStart;
+            time[1] = myTimeStop;
+            return time;
         }
 
         /// <summary>

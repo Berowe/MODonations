@@ -27,6 +27,7 @@ namespace MiddleOut
         ServiceDatabase SERVICE_DATABASE { get; set; }
         public string test { get; set; }
 
+
         /// <summary>
         /// Constructs a MainWindow and hides it. 
         /// @Author Karanbir and Ameet
@@ -38,7 +39,7 @@ namespace MiddleOut
             USER_DATABASE = new UserDatabase();
             this.Hide();
             InitializeComponent();
-
+            
             Form1 login = new Form1(this);
             login.Show();
             ReviewService review = new ReviewService(4, "the best");

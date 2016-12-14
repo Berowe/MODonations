@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
+using Application = System.Windows.Application;
 
 namespace MiddleOut
 {
@@ -125,6 +126,15 @@ namespace MiddleOut
         private void passwordBox_TextChanged(object sender, EventArgs e)
         {
             myPassword = passwordBox.Text;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow.Visibility == Visibility.Hidden)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

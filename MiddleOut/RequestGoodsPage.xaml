@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <Grid Name="HeadingGrid" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBlock Text="Choose a donation:" FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBlock Name="HeadingTextBlock" Text="Choose a donation:" FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         </Grid>
 
         <Grid Name="RadioButtonGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
