@@ -94,6 +94,8 @@ namespace MiddleOut
             service.setDescription(_description);
 
             user.addService(service);
+            ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
+            serviceDatabase.createService(ServiceTypes.Educator, _donationType, user, service);
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
