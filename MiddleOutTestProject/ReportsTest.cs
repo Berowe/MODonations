@@ -1,4 +1,5 @@
 ﻿using System;
+using MiddleOut;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MiddleOutTestProject
@@ -9,6 +10,7 @@ namespace MiddleOutTestProject
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

@@ -10,6 +10,7 @@ namespace MiddleOutTestProject
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }
