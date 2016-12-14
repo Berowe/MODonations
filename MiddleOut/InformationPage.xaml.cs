@@ -100,24 +100,24 @@ namespace MiddleOut
             //Process.Start(@"c:\"); @Karan
 
             // Create OpenFileDialog 
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog dialogue = new Microsoft.Win32.OpenFileDialog();
 
 
 
             // Set filter for file extension and default file extension 
-            dlg.DefaultExt = ".jpg";
-            dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
+            dialogue.DefaultExt = ".jpg";
+            dialogue.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
 
 
             // Display OpenFileDialog by calling ShowDialog method 
-            Nullable<bool> result = dlg.ShowDialog();
+            bool? result = dialogue.ShowDialog();
 
 
             // Get the selected file name and display in a TextBox 
             if (result == true)
             {
                 // Open document 
-                string filename = dlg.FileName;
+                string filename = dialogue.FileName;
                 String[] temp = filename.Split('\\');
                 textBlock1.Text = temp[temp.Length - 1];
                 nextPage.IsEnabled = true;
