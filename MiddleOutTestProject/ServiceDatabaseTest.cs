@@ -50,6 +50,7 @@ namespace MiddleOutTestProject
 
             Assert.AreEqual("1110000\n1210000\n1310000\n1410000\n1610000\n1510000\n1810000\n", sBase.printServices(ServiceTypes.Donate));
             Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Drive));
+            System.Console.WriteLine(sBase.retrieveService("3210000"));
             Assert.AreEqual("3110000\n3210000\n3310000\n", sBase.printServices(ServiceTypes.Educate));
             Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Request));
 
@@ -144,7 +145,7 @@ namespace MiddleOutTestProject
             File.Delete(Path.Combine(path, "Toy_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Clothes_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Tech_Dictionary.txt"));
-            File.Delete(Path.Combine(path, "First_Aid_Dictionary.txt"));
+            File.Delete(Path.Combine(path, "FirstAid_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Hygene_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Food_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Other_Dictionary.txt"));
@@ -155,7 +156,7 @@ namespace MiddleOutTestProject
             File.Delete(Path.Combine(path, "Reading_Dictionary.txt"));
             File.Delete(Path.Combine(path, "Writing_Dictionary.txt"));
 
-            File.Delete(Path.Combine(path, "Request_Dictionary.txt"));
+            File.Delete(Path.Combine(path, "Donation_Dictionary.txt"));
 
             File.Delete(Path.Combine(path, "serial_list.txt"));
             File.Delete(Path.Combine(path, "userlist.txt"));

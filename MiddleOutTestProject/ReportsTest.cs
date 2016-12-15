@@ -28,7 +28,7 @@ namespace MiddleOutTestProject
             List<Service> list = new List<Service> {service};
 
             string correctResult =
-                "Report: \n\nService 1:\nAmeet\nAmeet@email.com\nAlgebra\nService is Selected: False\nService is Completed: False\n000\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
+                "Report: \n\nService 1:\nThis Service is to Educate Math\nUser Submitted Description: Algebra\nService is Selected: No\nService is Completed: No\n______________________________________________________\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
 
             //create a report
             Reports reports = new Reports(list);
@@ -55,7 +55,7 @@ namespace MiddleOutTestProject
             List<Service> list = new List<Service> { service };
 
             string correctResult =
-                "Report: \n\nService 1:\nToor\nToor@email.com\nAlgebra\nService is Selected: False\nService is Completed: False\n000\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
+                "Report: \n\nService 1:\nThis Service is to Educate Math\nUser Submitted Description: Algebra\nService is Selected: No\nService is Completed: No\n______________________________________________________\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
 
             Reports reports = new Reports(list);
 
@@ -80,7 +80,7 @@ namespace MiddleOutTestProject
             List<Service> list = new List<Service> { service };
 
             string correctResult =
-                "Report: \n\nService 1:\nA\nA@email.com\nAlgebra\nService is Selected: False\nService is Completed: False\n000\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
+                "Report: \n\nService 1:\nThis Service is to Educate Math\nUser Submitted Description: Algebra\nService is Selected: No\nService is Completed: No\n______________________________________________________\n\n\nNumber of Services: 1\nTotal Tax Credit: $0";
 
             Reports reports = new Reports(list);
 
