@@ -25,7 +25,7 @@ namespace MiddleOut
         {
             InitializeComponent();
             ListPageHome.Height = MaxHeight - MaxHeight /10;
-            ListPageHome.Height = MaxWidth - MaxWidth / 10;
+            ListPageHome.Width = MaxWidth - MaxWidth / 10;
 
         }
     }
