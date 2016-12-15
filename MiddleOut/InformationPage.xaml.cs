@@ -47,6 +47,8 @@ namespace MiddleOut
             myEndTime = string.Empty;
             myFilePath = string.Empty;
 
+            UserDatabase.updateDatabase();
+
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             User user = mainWindow.getUser();
             if (user.getLicenseFilePath() != null)
@@ -54,8 +56,11 @@ namespace MiddleOut
                 if (!user.getLicenseFilePath().Equals(string.Empty))
                 {
                     nextPage.IsEnabled = true;
+                    textBlock1.Text = user.getLicenseFilePath();
                 }
             }
+
+
         }
 
         /// <summary>
@@ -82,6 +87,9 @@ namespace MiddleOut
             service.setDescription("Driving goods.");
 
             user.addService(service);
+
+            UserDatabase.updateDatabase();
+
 
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
             serviceDatabase.createService(ServiceTypes.Drive, DonationTypes.Goods, user, service);
@@ -139,6 +147,7 @@ namespace MiddleOut
                 textBlock1.Text = temp[temp.Length - 1];
                 myFilePath = filename;
                 user.setLicenseFilePath(filename);
+                UserDatabase.updateDatabase();
             }
 
             if (user.getLicenseFilePath() != null)
