@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="7*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/Images/spongebob.jpg" Loaded="Image_Loaded" HorizontalAlignment="Left"/>
+            <Image Name="ProfileImage" Grid.Column="0" Source="/Images/spongebob.jpg" Loaded="Image_Loaded" HorizontalAlignment="Left"/>
         </Grid>
         <StackPanel Grid.Row="1" MinWidth="200">
             <TextBlock Text="Your Profile" Style="{StaticResource Heading2}" HorizontalAlignment="Left"/>

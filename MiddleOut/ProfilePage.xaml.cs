@@ -33,6 +33,14 @@ namespace MiddleOut
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             User user = mainWindow.getUser();
+            if (user.getLicenseFilePath() != null)
+            {
+                if (!user.getLicenseFilePath().Equals(string.Empty))
+                {
+                    ProfileImage.Source = new BitmapImage(new Uri(user.getLicenseFilePath()));
+                }
+            }
+
 
             Reports r = new MiddleOut.Reports(user.getServices());
             textBlock.Text = r.GetReport();
