@@ -279,9 +279,8 @@ C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
-=======
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
->>>>>>> 7e148e5b471b56f56f3e2e1debf5c5c454999809
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
