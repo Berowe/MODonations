@@ -35,7 +35,7 @@ namespace MiddleOut
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
 
-            if ((bool)DriveRadioButton.IsChecked)
+            if ((bool)DriverRadioButton.IsChecked)
             {
                 myServiceTypes = ServiceTypes.Drive;
                 mainWindow.setServiceType(myServiceTypes);
