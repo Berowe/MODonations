@@ -18,6 +18,10 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for ListPage1.xaml
+    /// @Co-Author: Lovejit Hari, worked on .xaml
+    /// @Co-Author: Charlton Smith, public ListPage1()
+    /// This page connects all of the pages that we have together using named links to 
+    /// respective sources.
     /// </summary>
     public partial class ListPage1 : UserControl
     {
@@ -25,7 +29,7 @@ namespace MiddleOut
         {
             InitializeComponent();
             ListPageHome.Height = MaxHeight - MaxHeight /10;
-            ListPageHome.Height = MaxWidth - MaxWidth / 10;
+            ListPageHome.Width = MaxWidth - MaxWidth / 10;
 
         }
     }

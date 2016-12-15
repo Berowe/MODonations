@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="7*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/MiddleOut;component/Images/spongebob.jpg" Loaded="Image_Loaded" HorizontalAlignment="Left"/>
+            <Image Grid.Column="0" Source="/Images/spongebob.jpg" Loaded="Image_Loaded" HorizontalAlignment="Left"/>
         </Grid>
         <StackPanel Grid.Row="1" MinWidth="200">
             <TextBlock Text="Your Profile" Style="{StaticResource Heading2}" HorizontalAlignment="Left"/>
@@ -29,12 +29,10 @@
         <TextBlock Grid.Row="2" Text="Past Reports" Style="{StaticResource Heading2}" FontSize="14" HorizontalAlignment="Left"/>
         <ScrollViewer Grid.Row="3">
             <StackPanel MinWidth="200">
-                
+
                 <TextBlock x:Name="textBlock" TextWrapping="Wrap" MinHeight="85" HorizontalAlignment="Stretch"/>
 
             </StackPanel>
         </ScrollViewer>
-
-
     </Grid>
 </UserControl>

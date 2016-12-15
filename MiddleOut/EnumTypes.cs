@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 {
     /// <summary>
     /// Donation type enumerations
+    /// @Author: Lovejit Hari
     /// </summary>
     public enum DonationTypes { Toys, Clothes, Tech, FirstAid, Food, Hygene, Tools, Other, Goods, Math, Reading, Writing, Donation}
 
     /// <summary>
     /// Service type enumerations
+    /// Author: Lovejit Hari
     /// </summary>
     public enum ServiceTypes { Donate, Drive, Educate, Request }
 
     /// <summary>
     /// User type enumerations
+    /// @Author: Lovejit Hari
     /// </summary>
     public enum UserTypes { User, Admin }
 

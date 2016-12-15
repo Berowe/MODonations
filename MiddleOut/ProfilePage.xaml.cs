@@ -17,6 +17,9 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for ProfilePage.xaml
+    /// @Author: Lovejit Hari
+    /// Creates a profile page that displays past service info and the user's 
+    /// full name, email, and address.
     /// </summary>
     public partial class ProfilePage : UserControl
     {
@@ -24,24 +27,15 @@ namespace MiddleOut
         public ProfilePage()
         {
             InitializeComponent();
-            generateReportsOnScreen();
-        }
-
-
-        private void generateReportsOnScreen()
-        {
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            User user = mainWindow.getUser();
-            
-            Reports r = new Reports(user.getServices());
-            textBlock.Text= r.GetReport();
-            Console.WriteLine(r.GetReport());
         }
 
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             User user = mainWindow.getUser();
+
+            Reports r = new MiddleOut.Reports(user.getServices());
+            textBlock.Text = r.GetReport();
 
             userBlock.Text = "Name: " + user.getName() + "\n";
             userBlock.Text += "Address: " + user.getAddress() + "\n";

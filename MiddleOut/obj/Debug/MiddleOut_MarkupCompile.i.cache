@@ -4,16 +4,21 @@
 winexe
 C#
 .cs
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\
 MiddleOut
 none
 false
 DEBUG;TRACE
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\App.xaml
 16-995841581
 
+<<<<<<< HEAD
 38-6515029
 22-431935122
+=======
+35-184930746
+221368531604
+>>>>>>> 2f6c13e3a1211f989127705f5c904b851fbec29d
 AboutPage.xaml;ChooseServicePage.xaml;EducatePage.xaml;InformationPage.xaml;Pages\ListPage1.xaml;MainWindow.xaml;MapPage.xaml;NotificationPage.xaml;Pages\LogOutPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;ProfilePage.xaml;RequestGoodsPage.xaml;ThankYou.xaml;
 
 False

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"toy_serial":"10000","clothes_serial":"10001","tech_serial":"10035","first_aid_serial":"10004","hygene_serial":"10001","tools_serial":"10002","food_serial":"10001","other_serial":"10004","person_serial":"10000","goods_serial":"10001","math_serial":"10004","reading_serial":"10005","writing_serial":"10006","donation_serial":"10004","driver_serial":"10005","educator_serial":"10000"}
+=======
+{"toy_serial":"10000","clothes_serial":"10001","tech_serial":"10035","first_aid_serial":"10006","hygene_serial":"10001","tools_serial":"10002","food_serial":"10001","other_serial":"10005","person_serial":"10000","goods_serial":"10002","math_serial":"10004","reading_serial":"10005","writing_serial":"10006","donation_serial":"10006","driver_serial":"10005","educator_serial":"10000"}
+>>>>>>> 2f6c13e3a1211f989127705f5c904b851fbec29d

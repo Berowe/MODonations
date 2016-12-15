@@ -274,6 +274,7 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\Settings\A
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\Home.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\SettingsPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
+<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ThankYou.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\App.g.cs
@@ -284,3 +285,6 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+=======
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
+>>>>>>> 2f6c13e3a1211f989127705f5c904b851fbec29d
