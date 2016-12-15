@@ -25,19 +25,8 @@ namespace MiddleOut
         {
             InitializeComponent();
             generateReportsOnScreen();
-            generateUserInfo();
         }
 
-        private void generateUserInfo()
-        {
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            User user = mainWindow.getUser();
-
-            userBlock.Text = "Name: " + user.getName() + "\n";
-            userBlock.Text += "Address: " + user.getAddress() + "\n";
-            userBlock.Text += "Email: " + user.getEmail() + "\n";
-
-        }
 
         private void generateReportsOnScreen()
         {
@@ -47,6 +36,16 @@ namespace MiddleOut
             Reports r = new Reports(user.getServices());
             textBlock.Text= r.GetReport();
             Console.WriteLine(r.GetReport());
+        }
+
+        private void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+
+            userBlock.Text = "Name: " + user.getName() + "\n";
+            userBlock.Text += "Address: " + user.getAddress() + "\n";
+            userBlock.Text += "Email: " + user.getEmail() + "\n";
         }
     }
 }
