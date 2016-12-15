@@ -46,3 +46,15 @@ C:\Users\charl\Desktop\MiddleOut\MiddleOutTestProject\bin\Debug\Newtonsoft.Json.
 C:\Users\charl\Desktop\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.csprojResolveAssemblyReference.cache
 C:\Users\charl\Desktop\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.dll
 C:\Users\charl\Desktop\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.pdb
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\MiddleOutTestProject.dll
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\MiddleOutTestProject.pdb
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\MiddleOut.exe
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\MiddleOut.pdb
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.dll
+C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOutTestProject\obj\Debug\MiddleOutTestProject.pdb
