@@ -20,7 +20,7 @@
             <TextBox Name="EndXY" Width="50" Height="20" FontSize="12" HorizontalAlignment="Right" Margin="0,8,4,8.667">(X,Y)</TextBox>
         </Grid>
         <Grid Name="BodyGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Image Source="/images/WorldMap-Elwynn.jpg" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Image Name ="OutputImage" Source="/images/WorldMap-Elwynn.jpg" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         </Grid>
         
     </Grid>
