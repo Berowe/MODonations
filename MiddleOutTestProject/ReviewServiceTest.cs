@@ -4,14 +4,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MiddleOutTestProject
 {
     /// <summary>
-    /// Author: Ameet Toor
+    /// Authors: Ameet Toor Lovejit Hari
     /// This class tests the ReviewService class.
     /// </summary>
     [TestClass]
     public class ReviewServiceTest
     {
         /// <summary>
-        /// Author: Ameet Toor
+        /// Author: Ameet Toor Lovejit Hari
         /// Tests to make sure rating is not above 5
         /// </summary>
         [TestMethod]
@@ -33,7 +33,7 @@ namespace MiddleOutTestProject
         }
 
         /// <summary>
-        /// Author: Ameet Toor
+        /// Author: Ameet Toor Lovejit Hari
         /// Tests to make sure rating is not below 0.
         /// </summary>
         [TestMethod]
@@ -55,7 +55,7 @@ namespace MiddleOutTestProject
         }
 
         /// <summary>
-        /// Author: Ameet Toor
+        /// Author: Ameet Toor Lovejit Hari
         /// Tests to make sure rating is between 5 and 0;
         /// </summary>
         [TestMethod]
@@ -87,13 +87,12 @@ namespace MiddleOutTestProject
             reviewService = new ReviewService(5, "summary");
             Assert.AreEqual(correctResult, reviewService.ToString(), true);
 
-
             reviewService = new ReviewService(4, "summary");
             Assert.AreNotEqual(correctResult, reviewService.ToString(), true);
         }
 
         /// <summary>
-        /// Author: Ameet Toor
+        /// Author: Ameet Toor Lovejit Hari
         /// Tests to make sure the toString is printing out correctly.
         /// </summary>
         [TestMethod]
