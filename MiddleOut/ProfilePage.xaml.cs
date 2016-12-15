@@ -25,8 +25,18 @@ namespace MiddleOut
         {
             InitializeComponent();
             generateReportsOnScreen();
+            generateUserInfo();
         }
-        
+
+        private void generateUserInfo()
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+
+            Reports r = new Reports(user.getServices());
+            textBlock.Text = r.GetReport();
+        }
+
         private void generateReportsOnScreen()
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;

@@ -15,8 +15,8 @@
             <TextBlock Text="Profile" Style="{StaticResource Heading2}" />
         </StackPanel>
 
-        <ScrollViewer>
-            <StackPanel Grid.Row="1" MinWidth="200">
+        <ScrollViewer Grid.Row="1">
+            <StackPanel MinWidth="200">
                 <TextBlock Text="Reports" Style="{StaticResource Heading2}" FontSize="12" HorizontalAlignment="Left"/>
                 <TextBlock x:Name="textBlock" TextWrapping="Wrap" MinHeight="85" HorizontalAlignment="Stretch"/>
 
