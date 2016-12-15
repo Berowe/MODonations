@@ -1,92 +1,29 @@
 {
   "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MiddleOut.User, MiddleOut]], mscorlib",
-  "": {
-    "$type": "MiddleOut.User, MiddleOut",
-    "myName": "",
-    "myPassword": "",
-    "myEmail": "",
-    "myStreet": "",
-    "myApartment": "",
-    "myCity": "",
-    "myState": "",
-    "myZipCode": "",
-    "myVehichleType": null,
-    "myCapacity": null,
-    "myTimeStart": null,
-    "myTimeStop": null,
-    "myLicenseFilePath": null,
-    "myAdmin": false,
-    "myServices": {
-      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
-      "$values": []
-    }
-  },
   "john@doe.com": {
     "$type": "MiddleOut.User, MiddleOut",
     "myName": "John Doe",
     "myPassword": "password",
     "myEmail": "john@doe.com",
-    "myStreet": "123 12nd Lane",
-    "myApartment": "111",
+    "myStreet": "123 12th Lane ",
+    "myApartment": "Apt. #101",
     "myCity": "Tacoma",
     "myState": "WA",
-    "myZipCode": "98405",
-    "myVehichleType": null,
-    "myCapacity": null,
-    "myTimeStart": null,
-    "myTimeStop": null,
-    "myLicenseFilePath": null,
-    "myAdmin": false,
-    "myServices": {
-      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
-      "$values": []
-    }
-  },
-  "toork@uw.edu": {
-    "$type": "MiddleOut.User, MiddleOut",
-    "myName": "Karan Toor",
-    "myPassword": "password",
-    "myEmail": "toork@uw.edu",
-    "myStreet": "1710 122nd Ave. E.",
-    "myApartment": "",
-    "myCity": "Edgewood",
-    "myState": "WA",
-    "myZipCode": "98372",
-    "myVehichleType": null,
-    "myCapacity": null,
-    "myTimeStart": null,
-    "myTimeStop": null,
-    "myLicenseFilePath": null,
-    "myAdmin": false,
-    "myServices": {
-      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
-      "$values": []
-    }
-  },
-  "Karan@Toor.com": {
-    "$type": "MiddleOut.User, MiddleOut",
-    "myName": "Ameet Toor",
-    "myPassword": "booger",
-    "myEmail": "Karan@Toor.com",
-    "myStreet": "Neverland ",
-    "myApartment": "The Boat",
-    "myCity": "Oz",
-    "myState": "Kansas",
-    "myZipCode": "98501",
+    "myZipCode": "98402",
     "myVehichleType": "",
     "myCapacity": "4\r\n",
     "myTimeStart": "6\r\n",
     "myTimeStop": "8\r\n",
-    "myLicenseFilePath": "C:\\Users\\azoni\\Desktop\\MiddleOut\\MiddleOut\\Images\\middleout.jpg",
+    "myLicenseFilePath": "C:\\Users\\charl\\Desktop\\MiddleOut\\MiddleOut\\Images\\middleout.jpg",
     "myAdmin": false,
     "myServices": {
       "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
       "$values": [
         {
           "$type": "MiddleOut.Service, MiddleOut",
-          "myName": "Ameet Toor",
-          "myUserID": "Karan@Toor.com",
-          "myServiceID": "2110000",
+          "myName": "John Doe",
+          "myUserID": "john@doe.com",
+          "myServiceID": "2110001",
           "myServiceDescription": "Driving goods.",
           "myTimeStart": null,
           "myTimeStop": null,
@@ -106,10 +43,10 @@
         },
         {
           "$type": "MiddleOut.Service, MiddleOut",
-          "myName": "Ameet Toor",
-          "myUserID": "Karan@Toor.com",
-          "myServiceID": null,
-          "myServiceDescription": "Narrative",
+          "myName": "John Doe",
+          "myUserID": "john@doe.com",
+          "myServiceID": "1310038",
+          "myServiceDescription": "Tech",
           "myTimeStart": null,
           "myTimeStop": null,
           "myLocation": {
@@ -123,8 +60,30 @@
           "myCompleted": false,
           "mySelected": false,
           "myReview": null,
-          "myDonationRequest": 11,
-          "myServiceType": 2
+          "myDonationRequest": 2,
+          "myServiceType": 0
+        },
+        {
+          "$type": "MiddleOut.Service, MiddleOut",
+          "myName": "John Doe",
+          "myUserID": "john@doe.com",
+          "myServiceID": null,
+          "myServiceDescription": "Tech",
+          "myTimeStart": null,
+          "myTimeStop": null,
+          "myLocation": {
+            "$type": "System.Int32[], mscorlib",
+            "$values": [
+              0,
+              0
+            ]
+          },
+          "myTaxCredit": 0.0,
+          "myCompleted": false,
+          "mySelected": false,
+          "myReview": null,
+          "myDonationRequest": 2,
+          "myServiceType": 0
         }
       ]
     }
