@@ -33,9 +33,13 @@ namespace MiddleOutTestProject
             
             List<Street> testStreet = new List<Street>();
             testStreet.Add(myStreets[3]); // Westbrook Garrison to Stonefield farm. 
-            dAlg.Dijkstra(myLocations[1], myLocations[0]);
+            List<Street> dAlgStreet = dAlg.Dijkstra(myLocations[1], myLocations[0]);
             Console.WriteLine(dAlg.output.Count + "    " + testStreet.Count);
-            Assert.IsTrue(dAlg.output.Count == testStreet.Count);
+            Assert.IsTrue(dAlgStreet.Count == testStreet.Count);
+            for (int i = 0; i < testStreet.Count; i++)
+            {
+                Assert.AreEqual(testStreet[i], dAlgStreet[i]);
+            }
             
         }
 
