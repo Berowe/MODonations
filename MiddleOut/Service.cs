@@ -277,6 +277,11 @@ namespace MiddleOut
 
         #region private methods
 
+        /// <summary>
+        /// String representing if a Boolean is true or not.
+        /// </summary>
+        /// <param name="selected">The Boolean value.</param>
+        /// <returns>Returns "Yes" if true, "No" if false.</returns>
         public String isTrue(Boolean selected)
         {
             String check = "No";
@@ -297,9 +302,10 @@ namespace MiddleOut
             {
                 builder.Append("Service ID: " + myServiceID + "\n");
             }
+            builder.Append("This Service is to " + myServiceType.ToString() + " " + myDonationRequest.ToString() + "\n");
             if (myServiceDescription != null)
             {
-                builder.Append(myServiceDescription + "\n");
+                builder.Append("User Submitted Description: " + myServiceDescription + "\n");
             }
             builder.Append("Service is Selected: " + isTrue(mySelected) + "\n");
             builder.Append("Service is Completed: " + isTrue(myCompleted) + "\n");
@@ -311,7 +317,7 @@ namespace MiddleOut
             {
                 builder.Append("Review of Service:\n" + myReview.ToString() + "\n");
             }
-            builder.Append("______________________________________________________");
+            builder.Append("______________________________________________________\n");
 
             return builder.ToString();
         }
