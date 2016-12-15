@@ -102,7 +102,6 @@
           "mySelected": false,
           "myReview": null,
           "myDonationRequest": 8,
-          "myServiceRequest": 0,
           "myServiceType": 1
         },
         {
@@ -125,7 +124,6 @@
           "mySelected": false,
           "myReview": null,
           "myDonationRequest": 11,
-          "myServiceRequest": 0,
           "myServiceType": 2
         }
       ]
