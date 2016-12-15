@@ -17,6 +17,9 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for ProfilePage.xaml
+    /// @Author: Lovejit Hari
+    /// Creates a profile page that displays past service info and the user's 
+    /// full name, email, and address.
     /// </summary>
     public partial class ProfilePage : UserControl
     {
