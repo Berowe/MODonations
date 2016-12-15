@@ -46,6 +46,16 @@ namespace MiddleOut
             myStartTime = string.Empty;
             myEndTime = string.Empty;
             myFilePath = string.Empty;
+
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+            if (user.getLicenseFilePath() != null)
+            {
+                if (!user.getLicenseFilePath().Equals(string.Empty))
+                {
+                    nextPage.IsEnabled = true;
+                }
+            }
         }
 
         /// <summary>
@@ -114,6 +124,11 @@ namespace MiddleOut
             // Display OpenFileDialog by calling ShowDialog method 
             bool? result = dialogue.ShowDialog();
 
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+
+
+
 
             // Get the selected file name and display in a TextBox 
             if (result == true)
@@ -122,9 +137,18 @@ namespace MiddleOut
                 string filename = dialogue.FileName;
                 String[] temp = filename.Split('\\');
                 textBlock1.Text = temp[temp.Length - 1];
-                nextPage.IsEnabled = true;
                 myFilePath = filename;
+                user.setLicenseFilePath(filename);
             }
+
+            if (user.getLicenseFilePath() != null)
+            {
+                if (!user.getLicenseFilePath().Equals(string.Empty))
+                {
+                    nextPage.IsEnabled = true;
+                }
+            }
+
         }
 
         /// <summary>
