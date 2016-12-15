@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\
-=======
-C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\
->>>>>>> 5e7762cf2d8f58206ff5c74db8276d6ee6fb303a
 MiddleOut
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\App.xaml
 15-621302581
 
 301697400016
 22-431935122
-=======
-C:\Users\azoni\Desktop\MiddleOut\MiddleOut\App.xaml
-15-621302581
-
-301697400016
-221368531604
->>>>>>> 5e7762cf2d8f58206ff5c74db8276d6ee6fb303a
 AboutPage.xaml;ChooseServicePage.xaml;EducatePage.xaml;InformationPage.xaml;Pages\ListPage1.xaml;MainWindow.xaml;MapPage.xaml;NotificationPage.xaml;Pages\LogOutPage.xaml;Pages\Settings\About.xaml;Pages\Settings\Appearance.xaml;Pages\Home.xaml;Pages\SettingsPage.xaml;RequestGoodsPage.xaml;ThankYou.xaml;
 
 False
