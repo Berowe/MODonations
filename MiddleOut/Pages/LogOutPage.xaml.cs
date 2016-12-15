@@ -18,6 +18,11 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for LogOutPage.xaml
+    /// @Co-Author: Lovejit Hari, yesButton_Click
+    /// @Co-Author: Charlton Smith, noButton_Click
+    /// Logs out of the program, closes the current application, makes sure that
+    /// every instance of the application is also shut down and re-opens the log-in form.
+    /// Otherwise the no button returns back to the home page.
     /// </summary>
     public partial class LogOutPage : UserControl
     {

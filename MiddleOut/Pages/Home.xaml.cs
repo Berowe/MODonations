@@ -25,7 +25,11 @@ namespace MiddleOut.Pages
             InitializeComponent();
 
         }
-
+        /// <summary>
+        /// Interaction logic for Home.xaml
+        /// @Author: Charlton Smith
+        /// Whenever the user comes to page, reload.
+        /// </summary>
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;

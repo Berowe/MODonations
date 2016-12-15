@@ -20,7 +20,6 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 7,
-    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1810001": {
@@ -43,7 +42,6 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 7,
-    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1810002": {
@@ -66,7 +64,6 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 7,
-    "myServiceRequest": 0,
     "myServiceType": 0
   },
   "1810003": {
@@ -89,7 +86,28 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 7,
-    "myServiceRequest": 0,
+    "myServiceType": 0
+  },
+  "1810004": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "1810004",
+    "myServiceDescription": "3",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 7,
     "myServiceType": 0
   }
 }
