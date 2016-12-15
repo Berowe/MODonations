@@ -33,8 +33,10 @@ namespace MiddleOut
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             User user = mainWindow.getUser();
 
-            Reports r = new Reports(user.getServices());
-            textBlock.Text = r.GetReport();
+            userBlock.Text = "Name: " + user.getName() + "\n";
+            userBlock.Text += "Address: " + user.getAddress() + "\n";
+            userBlock.Text += "Email: " + user.getEmail() + "\n";
+
         }
 
         private void generateReportsOnScreen()

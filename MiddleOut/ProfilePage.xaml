@@ -12,7 +12,8 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" MinWidth="200">
-            <TextBlock Text="Profile" Style="{StaticResource Heading2}" />
+            <TextBlock Text="Profile" Style="{StaticResource Heading2}" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="userBlock" TextWrapping="Wrap" MinHeight="150" HorizontalAlignment="Stretch" FontSize="20"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="1">
