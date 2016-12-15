@@ -25,7 +25,7 @@
                         <ColumnDefinition Width="5*"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Name="SubjectTextBox" Text="Subject:" Grid.Column="0"/>
-                    <ComboBox Name="SubjectComboBox" Text="Subject" Grid.Column="1" SelectionChanged="SubjectComboBox_SelectionChanged"/>
+                    <ComboBox Name="SubjectComboBox" Grid.Column="1" SelectionChanged="SubjectComboBox_SelectionChanged"/>
                 </Grid>
                 <Grid Name="SpecificSubjectTextBoxAndComboGrid">
                     <Grid.ColumnDefinitions>

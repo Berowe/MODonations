@@ -23,10 +23,10 @@ namespace MiddleOut
         private Dictionary<String, Service> myTools;
         private Dictionary<String, Service> myFood;
         private Dictionary<String, Service> myOthers;
-        private Dictionary<String, Service> myGoodsDrivers;
-        private Dictionary<String, Service> myMathEducators;
-        private Dictionary<String, Service> myReadingEducators;
-        private Dictionary<String, Service> myWritingEducators;
+        private Dictionary<String, Service> myGoodsDrives;
+        private Dictionary<String, Service> myMathEducates;
+        private Dictionary<String, Service> myReadingEducates;
+        private Dictionary<String, Service> myWritingEducates;
         private Dictionary<String, Service> myDonationRequests;
         private Dictionary<String, String> mySerialNumbers;
         private List<String> myServiceIDs;
@@ -70,7 +70,7 @@ namespace MiddleOut
             String serial;
             switch (sType)
             {
-                case ServiceTypes.Donor:
+                case ServiceTypes.Donate:
                     switch (dType)
                     {
                         case DonationTypes.Toys:
@@ -149,57 +149,58 @@ namespace MiddleOut
                             break;
                     }
                     break;
-                case ServiceTypes.Driver:
+                case ServiceTypes.Drive:
                     switch (dType)
                     {
-                        case DonationTypes.TransportGoods:
+                        case DonationTypes.Goods:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
-                            myGoodsDrivers.Add(theService.getServiceID(), theService);
-                            serial = serializeDictionary(myGoodsDrivers);
+                            myGoodsDrives.Add(theService.getServiceID(), theService);
+                            serial = serializeDictionary(myGoodsDrives);
                             writeFile(myDictionaryFileStrings[8], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
                     }
                     break;
-                case ServiceTypes.Educator:
+                case ServiceTypes.Educate:
                     switch (dType)
                     {
-                        case DonationTypes.MathEducator:
+                        case DonationTypes.Math:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
-                            myMathEducators.Add(theService.getServiceID(), theService);
-                            serial = serializeDictionary(myMathEducators);
+                            myMathEducates.Add(theService.getServiceID(), theService);
+                            serial = serializeDictionary(myMathEducates);
                             writeFile(myDictionaryFileStrings[9], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
-                        case DonationTypes.WritingEducator:
+                        case DonationTypes.Writing:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
-                            myWritingEducators.Add(theService.getServiceID(), theService);
-                            serial = serializeDictionary(myWritingEducators);
+                            myWritingEducates.Add(theService.getServiceID(), theService);
+                            serial = serializeDictionary(myWritingEducates);
                             writeFile(myDictionaryFileStrings[11], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
-                        case DonationTypes.ReadingEducator:
+                        case DonationTypes.Reading:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
-                            if (theService.getServiceID() == null)
-                            myReadingEducators.Add(theService.getServiceID(), theService);
-                            serial = serializeDictionary(myReadingEducators);
+                            //if (theService.getServiceID() == null)
+                            myReadingEducates.Add(theService.getServiceID(), theService);
+                            serial = serializeDictionary(myReadingEducates);
                             writeFile(myDictionaryFileStrings[10], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
                     }
                     break;
-                case ServiceTypes.Requester:
-                    theService.setServiceID(createServiceID(DonationTypes.DonationRequest));
+                case ServiceTypes.Request:
+                    theService.setServiceID(createServiceID(DonationTypes.Donation));
                     theService.setServiceType(sType);
                     theService.setDonationRequest(dType);
+                    //if (theService.getServiceID() == null)
                     myDonationRequests.Add(theService.getServiceID(), theService);
                     serial = serializeDictionary(myDonationRequests);
                     writeFile(myDictionaryFileStrings[12], serial);
@@ -260,27 +261,27 @@ namespace MiddleOut
                     builder.Append(mySerialNumbers[myStrings[7]]);
                     updateSerial(myStrings[7]);
                     break;
-                case DonationTypes.TransportGoods:
+                case DonationTypes.Goods:
                     builder.Append("21");
                     builder.Append(mySerialNumbers[myStrings[8]]);
                     updateSerial(myStrings[8]);
                     break;
-                case DonationTypes.MathEducator:
+                case DonationTypes.Math:
                     builder.Append("31");
                     builder.Append(mySerialNumbers[myStrings[9]]);
                     updateSerial(myStrings[9]);
                     break;
-                case DonationTypes.ReadingEducator:
+                case DonationTypes.Reading:
                     builder.Append("32");
                     builder.Append(mySerialNumbers[myStrings[10]]);
                     updateSerial(myStrings[10]);
                     break;
-                case DonationTypes.WritingEducator:
+                case DonationTypes.Writing:
                     builder.Append("33");
                     builder.Append(mySerialNumbers[myStrings[11]]);
                     updateSerial(myStrings[11]);
                     break;
-                case DonationTypes.DonationRequest:
+                case DonationTypes.Donation:
                     builder.Append("41");
                     builder.Append(mySerialNumbers[myStrings[12]]);
                     updateSerial(myStrings[12]);
@@ -356,10 +357,10 @@ namespace MiddleOut
             myTools = new Dictionary<String, Service>();
             myFood = new Dictionary<String, Service>();
             myOthers = new Dictionary<String, Service>();
-            myGoodsDrivers = new Dictionary<String, Service>();
-            myMathEducators = new Dictionary<String, Service>();
-            myReadingEducators = new Dictionary<String, Service>();
-            myWritingEducators = new Dictionary<String, Service>();
+            myGoodsDrives = new Dictionary<String, Service>();
+            myMathEducates = new Dictionary<String, Service>();
+            myReadingEducates = new Dictionary<String, Service>();
+            myWritingEducates = new Dictionary<String, Service>();
             myDonationRequests = new Dictionary<String, Service>();
             mySerialNumbers = new Dictionary<string, string>();
 
@@ -453,16 +454,16 @@ namespace MiddleOut
                     myOthers = (Dictionary<String, Service>)dictionary;
                     break;
                 case 9:
-                    myGoodsDrivers = (Dictionary<String, Service>)dictionary;
+                    myGoodsDrives = (Dictionary<String, Service>)dictionary;
                     break;
                 case 10:
-                    myMathEducators = (Dictionary<String, Service>)dictionary;
+                    myMathEducates = (Dictionary<String, Service>)dictionary;
                     break;
                 case 11:
-                    myReadingEducators = (Dictionary<String, Service>)dictionary;
+                    myReadingEducates = (Dictionary<String, Service>)dictionary;
                     break;
                 case 12:
-                    myWritingEducators = (Dictionary<String, Service>)dictionary;
+                    myWritingEducates = (Dictionary<String, Service>)dictionary;
                     break;
                 case 13:
                     myDonationRequests = (Dictionary<String, Service>)dictionary;
@@ -534,19 +535,19 @@ namespace MiddleOut
                     }
                     break;
                 case "2":
-                    service = myGoodsDrivers[serviceID];
+                    service = myGoodsDrives[serviceID];
                     break;
                 case "3":
                     switch (dType)
                     {
                         case "1":
-                            service = myMathEducators[serviceID];
+                            service = myMathEducates[serviceID];
                             break;
                         case "2":
-                            service = myReadingEducators[serviceID];
+                            service = myReadingEducates[serviceID];
                             break;
                         case "3":
-                            service = myWritingEducators[serviceID];
+                            service = myWritingEducates[serviceID];
                             break;
                     }
                     break;
@@ -573,7 +574,7 @@ namespace MiddleOut
             StringBuilder prefix = new StringBuilder();
             switch (sType)
             {
-                case ServiceTypes.Donor:
+                case ServiceTypes.Donate:
                     prefix.Append("11" + mySerialNumbers[myStrings[0]]);
                     print.Append(getServices(prefix.ToString(), myToys));
                     prefix.Clear();
@@ -598,21 +599,21 @@ namespace MiddleOut
                     prefix.Append("18" + mySerialNumbers[myStrings[7]]);
                     print.Append(getServices(prefix.ToString(), myOthers));
                     break;
-                case ServiceTypes.Driver:
+                case ServiceTypes.Drive:
                     prefix.Append("21" + mySerialNumbers[myStrings[8]]);
-                    print.Append(getServices(prefix.ToString(), myGoodsDrivers));
+                    print.Append(getServices(prefix.ToString(), myGoodsDrives));
                     break;
-                case ServiceTypes.Educator:
+                case ServiceTypes.Educate:
                     prefix.Append("31" + mySerialNumbers[myStrings[9]]);
-                    print.Append(getServices(prefix.ToString(), myMathEducators));
+                    print.Append(getServices(prefix.ToString(), myMathEducates));
                     prefix.Clear();
                     prefix.Append("32" + mySerialNumbers[myStrings[10]]);
-                    print.Append(getServices(prefix.ToString(), myReadingEducators));
+                    print.Append(getServices(prefix.ToString(), myReadingEducates));
                     prefix.Clear();
                     prefix.Append("33" + mySerialNumbers[myStrings[11]]);
-                    print.Append(getServices(prefix.ToString(), myWritingEducators));
+                    print.Append(getServices(prefix.ToString(), myWritingEducates));
                     break;
-                case ServiceTypes.Requester:
+                case ServiceTypes.Request:
                     prefix.Append("41" + mySerialNumbers[myStrings[12]]);
                     print.Append(getServices(prefix.ToString(), myDonationRequests));
                     break;
@@ -632,7 +633,7 @@ namespace MiddleOut
             StringBuilder prefix = new StringBuilder();
             switch (sType)
             {
-                case ServiceTypes.Donor:
+                case ServiceTypes.Donate:
                     switch (dType)
                     {
                         case DonationTypes.Toys:
@@ -665,33 +666,33 @@ namespace MiddleOut
                             break;
                     }
                     break;
-                case ServiceTypes.Driver:
+                case ServiceTypes.Drive:
                     switch (dType)
                     {
-                        case DonationTypes.TransportGoods:
+                        case DonationTypes.Goods:
                             prefix.Append("21" + mySerialNumbers[myStrings[8]]);
-                            print.Append(getServices(prefix.ToString(), myGoodsDrivers));
+                            print.Append(getServices(prefix.ToString(), myGoodsDrives));
                             break;
                     }
                     break;
-                case ServiceTypes.Educator:
+                case ServiceTypes.Educate:
                     switch (dType)
                     {
-                        case DonationTypes.MathEducator:
+                        case DonationTypes.Math:
                             prefix.Append("31" + mySerialNumbers[myStrings[9]]);
-                            print.Append(getServices(prefix.ToString(), myMathEducators));
+                            print.Append(getServices(prefix.ToString(), myMathEducates));
                             break;
-                        case DonationTypes.WritingEducator:
+                        case DonationTypes.Writing:
                             prefix.Append("33" + mySerialNumbers[myStrings[11]]);
-                            print.Append(getServices(prefix.ToString(), myWritingEducators));
+                            print.Append(getServices(prefix.ToString(), myWritingEducates));
                             break;
-                        case DonationTypes.ReadingEducator:
+                        case DonationTypes.Reading:
                             prefix.Append("32" + mySerialNumbers[myStrings[10]]);
-                            print.Append(getServices(prefix.ToString(), myReadingEducators));
+                            print.Append(getServices(prefix.ToString(), myReadingEducates));
                             break;
                     }
                     break;
-                case ServiceTypes.Requester:
+                case ServiceTypes.Request:
                     prefix.Append("41" + mySerialNumbers[myStrings[12]]);
                     print.Append(getServices(prefix.ToString(), myDonationRequests));
                     break;

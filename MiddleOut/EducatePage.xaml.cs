@@ -48,18 +48,18 @@ namespace MiddleOut
             var subject = SubjectComboBox.SelectedItem.ToString();
             if (subject.Equals("Writing"))
             {
-                myDonationType = DonationTypes.WritingEducator;
+                myDonationType = DonationTypes.Writing;
                 SetSpecificSubjectComboBox("Writing");
             }
             else if (subject.Equals("Reading"))
             {
                 SetSpecificSubjectComboBox("Reading");
-                myDonationType = DonationTypes.ReadingEducator;
+                myDonationType = DonationTypes.Reading;
             }
             else
             {
                 SetSpecificSubjectComboBox("Math");
-                myDonationType = DonationTypes.MathEducator;
+                myDonationType = DonationTypes.Math;
             }
         }
 
@@ -90,13 +90,13 @@ namespace MiddleOut
 
             Service service = new Service(user.getName(), user.getEmail());
 
-            service.setServiceType(ServiceTypes.Educator);
+            service.setServiceType(ServiceTypes.Educate);
             service.setDonationRequest(myDonationType);
             service.setDescription(myDescription);
 
             user.addService(service);
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
-            serviceDatabase.createService(ServiceTypes.Educator, myDonationType, user, service);
+            serviceDatabase.createService(ServiceTypes.Educate, myDonationType, user, service);
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
@@ -119,7 +119,7 @@ namespace MiddleOut
         /// </summary>
         private void InitializeFields()
         {
-            myDonationType = DonationTypes.MathEducator;
+            myDonationType = DonationTypes.Math;
             myDescription = string.Empty;
         }
 

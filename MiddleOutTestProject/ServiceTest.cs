@@ -24,8 +24,8 @@ namespace MiddleOutTestProject
             Assert.AreEqual(200, toy.getLocation()[1]);
             toy.setDonationRequest(DonationTypes.Food);
             Assert.AreEqual(DonationTypes.Food, toy.getDonationRequest());
-            toy.setServiceType(ServiceTypes.Driver);
-            Assert.AreEqual(ServiceTypes.Driver, toy.getDonationType());
+            toy.setServiceType(ServiceTypes.Drive);
+            Assert.AreEqual(ServiceTypes.Drive, toy.getDonationType());
             ReviewService review = new ReviewService(5, "This is the best test!");
             toy.setReview(review);
             Assert.AreEqual(review, toy.getReview());

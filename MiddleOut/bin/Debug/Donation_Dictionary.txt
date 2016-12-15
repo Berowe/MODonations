@@ -20,6 +20,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 7,
+    "myServiceRequest": 0,
     "myServiceType": 3
   },
   "4110001": {
@@ -42,6 +43,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 5,
+    "myServiceRequest": 0,
     "myServiceType": 3
   },
   "4110002": {
@@ -64,6 +66,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 3,
+    "myServiceRequest": 0,
     "myServiceType": 3
   },
   "4110003": {
@@ -86,6 +89,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 4,
+    "myServiceRequest": 0,
     "myServiceType": 3
   },
   "4110004": {
@@ -108,6 +112,7 @@
     "mySelected": false,
     "myReview": null,
     "myDonationRequest": 3,
+    "myServiceRequest": 0,
     "myServiceType": 3
   }
 }

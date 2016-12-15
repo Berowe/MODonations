@@ -51,7 +51,7 @@ namespace MiddleOut
         /// <summary>
         /// Direct the user to the next page (Thank you page). 
         /// @Author Ameet and Karanbir
-        /// Grabs user from mainwindow, adds driver information and adds service.
+        /// Grabs user from mainwindow, adds Drive information and adds service.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -61,20 +61,20 @@ namespace MiddleOut
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             User user = mainWindow.getUser();
 
-            //Add driver info to user
-            user.addDriver(myVehicleType, myCapacity, myStartTime, myEndTime, myFilePath);
+            //Add Drive info to user
+            user.addDrive(myVehicleType, myCapacity, myStartTime, myEndTime, myFilePath);
 
             //Add driving service to user
             Service service = new Service(user.getName(), user.getEmail());
 
-            service.setServiceType(ServiceTypes.Driver);
-            service.setDonationRequest(DonationTypes.TransportGoods);
+            service.setServiceType(ServiceTypes.Drive);
+            service.setDonationRequest(DonationTypes.Goods);
             service.setDescription("Driving goods.");
 
             user.addService(service);
 
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
-            serviceDatabase.createService(ServiceTypes.Driver, DonationTypes.TransportGoods, user, service);
+            serviceDatabase.createService(ServiceTypes.Drive, DonationTypes.Goods, user, service);
 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
             NavigationCommands.GoToPage.Execute("/ThankYou.xaml", target);
