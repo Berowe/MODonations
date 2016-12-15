@@ -68,5 +68,28 @@
     "myDonationRequest": 7,
     "myServiceRequest": 0,
     "myServiceType": 0
+  },
+  "1810003": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "1810003",
+    "myServiceDescription": "Dildo",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 7,
+    "myServiceRequest": 0,
+    "myServiceType": 0
   }
 }

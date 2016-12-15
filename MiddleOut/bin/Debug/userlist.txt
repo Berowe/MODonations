@@ -62,5 +62,73 @@
       "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
       "$values": []
     }
+  },
+  "Karan@Toor.com": {
+    "$type": "MiddleOut.User, MiddleOut",
+    "myName": "Ameet Toor",
+    "myPassword": "booger",
+    "myEmail": "Karan@Toor.com",
+    "myStreet": "Neverland ",
+    "myApartment": "The Boat",
+    "myCity": "Oz",
+    "myState": "Kansas",
+    "myZipCode": "98501",
+    "myVehichleType": "",
+    "myCapacity": "4\r\n",
+    "myTimeStart": "6\r\n",
+    "myTimeStop": "8\r\n",
+    "myLicenseFilePath": "C:\\Users\\azoni\\Desktop\\MiddleOut\\MiddleOut\\Images\\middleout.jpg",
+    "myAdmin": false,
+    "myServices": {
+      "$type": "System.Collections.Generic.List`1[[MiddleOut.Service, MiddleOut]], mscorlib",
+      "$values": [
+        {
+          "$type": "MiddleOut.Service, MiddleOut",
+          "myName": "Ameet Toor",
+          "myUserID": "Karan@Toor.com",
+          "myServiceID": "2110000",
+          "myServiceDescription": "Driving goods.",
+          "myTimeStart": null,
+          "myTimeStop": null,
+          "myLocation": {
+            "$type": "System.Int32[], mscorlib",
+            "$values": [
+              0,
+              0
+            ]
+          },
+          "myTaxCredit": 0.0,
+          "myCompleted": false,
+          "mySelected": false,
+          "myReview": null,
+          "myDonationRequest": 8,
+          "myServiceRequest": 0,
+          "myServiceType": 1
+        },
+        {
+          "$type": "MiddleOut.Service, MiddleOut",
+          "myName": "Ameet Toor",
+          "myUserID": "Karan@Toor.com",
+          "myServiceID": null,
+          "myServiceDescription": "Narrative",
+          "myTimeStart": null,
+          "myTimeStop": null,
+          "myLocation": {
+            "$type": "System.Int32[], mscorlib",
+            "$values": [
+              0,
+              0
+            ]
+          },
+          "myTaxCredit": 0.0,
+          "myCompleted": false,
+          "mySelected": false,
+          "myReview": null,
+          "myDonationRequest": 11,
+          "myServiceRequest": 0,
+          "myServiceType": 2
+        }
+      ]
+    }
   }
 }
