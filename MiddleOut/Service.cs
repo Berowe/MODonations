@@ -35,8 +35,6 @@ namespace MiddleOut
         private ReviewService myReview;
         [JsonProperty("myDonationRequest")]
         private DonationTypes myDonationRequest; ///changes from EnumTypes to DonationTypes
-        [JsonProperty("myServiceRequest")]
-        private ServiceTypes myServiceRequest;
         [JsonProperty("myServiceType")]
         private ServiceTypes myServiceType; //added ServiceTypes
         #endregion

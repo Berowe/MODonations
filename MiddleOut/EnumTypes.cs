@@ -9,7 +9,7 @@ using System.Threading.Tasks;
     /// <summary>
     /// Donation type enumerations
     /// </summary>
-    public enum DonationTypes { Toys, Clothes, Tech, FirstAid, Food, Hygene, Tools, Other, TransportGoods, MathEducator, ReadingEducator, WritingEducator, DonationRequest }
+    public enum DonationTypes { Toys, Clothes, Tech, FirstAid, Food, Hygene, Tools, Other, Goods, Math, Reading, Writing, Donation}
 
     /// <summary>
     /// Service type enumerations
