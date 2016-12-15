@@ -100,6 +100,7 @@
     <Compile Include="ChooseServicePage.xaml.cs">
       <DependentUpon>ChooseServicePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DijkstraAlg.cs" />
     <Compile Include="EducatePage.xaml.cs">
       <DependentUpon>EducatePage.xaml</DependentUpon>
     </Compile>
@@ -118,6 +119,7 @@
     <Compile Include="InformationPage.xaml.cs">
       <DependentUpon>InformationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Location.cs" />
     <Compile Include="Pages\ListPage1.xaml.cs">
       <DependentUpon>ListPage1.xaml</DependentUpon>
     </Compile>
@@ -141,6 +143,7 @@
     <Compile Include="ReviewService.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="ServiceDatabase.cs" />
+    <Compile Include="Street.cs" />
     <Compile Include="ThankYou.xaml.cs">
       <DependentUpon>ThankYou.xaml</DependentUpon>
     </Compile>
