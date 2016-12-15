@@ -188,6 +188,7 @@ namespace MiddleOut
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
+                            if (theService.getServiceID() == null)
                             myReadingEducators.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myReadingEducators);
                             writeFile(myDictionaryFileStrings[10], serial);
