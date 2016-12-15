@@ -14,10 +14,26 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Name="HeadingGrid" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBlock HorizontalAlignment="Left" Width="90" Height="15" FontSize="11">Start Coordinate</TextBlock>
-            <TextBox Name="StartXY" Width="50" Height="20" FontSize="12" HorizontalAlignment="Left" Margin="90,8,0,8.667">(X,Y)</TextBox>
-            <TextBlock HorizontalAlignment="Right" Width="90" Height="15" FontSize="11" Margin="0,12,49,9.667">End Coordinate</TextBlock>
-            <TextBox Name="EndXY" Width="50" Height="20" FontSize="12" HorizontalAlignment="Right" Margin="0,8,4,8.667">(X,Y)</TextBox>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" FontSize="11" VerticalAlignment="Center">Start Coordinate</TextBlock>
+                <ComboBox Grid.Column="1" Name="StartXY" FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="StartXY_SelectionChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" FontSize="11" VerticalAlignment="Center">End Coordinate</TextBlock>
+                <ComboBox Grid.Column="1" Name="EndXY" FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="EndXY_SelectionChanged"></ComboBox>
+            </Grid>
         </Grid>
         <Grid Name="BodyGrid" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Image Name ="OutputImage" Source="/images/WorldMap-Elwynn.jpg" Visibility="Visible" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
