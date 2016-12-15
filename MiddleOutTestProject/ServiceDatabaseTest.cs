@@ -40,11 +40,11 @@ namespace MiddleOutTestProject
             sBase.createService(ServiceTypes.Donor, DonationTypes.Hygene, testUser, hygiene);
             sBase.createService(ServiceTypes.Donor, DonationTypes.Other, testUser, other);
 
-            sBase.createService(ServiceTypes.Driver, DonationTypes.TransportGoods, testUser, drive);
+            sBase.createService(ServiceTypes.Driver, DonationTypes.Goods, testUser, drive);
 
-            sBase.createService(ServiceTypes.Educator, DonationTypes.MathEducator, testUser, math);
-            sBase.createService(ServiceTypes.Educator, DonationTypes.ReadingEducator, testUser, read);
-            sBase.createService(ServiceTypes.Educator, DonationTypes.WritingEducator, testUser, write);
+            sBase.createService(ServiceTypes.Educator, DonationTypes.Math, testUser, math);
+            sBase.createService(ServiceTypes.Educator, DonationTypes.Reading, testUser, read);
+            sBase.createService(ServiceTypes.Educator, DonationTypes.Writing, testUser, write);
 
             sBase.createService(ServiceTypes.Requester, DonationTypes.Tools, testUser, request);
 
@@ -61,13 +61,13 @@ namespace MiddleOutTestProject
             Assert.AreEqual("1610000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Food));
             Assert.AreEqual("1810000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Other));
 
-            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver, DonationTypes.TransportGoods));
+            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver, DonationTypes.Goods));
 
-            Assert.AreEqual("3110000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.MathEducator));
-            Assert.AreEqual("3210000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.ReadingEducator));
-            Assert.AreEqual("3310000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.WritingEducator));
+            Assert.AreEqual("3110000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Math));
+            Assert.AreEqual("3210000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Reading));
+            Assert.AreEqual("3310000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Writing));
 
-            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester, DonationTypes.DonationRequest));
+            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester, DonationTypes.Donation));
 
             Assert.AreEqual(toy, sBase.retrieveService("1110000"));
             Assert.AreEqual(clothes, sBase.retrieveService("1210000"));
@@ -104,13 +104,13 @@ namespace MiddleOutTestProject
             Assert.AreEqual("1610000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Food));
             Assert.AreEqual("1810000\n", sBase.printServices(ServiceTypes.Donor, DonationTypes.Other));
 
-            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver, DonationTypes.TransportGoods));
+            Assert.AreEqual("2110000\n", sBase.printServices(ServiceTypes.Driver, DonationTypes.Goods));
 
-            Assert.AreEqual("3110000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.MathEducator));
-            Assert.AreEqual("3210000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.ReadingEducator));
-            Assert.AreEqual("3310000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.WritingEducator));
+            Assert.AreEqual("3110000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Math));
+            Assert.AreEqual("3210000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Reading));
+            Assert.AreEqual("3310000\n", sBase.printServices(ServiceTypes.Educator, DonationTypes.Writing));
 
-            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester, DonationTypes.DonationRequest));
+            Assert.AreEqual("4110000\n", sBase.printServices(ServiceTypes.Requester, DonationTypes.Donation));
 
             Service toy = sBase.retrieveService("1110000");
             Assert.AreEqual(toy, sBase.retrieveService("1110000"));

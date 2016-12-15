@@ -152,7 +152,7 @@ namespace MiddleOut
                 case ServiceTypes.Driver:
                     switch (dType)
                     {
-                        case DonationTypes.TransportGoods:
+                        case DonationTypes.Goods:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
@@ -166,7 +166,7 @@ namespace MiddleOut
                 case ServiceTypes.Educator:
                     switch (dType)
                     {
-                        case DonationTypes.MathEducator:
+                        case DonationTypes.Math:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
@@ -175,7 +175,7 @@ namespace MiddleOut
                             writeFile(myDictionaryFileStrings[9], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
-                        case DonationTypes.WritingEducator:
+                        case DonationTypes.Writing:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
@@ -184,7 +184,7 @@ namespace MiddleOut
                             writeFile(myDictionaryFileStrings[11], serial);
                             myServiceIDs.Add(theService.getServiceID());
                             break;
-                        case DonationTypes.ReadingEducator:
+                        case DonationTypes.Reading:
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
@@ -197,7 +197,7 @@ namespace MiddleOut
                     }
                     break;
                 case ServiceTypes.Requester:
-                    theService.setServiceID(createServiceID(DonationTypes.DonationRequest));
+                    theService.setServiceID(createServiceID(DonationTypes.Donation));
                     theService.setServiceType(sType);
                     theService.setDonationRequest(dType);
                     if (theService.getServiceID() == null)
@@ -261,27 +261,27 @@ namespace MiddleOut
                     builder.Append(mySerialNumbers[myStrings[7]]);
                     updateSerial(myStrings[7]);
                     break;
-                case DonationTypes.TransportGoods:
+                case DonationTypes.Goods:
                     builder.Append("21");
                     builder.Append(mySerialNumbers[myStrings[8]]);
                     updateSerial(myStrings[8]);
                     break;
-                case DonationTypes.MathEducator:
+                case DonationTypes.Math:
                     builder.Append("31");
                     builder.Append(mySerialNumbers[myStrings[9]]);
                     updateSerial(myStrings[9]);
                     break;
-                case DonationTypes.ReadingEducator:
+                case DonationTypes.Reading:
                     builder.Append("32");
                     builder.Append(mySerialNumbers[myStrings[10]]);
                     updateSerial(myStrings[10]);
                     break;
-                case DonationTypes.WritingEducator:
+                case DonationTypes.Writing:
                     builder.Append("33");
                     builder.Append(mySerialNumbers[myStrings[11]]);
                     updateSerial(myStrings[11]);
                     break;
-                case DonationTypes.DonationRequest:
+                case DonationTypes.Donation:
                     builder.Append("41");
                     builder.Append(mySerialNumbers[myStrings[12]]);
                     updateSerial(myStrings[12]);
@@ -669,7 +669,7 @@ namespace MiddleOut
                 case ServiceTypes.Driver:
                     switch (dType)
                     {
-                        case DonationTypes.TransportGoods:
+                        case DonationTypes.Goods:
                             prefix.Append("21" + mySerialNumbers[myStrings[8]]);
                             print.Append(getServices(prefix.ToString(), myGoodsDrivers));
                             break;
@@ -678,15 +678,15 @@ namespace MiddleOut
                 case ServiceTypes.Educator:
                     switch (dType)
                     {
-                        case DonationTypes.MathEducator:
+                        case DonationTypes.Math:
                             prefix.Append("31" + mySerialNumbers[myStrings[9]]);
                             print.Append(getServices(prefix.ToString(), myMathEducators));
                             break;
-                        case DonationTypes.WritingEducator:
+                        case DonationTypes.Writing:
                             prefix.Append("33" + mySerialNumbers[myStrings[11]]);
                             print.Append(getServices(prefix.ToString(), myWritingEducators));
                             break;
-                        case DonationTypes.ReadingEducator:
+                        case DonationTypes.Reading:
                             prefix.Append("32" + mySerialNumbers[myStrings[10]]);
                             print.Append(getServices(prefix.ToString(), myReadingEducators));
                             break;

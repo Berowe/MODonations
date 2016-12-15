@@ -48,18 +48,18 @@ namespace MiddleOut
             var subject = SubjectComboBox.SelectedItem.ToString();
             if (subject.Equals("Writing"))
             {
-                myDonationType = DonationTypes.WritingEducator;
+                myDonationType = DonationTypes.Writing;
                 SetSpecificSubjectComboBox("Writing");
             }
             else if (subject.Equals("Reading"))
             {
                 SetSpecificSubjectComboBox("Reading");
-                myDonationType = DonationTypes.ReadingEducator;
+                myDonationType = DonationTypes.Reading;
             }
             else
             {
                 SetSpecificSubjectComboBox("Math");
-                myDonationType = DonationTypes.MathEducator;
+                myDonationType = DonationTypes.Math;
             }
         }
 
@@ -119,7 +119,7 @@ namespace MiddleOut
         /// </summary>
         private void InitializeFields()
         {
-            myDonationType = DonationTypes.MathEducator;
+            myDonationType = DonationTypes.Math;
             myDescription = string.Empty;
         }
 
