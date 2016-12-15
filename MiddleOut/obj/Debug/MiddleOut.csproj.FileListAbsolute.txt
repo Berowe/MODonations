@@ -284,3 +284,4 @@ C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache

@@ -23,5 +23,6 @@
             <TextBlock Name="services"  Text="" HorizontalAlignment="Right"/>
         </ScrollViewer>
         <Image Grid.Row="2" Grid.Column="1" Source="/MiddleOut;component/Images/middleout.jpg" Loaded="Image_Loaded" HorizontalAlignment="Right"/>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Light" TextWrapping="Wrap" Text="*We are not responsible for goods that are stolen or lost."/>
     </Grid>
 </UserControl>
