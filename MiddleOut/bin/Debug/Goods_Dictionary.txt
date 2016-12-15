@@ -1,0 +1,26 @@
+{
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MiddleOut.Service, MiddleOut]], mscorlib",
+  "2110000": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "Ameet Toor",
+    "myUserID": "Karan@Toor.com",
+    "myServiceID": "2110000",
+    "myServiceDescription": "Driving goods.",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 8,
+    "myServiceRequest": 0,
+    "myServiceType": 1
+  }
+}

@@ -301,14 +301,14 @@ namespace MiddleOut
         }
 
         /// <summary>
-        /// Adds the User's driver information.
+        /// Adds the User's Drive information.
         /// </summary>
         /// <param name="type">The User's vehichle type.</param>
         /// <param name="capacity">The User's vehicle capacity.</param>
         /// <param name="start">The User's start time.</param>
         /// <param name="stop">The User's stop time.</param>
         /// <param name="filePath">The file path for the User's license photo.</param>
-        public void addDriver(String type, String capacity, String start, String stop, String filePath)
+        public void addDrive(String type, String capacity, String start, String stop, String filePath)
         {
             myVehichleType = type;
             myCapacity = capacity;

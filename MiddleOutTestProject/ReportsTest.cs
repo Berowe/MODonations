@@ -21,8 +21,8 @@ namespace MiddleOutTestProject
             //create a list of services
             Service service = new Service("Ameet", "Ameet@email.com");
             service.setDescription("Ameet's Service");
-            service.setServiceType(ServiceTypes.Educator);
-            service.setDonationRequest(DonationTypes.MathEducator);
+            service.setServiceType(ServiceTypes.Educate);
+            service.setDonationRequest(DonationTypes.Math);
             service.setDescription("Algebra");
             
             List<Service> list = new List<Service> {service};
@@ -48,8 +48,8 @@ namespace MiddleOutTestProject
         {
             Service service = new Service("Toor", "Toor@email.com");
             service.setDescription("Service");
-            service.setServiceType(ServiceTypes.Educator);
-            service.setDonationRequest(DonationTypes.MathEducator);
+            service.setServiceType(ServiceTypes.Educate);
+            service.setDonationRequest(DonationTypes.Math);
             service.setDescription("Algebra");
 
             List<Service> list = new List<Service> { service };
@@ -73,8 +73,8 @@ namespace MiddleOutTestProject
         {
             Service service = new Service("A", "A@email.com");
             service.setDescription("A");
-            service.setServiceType(ServiceTypes.Educator);
-            service.setDonationRequest(DonationTypes.MathEducator);
+            service.setServiceType(ServiceTypes.Educate);
+            service.setDonationRequest(DonationTypes.Math);
             service.setDescription("Algebra");
 
             List<Service> list = new List<Service> { service };

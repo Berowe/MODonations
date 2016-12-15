@@ -131,6 +131,9 @@
     <Compile Include="Pages\LogOutPage.xaml.cs">
       <DependentUpon>LogOutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reports.cs" />
     <Compile Include="RequestGoodsPage.xaml.cs">
       <DependentUpon>RequestGoodsPage.xaml</DependentUpon>
@@ -214,6 +217,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="RequestGoodsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

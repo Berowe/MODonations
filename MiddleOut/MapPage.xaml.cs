@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace MiddleOut
 {
@@ -32,12 +34,12 @@ namespace MiddleOut
         {
             InitializeComponent();
             myLocations = new List<Location>();
-            myLocations.Add(new Location(10, 10));
-            myLocations.Add(new Location(100, 50));
-            myLocations.Add(new Location(87, 45));
-            myLocations.Add(new Location(92, 143));
-            myLocations.Add(new Location(300, 98));
-            myLocations.Add(new Location(156, 186));
+            myLocations.Add(new Location(225, 475));
+            myLocations.Add(new Location(315, 560));
+            myLocations.Add(new Location(315, 300));
+            myLocations.Add(new Location(400, 412));
+            myLocations.Add(new Location(635, 450));
+            myLocations.Add(new Location(400, 570));
 
             myStreets = new List<Street>();
             myStreets.Add(new Street(10, myLocations[0], myLocations[1]));
@@ -46,8 +48,40 @@ namespace MiddleOut
             myStreets.Add(new Street(7, myLocations[1], myLocations[2]));
 
             List<Street> deleteMe = Dijkstra(myLocations[0], myLocations[3]);
+            drawLocations(deleteMe);
+
             Console.WriteLine("Test complete");
         }
+
+        public void drawLocations(List<Street> streets)
+        {
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\MiddleOut\\Images\\WorldMap-Elwynn.jpg";
+            string outputPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\MiddleOut\\Images\\WorldMap-Elwynn1.jpg";
+            System.Drawing.Image map = System.Drawing.Image.FromFile(path);
+            //@"WorldMap-Elwynn.jpg"
+            using (Graphics g = Graphics.FromImage(map))
+            {
+                g.DrawImage(map, 0, 0);
+                System.Drawing.Color locColor = System.Drawing.Color.FromArgb(60, System.Drawing.Color.Red);
+                SolidBrush brush = new SolidBrush(locColor);
+                foreach (Location loc in myLocations)
+                {
+                    g.FillEllipse(brush, loc.myX, loc.myY, 50, 50);
+                }
+                brush = new SolidBrush(System.Drawing.Color.FromArgb(90, System.Drawing.Color.Yellow));
+                foreach (Street st in streets)
+                {
+                    GraphicsPath lineBetweenLocs = new GraphicsPath();
+                    lineBetweenLocs.AddLine(st.myA.myX + 25, st.myA.myY + 25, st.myB.myX + 25, st.myB.myY + 25);
+                    
+                    g.DrawPath(new System.Drawing.Pen(brush, 5), lineBetweenLocs);
+                }
+                map.Save(outputPath);
+                System.Windows.Media.ImageSource outputImage = new BitmapImage(new Uri(outputPath));
+                OutputImage.Source = outputImage;
+            }
+        }
+
 
         /// <summary>
         /// Finds the shortest path between two locations! AWESOME!
@@ -71,10 +105,8 @@ namespace MiddleOut
                 if (!loc.Equals(theStart))
                 {
                     buildPaths.Add(loc, -1); // -1 means infinity
-                    
                 }
                 unvisited.Add(loc);
-
             }
 
             while (unvisited.Count != 0)
@@ -140,6 +172,13 @@ namespace MiddleOut
             return null;
         }
 
+        /// <summary>
+        /// Finds the minimum value location in the given dictinoary. Otherwise returns the first 
+        /// value in the dictionary if it is unvisited. 
+        /// </summary>
+        /// <param name="theDic">The dictionary with values.</param>
+        /// <param name="theUnvisited">The list of univisited locations.</param>
+        /// <returns>The location with the lowest distance.</returns>
         public Location findMin (Dictionary<Location, int> theDic, List<Location> theUnvisited)
         {
             Location toReturn = null;
@@ -160,11 +199,15 @@ namespace MiddleOut
                     }
                 }
             }
-
             theUnvisited.Remove(toReturn);
             return toReturn;
         }
 
+        /// <summary>
+        /// Gets the neighbors of the given location. 
+        /// </summary>
+        /// <param name="theStart">The location to find neighbors of.</param>
+        /// <returns>Returns a list of location neighbors not including the location passed in.</returns>
         public List<Location> getNeighbors(Location theStart)
         {
             List<Location> neighbors = new List<Location>();
@@ -183,11 +226,19 @@ namespace MiddleOut
             return neighbors;
         }
 
+        /// <summary>
+        /// A location on the map. Business or homeless shelter. 
+        /// </summary>
         public class Location
         {
-            private int myX { get; }
-            private int myY { get; }
+            public int myX { get; }
+            public int myY { get; }
 
+            /// <summary>
+            /// Initializes the Location with the given coordinates. 
+            /// </summary>
+            /// <param name="theX">X coordinate</param>
+            /// <param name="theY">Y coordinate</param>
             public Location(int theX, int theY)
             {
                 myX = theX;
@@ -195,19 +246,27 @@ namespace MiddleOut
             }
         }
 
+        /// <summary>
+        /// The street connecting two locations. 
+        /// </summary>
         public class Street
         {
             public int myWeight { get; }
             public Location myA { get; }
             public Location myB { get; }
 
+            /// <summary>
+            /// Iinitialize a street between two locations with a weight as travel time.
+            /// </summary>
+            /// <param name="theWeight">The travel time.</param>
+            /// <param name="theA">The first location.</param>
+            /// <param name="theB">The second location.</param>
             public Street(int theWeight, Location theA, Location theB)
             {
                 myWeight = theWeight;
                 myA = theA;
                 myB = theB;
             }
-
         }
     }
 }

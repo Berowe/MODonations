@@ -176,7 +176,6 @@ C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\EducatePage.g.cs
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\RequestGoodsPage.g.cs
-C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\bin\Debug\MiddleOut.exe
@@ -228,6 +227,8 @@ C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\Ameet2r\Source\Repos\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.baml
 C:\Users\LJ\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.g.cs
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.baml
+C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.g.cs
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.baml
 C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\Pages\LogOutPage.g.cs
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
@@ -241,7 +242,6 @@ C:\Users\azoni\Desktop\MiddleOut\MiddleOut\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.dll
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\bin\Debug\FirstFloor.ModernUI.xml
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\bin\Debug\Newtonsoft.Json.xml
-C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csprojResolveAssemblyReference.cache
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\AboutPage.baml
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ChooseServicePage.baml
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\EducatePage.baml
@@ -279,3 +279,5 @@ C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
