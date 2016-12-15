@@ -75,6 +75,8 @@ namespace MiddleOut
                     {
                         case DonationTypes.Toys:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myToys.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myToys);
                             writeFile(myDictionaryFileStrings[0], serial);
@@ -82,6 +84,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Clothes:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myClothes.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myClothes);
                             writeFile(myDictionaryFileStrings[1], serial);
@@ -89,6 +93,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Tech:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myTech.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myTech);
                             writeFile(myDictionaryFileStrings[2], serial);
@@ -96,6 +102,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.FirstAid:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myFirstAid.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myFirstAid);
                             writeFile(myDictionaryFileStrings[3], serial);
@@ -103,6 +111,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Food:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myFood.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myFood);
                             writeFile(myDictionaryFileStrings[6], serial);
@@ -110,6 +120,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Hygene:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myHygene.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myHygene);
                             writeFile(myDictionaryFileStrings[4], serial);
@@ -117,6 +129,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Tools:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myTools.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myTools);
                             writeFile(myDictionaryFileStrings[5], serial);
@@ -124,6 +138,10 @@ namespace MiddleOut
                             break;
                         case DonationTypes.Other:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myOthers.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myOthers);
                             writeFile(myDictionaryFileStrings[7], serial);
@@ -136,6 +154,8 @@ namespace MiddleOut
                     {
                         case DonationTypes.TransportGoods:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myGoodsDrivers.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myGoodsDrivers);
                             writeFile(myDictionaryFileStrings[8], serial);
@@ -148,6 +168,8 @@ namespace MiddleOut
                     {
                         case DonationTypes.MathEducator:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myMathEducators.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myMathEducators);
                             writeFile(myDictionaryFileStrings[9], serial);
@@ -155,6 +177,8 @@ namespace MiddleOut
                             break;
                         case DonationTypes.WritingEducator:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
                             myWritingEducators.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myWritingEducators);
                             writeFile(myDictionaryFileStrings[11], serial);
@@ -162,6 +186,9 @@ namespace MiddleOut
                             break;
                         case DonationTypes.ReadingEducator:
                             theService.setServiceID(createServiceID(dType));
+                            theService.setServiceType(sType);
+                            theService.setDonationRequest(dType);
+                            if (theService.getServiceID() == null)
                             myReadingEducators.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myReadingEducators);
                             writeFile(myDictionaryFileStrings[10], serial);
@@ -171,6 +198,8 @@ namespace MiddleOut
                     break;
                 case ServiceTypes.Requester:
                     theService.setServiceID(createServiceID(DonationTypes.DonationRequest));
+                    theService.setServiceType(sType);
+                    theService.setDonationRequest(dType);
                     myDonationRequests.Add(theService.getServiceID(), theService);
                     serial = serializeDictionary(myDonationRequests);
                     writeFile(myDictionaryFileStrings[12], serial);

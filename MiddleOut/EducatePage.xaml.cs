@@ -71,7 +71,8 @@ namespace MiddleOut
         /// <param name="e"></param>
         private void SpecificSubjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            myDescription = SpecificSubjectComboBox.SelectedItem.ToString();
+            if (SpecificSubjectComboBox.SelectedItem != null)
+                myDescription = SpecificSubjectComboBox.SelectedItem.ToString();
         }
 
         /// <summary>

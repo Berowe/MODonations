@@ -25,5 +25,19 @@ namespace MiddleOut.Pages
             InitializeComponent();
 
         }
+
+        private void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            User user = mainWindow.getUser();
+            userInfo.Text = "Hello, " + user.getName();
+            Console.WriteLine(user.getServices().Count);
+            services.Text = "You have " + user.getServices().Count + " service(s).\n";
+            for (int i = 0; i < user.getServices().Count; i++)
+            {
+                Console.WriteLine(user.getServices()[i].ToString());
+                services.Text += user.getServices()[i].ToString();
+            }
+        }
     }
 }
