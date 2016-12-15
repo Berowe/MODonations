@@ -2,13 +2,8 @@
   "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[MiddleOut.Service, MiddleOut]], mscorlib",
   "1210000": {
     "$type": "MiddleOut.Service, MiddleOut",
-<<<<<<< HEAD
     "myName": "Ameet Toor",
     "myUserID": "Karan@Toor.com",
-=======
-    "myName": "John Doe",
-    "myUserID": "john@doe.com",
->>>>>>> 2f6c13e3a1211f989127705f5c904b851fbec29d
     "myServiceID": "1210000",
     "myServiceDescription": "Clothes",
     "myTimeStart": null,
