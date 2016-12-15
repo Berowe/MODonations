@@ -10,6 +10,7 @@ namespace MiddleOut
     {
         private List<Location> myLocations;
         private List<Street> myStreets;
+        public List<Street> output; //public for unit testing.
 
         public DijkstraAlg(List<Location> theLocs, List<Street> theSts)
         {
@@ -90,6 +91,7 @@ namespace MiddleOut
                 shortestPath.Add(findStreet(retrackLoc, firstLoc));
                 firstLoc = retrackLoc;
             }
+            output = shortestPath;
             return shortestPath;
         }
 
@@ -165,6 +167,16 @@ namespace MiddleOut
                 }
             }
             return neighbors;
+        }
+
+        public string toString()
+        {
+            string temp = "";
+            foreach (Street st in output)
+            {
+                temp = temp + " " + st.myA.myX + " " + st.myA.myY + " " + st.myB.myX + " " + st.myB.myY + "\n";
+            }
+            return temp;
         }
     }
 }
