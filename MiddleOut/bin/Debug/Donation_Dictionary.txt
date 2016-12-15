@@ -109,5 +109,71 @@
     "myReview": null,
     "myDonationRequest": 3,
     "myServiceType": 3
+  },
+  "4110005": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "4110005",
+    "myServiceDescription": "Clothes",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 1,
+    "myServiceType": 3
+  },
+  "4110006": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "4110006",
+    "myServiceDescription": "Clothes",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 1,
+    "myServiceType": 3
+  },
+  "4110007": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "4110007",
+    "myServiceDescription": "Tech",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 2,
+    "myServiceType": 3
   }
 }

@@ -285,3 +285,5 @@ C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.exe
 C:\Users\ToorKPC\Documents\GitHub\MiddleOut\MiddleOut\obj\Debug\MiddleOut.pdb
+C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
+C:\Users\charl\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs
