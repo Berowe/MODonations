@@ -36,7 +36,7 @@ namespace MiddleOut
         // myStrings are the strings used to label the serial numbers in the serial.txt file.
         private String[] myStrings = new string[] {"toy_serial", "clothes_serial", "tech_serial", "first_aid_serial",
         "hygene_serial", "tools_serial", "food_serial", "other_serial", "goods_serial", "math_serial",
-        "reading_serial", "writing_serial", "donation_serial", "Drive_serial", "Educate_serial"};
+        "reading_serial", "writing_serial", "donation_serial", "driver_serial", "educator_serial"};
         // myDictionaryFileStrings are the strings that are used to create, read, write the files for their respective Service Dictionary.
         private String[] myDictionaryFileStrings = new string[] {
                     "Toy_Dictionary.txt", "Clothes_Dictionary.txt", "Tech_Dictionary.txt", "FirstAid_Dictionary.txt", "Hygene_Dictionary.txt",
@@ -188,7 +188,7 @@ namespace MiddleOut
                             theService.setServiceID(createServiceID(dType));
                             theService.setServiceType(sType);
                             theService.setDonationRequest(dType);
-                            if (theService.getServiceID() == null)
+                            //if (theService.getServiceID() == null)
                             myReadingEducates.Add(theService.getServiceID(), theService);
                             serial = serializeDictionary(myReadingEducates);
                             writeFile(myDictionaryFileStrings[10], serial);
@@ -200,8 +200,8 @@ namespace MiddleOut
                     theService.setServiceID(createServiceID(DonationTypes.Donation));
                     theService.setServiceType(sType);
                     theService.setDonationRequest(dType);
-                    if (theService.getServiceID() == null)
-                        myDonationRequests.Add(theService.getServiceID(), theService);
+                    //if (theService.getServiceID() == null)
+                    myDonationRequests.Add(theService.getServiceID(), theService);
                     serial = serializeDictionary(myDonationRequests);
                     writeFile(myDictionaryFileStrings[12], serial);
                     myServiceIDs.Add(theService.getServiceID());
