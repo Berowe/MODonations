@@ -22,11 +22,11 @@ namespace MiddleOut
     /// </summary>
     public partial class InformationPage : UserControl
     {
-        private string _vehicleType;
-        private string _capacity;
-        private string _startTime;
-        private string _stopTime;
-        private string _filePath;
+        private string myVehicleType;
+        private string myCapacity;
+        private string myStartTime;
+        private string myEndTime;
+        private string myFilePath;
 
         public InformationPage()
         {
@@ -41,11 +41,11 @@ namespace MiddleOut
             
             vehicleList.ItemsSource = vehicles;
             vehicleList.SelectedIndex = 0;
-            _vehicleType = string.Empty;
-            _capacity = string.Empty;
-            _startTime = string.Empty;
-            _stopTime = string.Empty;
-            _filePath = string.Empty;
+            myVehicleType = string.Empty;
+            myCapacity = string.Empty;
+            myStartTime = string.Empty;
+            myEndTime = string.Empty;
+            myFilePath = string.Empty;
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace MiddleOut
             User user = mainWindow.getUser();
 
             //Add driver info to user
-            user.addDriver(_vehicleType, _capacity, _startTime, _stopTime, _filePath);
+            user.addDriver(myVehicleType, myCapacity, myStartTime, myEndTime, myFilePath);
 
             //Add driving service to user
             Service service = new Service(user.getName(), user.getEmail());
@@ -82,13 +82,13 @@ namespace MiddleOut
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Sets the _capacity field to the text in the CapacityTextbox.
+        /// Sets the myCapacity field to the text in the CapacityTextbox.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void capacityBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            _capacity = new TextRange(capacityBox.Document.ContentStart, capacityBox.Document.ContentEnd).Text;
+            myCapacity = new TextRange(capacityBox.Document.ContentStart, capacityBox.Document.ContentEnd).Text;
         }
 
         /// <summary>
@@ -123,41 +123,41 @@ namespace MiddleOut
                 String[] temp = filename.Split('\\');
                 textBlock1.Text = temp[temp.Length - 1];
                 nextPage.IsEnabled = true;
-                _filePath = filename;
+                myFilePath = filename;
             }
         }
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Sets the _startTime field to the text in the startTimeBox text box.
+        /// Sets the myStartTime field to the text in the startTimeBox text box.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void startTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            _startTime = new TextRange(startTimeBox.Document.ContentStart, startTimeBox.Document.ContentEnd).Text;
+            myStartTime = new TextRange(startTimeBox.Document.ContentStart, startTimeBox.Document.ContentEnd).Text;
         }
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Sets the _stopTime fields to the text in the endTimebox text box.
+        /// Sets the myEndTime fields to the text in the endTimebox text box.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void endTimeBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            _stopTime = new TextRange(endTimeBox.Document.ContentStart, endTimeBox.Document.ContentEnd).Text;
+            myEndTime = new TextRange(endTimeBox.Document.ContentStart, endTimeBox.Document.ContentEnd).Text;
         }
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Sets the _vehicleType to the chosen ComboBox selectedItem.
+        /// Sets the myVehicleType to the chosen ComboBox selectedItem.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void vehicleList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _vehicleType = vehicleList.SelectedItem.ToString();
+            myVehicleType = vehicleList.SelectedItem.ToString();
         }
 
         /// <summary>
@@ -200,6 +200,18 @@ namespace MiddleOut
             {
                 capacity.Text = "";
             }
+        }
+
+        private void vehicleList_DropDownClosed(object sender, EventArgs e)
+        {
+            if (vehicleList.SelectedItem.ToString() == "Sedan")//"Sedan")
+                vehicleList.SelectedIndex = 0;
+            else if (vehicleList.SelectedItem.ToString() == "Truck") //"Truck")
+                vehicleList.SelectedIndex = 1;
+            else if (vehicleList.SelectedItem.ToString() == "SUV") //== "SUV")
+                vehicleList.SelectedIndex = 2; 
+            else if (vehicleList.SelectedItem.ToString() == "Compact") //== "Compact")
+                vehicleList.SelectedIndex = 3;
         }
     }
 }

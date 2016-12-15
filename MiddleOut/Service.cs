@@ -35,6 +35,8 @@ namespace MiddleOut
         private ReviewService myReview;
         [JsonProperty("myDonationRequest")]
         private DonationTypes myDonationRequest; ///changes from EnumTypes to DonationTypes
+        [JsonProperty("myServiceRequest")]
+        private ServiceTypes myServiceRequest;
         [JsonProperty("myServiceType")]
         private ServiceTypes myServiceType; //added ServiceTypes
         #endregion
@@ -91,6 +93,14 @@ namespace MiddleOut
         public String getDescription()
         {
             return myServiceDescription;
+        }
+
+        public String[] getTime()
+        {
+            String[] time = new String[2];
+            time[0] = myTimeStart;
+            time[1] = myTimeStop;
+            return time;
         }
 
         /// <summary>
@@ -265,38 +275,43 @@ namespace MiddleOut
         }
         #endregion
 
+        #region private methods
+
+        public String isTrue(Boolean selected)
+        {
+            String check = "No";
+            if (selected)
+            {
+                check = "Yes";
+            }
+            return check;
+        }
+        #endregion
+
         #region overrides
         override
         public string ToString()
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append(myName + "\n");
-            builder.Append(myUserID + "\n");
             if (myServiceID != null)
             {
-                builder.Append(myServiceID + "\n");
+                builder.Append("Service ID: " + myServiceID + "\n");
             }
             if (myServiceDescription != null)
             {
                 builder.Append(myServiceDescription + "\n");
             }
-            builder.Append("Service is Selected: " + mySelected.ToString() + "\n");
-            builder.Append("Service is Completed: " + myCompleted.ToString() + "\n");
+            builder.Append("Service is Selected: " + isTrue(mySelected) + "\n");
+            builder.Append("Service is Completed: " + isTrue(myCompleted) + "\n");
             if (myTimeStart != null)
             {
                 builder.Append(myTimeStart + " to " + myTimeStop + "\n");
             }
-            if (myLocation != null)
-            {
-                builder.Append("X and Y Coordinates of Service: {0},{1}" + "\n", myLocation[0], myLocation[1]);
-            }
-            builder.Append(Convert.ToString(myLocation[0]));
-            builder.Append(Convert.ToString(myLocation[1]));
-            builder.Append(myTaxCredit.ToString() + "\n");
             if (myReview != null)
             {
-                builder.Append(myReview.ToString() + "\n");
+                builder.Append("Review of Service:\n" + myReview.ToString() + "\n");
             }
+            builder.Append("______________________________________________________");
 
             return builder.ToString();
         }

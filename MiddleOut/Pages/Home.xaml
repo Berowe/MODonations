@@ -4,14 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
+           
              d:DesignHeight="300" d:DesignWidth="300"
              >
     <Grid Style="{StaticResource ContentRoot}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Welcome to Middle Out" HorizontalAlignment="Center" Grid.Row="0"/>
-        <Image Grid.Row="1" Source="/MiddleOut;component/Images/middleout.jpg"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Welcome to Middle Out" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock Name="userInfo" Text="" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left"/>
+        <ScrollViewer Grid.Row="1" Grid.Column="1">
+            <TextBlock Name="services"  Text="" HorizontalAlignment="Right"/>
+        </ScrollViewer>
+        <Image Grid.Row="2" Grid.Column="1" Source="/MiddleOut;component/Images/middleout.jpg" Loaded="Image_Loaded" HorizontalAlignment="Right"/>
     </Grid>
 </UserControl>

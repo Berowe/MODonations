@@ -14,13 +14,13 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// The list of services that the user has associated with their account.
         /// </summary>
-        private List<Service> _listOfServices;
+        private List<Service> myListOfServices;
 
         /// <summary>
         /// Author: Ameet Toor
         /// The string that holds the report for the user.
         /// </summary>
-        private string _report;
+        private string myReport;
         #endregion
 
         #region methods
@@ -46,7 +46,7 @@ namespace MiddleOut
         /// <returns>Report of the user as a string.</returns>
         public string GetReport()
         {
-            return _report;
+            return myReport;
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace MiddleOut
         override 
         public string ToString()
         {
-            return _report;
+            return myReport;
         }
 
         #endregion
@@ -74,7 +74,7 @@ namespace MiddleOut
         {
             if (theListOfCompletedServices != null)
             {
-                _listOfServices = theListOfCompletedServices;
+                myListOfServices = theListOfCompletedServices;
             }
         }
         #endregion
@@ -85,26 +85,26 @@ namespace MiddleOut
         /// </summary>
         private void CreateReport()
         {
-            if (_listOfServices != null)
+            if (myListOfServices != null)
             {
                 var sb = new StringBuilder();
                 var totalTaxCredit = 0.0;
                 var serviceNum = 1;
                 sb.Append("Report: \n\n");
-                foreach (var service in _listOfServices)
+                foreach (var service in myListOfServices)
                 {
                     sb.Append("Service " + serviceNum + ":\n");
                     totalTaxCredit = totalTaxCredit + service.getTaxCredit();
                     sb.Append(service + "\n\n");
                     serviceNum++;
                 }
-                sb.Append("Number of Services: " + _listOfServices.Count + "\n");
+                sb.Append("Number of Services: " + myListOfServices.Count + "\n");
                 sb.Append("Total Tax Credit: $" + totalTaxCredit);
-                _report = sb.ToString();
+                myReport = sb.ToString();
             }
             else
             {
-                _report = string.Empty;
+                myReport = string.Empty;
             }
         }
 

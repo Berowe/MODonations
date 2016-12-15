@@ -30,7 +30,7 @@
             </Grid.RowDefinitions>
             <TextBlock x:Name="textBlock1" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" />
             <StackPanel  Grid.Row="1">
-                <ComboBox x:Name="vehicleList" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="87" SelectionChanged="vehicleList_SelectionChanged" IsSynchronizedWithCurrentItem="False" SelectedIndex="0"/>
+                <ComboBox x:Name="vehicleList" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="87" DropDownClosed="vehicleList_DropDownClosed"/>
                 <RichTextBox x:Name="capacityBox" HorizontalAlignment="Center" Height="21" Width="87" TextChanged="capacityBox_TextChanged" >
                     <FlowDocument>
                         <Paragraph MouseLeftButtonDown="Paragraph_MouseDown">

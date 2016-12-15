@@ -17,13 +17,13 @@ namespace MiddleOut
         /// Author: Ameet Toor
         /// The donation type for the education service.
         /// </summary>
-        private DonationTypes _donationType;
+        private DonationTypes myDonationType;
 
         /// <summary>
         /// Author: Ameet Toor
         /// The description of the service.
         /// </summary>
-        private string _description;
+        private string myDescription;
 
         /// <summary>
         /// Author: Ameet Toor
@@ -39,7 +39,7 @@ namespace MiddleOut
 
         /// <summary>
         /// Author: Ameet Toor
-        /// Changes _donationType depending on which subject was chosen. And changes the secondary combobox content depending on the subject chosen.
+        /// Changes myDonationType depending on which subject was chosen. And changes the secondary combobox content depending on the subject chosen.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -48,18 +48,18 @@ namespace MiddleOut
             var subject = SubjectComboBox.SelectedItem.ToString();
             if (subject.Equals("Writing"))
             {
-                _donationType = DonationTypes.WritingEducator;
+                myDonationType = DonationTypes.WritingEducator;
                 SetSpecificSubjectComboBox("Writing");
             }
             else if (subject.Equals("Reading"))
             {
                 SetSpecificSubjectComboBox("Reading");
-                _donationType = DonationTypes.ReadingEducator;
+                myDonationType = DonationTypes.ReadingEducator;
             }
             else
             {
                 SetSpecificSubjectComboBox("Math");
-                _donationType = DonationTypes.MathEducator;
+                myDonationType = DonationTypes.MathEducator;
             }
         }
 
@@ -71,7 +71,8 @@ namespace MiddleOut
         /// <param name="e"></param>
         private void SpecificSubjectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _description = SpecificSubjectComboBox.SelectedItem.ToString();
+            if (SpecificSubjectComboBox.SelectedItem != null)
+                myDescription = SpecificSubjectComboBox.SelectedItem.ToString();
         }
 
         /// <summary>
@@ -90,12 +91,12 @@ namespace MiddleOut
             Service service = new Service(user.getName(), user.getEmail());
 
             service.setServiceType(ServiceTypes.Educator);
-            service.setDonationRequest(_donationType);
-            service.setDescription(_description);
+            service.setDonationRequest(myDonationType);
+            service.setDescription(myDescription);
 
             user.addService(service);
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
-            serviceDatabase.createService(ServiceTypes.Educator, _donationType, user, service);
+            serviceDatabase.createService(ServiceTypes.Educator, myDonationType, user, service);
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
@@ -109,7 +110,7 @@ namespace MiddleOut
         /// <returns>The donationType associated with this service.</returns>
         public DonationTypes GetChosenSubjectAsDonationType()
         {
-            return _donationType;
+            return myDonationType;
         }
 
         /// <summary>
@@ -118,8 +119,8 @@ namespace MiddleOut
         /// </summary>
         private void InitializeFields()
         {
-            _donationType = DonationTypes.MathEducator;
-            _description = string.Empty;
+            myDonationType = DonationTypes.MathEducator;
+            myDescription = string.Empty;
         }
 
         /// <summary>
