@@ -18,6 +18,9 @@ namespace MiddleOut
 {
     /// <summary>
     /// Interaction logic for ThankYou.xaml
+    /// Co-Author: Lovejit Hari, .xaml
+    /// Co-Author: Charlton Smith, nextPage_Click
+    /// Returns to home screen on nextPage_Click.
     /// </summary>
     public partial class ThankYou : UserControl
     {
