@@ -21,6 +21,7 @@
             <TextBlock x:Name="licenseInsuranceText" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="License "/><LineBreak/><Run FontWeight="Bold" Text="&amp; Insurance"/></TextBlock>
             <TextBlock x:Name="vehicleTypeText" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Type of Vehicle"/></TextBlock>
             <TextBlock x:Name="textBlock" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Availability"/></TextBlock>
+            <Button x:Name="back" Content="Back" Click="prevPage_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="2"/>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>

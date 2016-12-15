@@ -62,6 +62,12 @@ namespace MiddleOut
 
 
         }
+        //Charlton last minute addition to navigate userback.
+        private void prevPage_Click(object sender, RoutedEventArgs e)
+        {
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.BrowseBack.Execute(null, target);
+        }
 
         /// <summary>
         /// Direct the user to the next page (Thank you page). 

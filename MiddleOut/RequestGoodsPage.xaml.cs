@@ -86,6 +86,12 @@ namespace MiddleOut
                 //OtherTextBox.ForeColor = Color.White;
             }
         }
+        //Charlton last minute addition to navigate userback.
+        private void prevPage_Click(object sender, RoutedEventArgs e)
+        {
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.BrowseBack.Execute(null, target);
+        }
 
         private void nextPage_Click(object sender, RoutedEventArgs e)
         {

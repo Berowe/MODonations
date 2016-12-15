@@ -31,7 +31,8 @@
             </StackPanel>
         </Grid>
         <Grid Name="ButtonGrid" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Button x:Name="nextPage" Content="Continue" Click="nextPage_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="nextPage" Content="Continue" Click="nextPage_Click" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Button x:Name="back" Content="Back" Click="prevPage_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </UserControl>

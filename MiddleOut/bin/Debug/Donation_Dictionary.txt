@@ -175,5 +175,49 @@
     "myReview": null,
     "myDonationRequest": 2,
     "myServiceType": 3
+  },
+  "4110008": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "4110008",
+    "myServiceDescription": "",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 7,
+    "myServiceType": 3
+  },
+  "4110009": {
+    "$type": "MiddleOut.Service, MiddleOut",
+    "myName": "John Doe",
+    "myUserID": "john@doe.com",
+    "myServiceID": "4110009",
+    "myServiceDescription": "",
+    "myTimeStart": null,
+    "myTimeStop": null,
+    "myLocation": {
+      "$type": "System.Int32[], mscorlib",
+      "$values": [
+        0,
+        0
+      ]
+    },
+    "myTaxCredit": 0.0,
+    "myCompleted": false,
+    "mySelected": false,
+    "myReview": null,
+    "myDonationRequest": 7,
+    "myServiceType": 3
   }
 }

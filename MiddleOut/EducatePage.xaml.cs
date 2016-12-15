@@ -36,7 +36,12 @@ namespace MiddleOut
             InitializeButtons();
             InitializeComboBoxes();
         }
-
+        //Charlton last minute addition to navigate userback.
+        private void prevPage_Click(object sender, RoutedEventArgs e)
+        {
+            IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
+            NavigationCommands.BrowseBack.Execute(null, target);
+        }
         /// <summary>
         /// Author: Ameet Toor
         /// Changes myDonationType depending on which subject was chosen. And changes the secondary combobox content depending on the subject chosen.
