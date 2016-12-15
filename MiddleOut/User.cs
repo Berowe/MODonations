@@ -8,6 +8,7 @@ namespace MiddleOut
 {
     /// <summary>
     /// The User object class.
+    /// Author: Braxton Rowe
     /// </summary>
     public class User
     {
