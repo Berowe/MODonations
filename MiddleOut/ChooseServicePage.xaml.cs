@@ -22,7 +22,7 @@ namespace MiddleOut
         public BasicPage1()
         {
             InitializeComponent();
-            myServiceTypes = ServiceTypes.Donor;
+            myServiceTypes = ServiceTypes.Donate;
         }
 
         /// <summary>
@@ -35,27 +35,27 @@ namespace MiddleOut
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
 
-            if ((bool)DriverRadioButton.IsChecked)
+            if ((bool)DriveRadioButton.IsChecked)
             {
-                myServiceTypes = ServiceTypes.Driver;
+                myServiceTypes = ServiceTypes.Drive;
                 mainWindow.setServiceType(myServiceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/Informationpage.xaml", target);
             } else if ((bool)DonateRadioButton.IsChecked)
             {
-                myServiceTypes = ServiceTypes.Donor;
+                myServiceTypes = ServiceTypes.Donate;
                 mainWindow.setServiceType(myServiceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);
             } else if ((bool)EducateRadioButton.IsChecked)
             {
-                myServiceTypes = ServiceTypes.Educator;
+                myServiceTypes = ServiceTypes.Educate;
                 mainWindow.setServiceType(myServiceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/EducatePage.xaml", target);
             } else if ((bool)RequestGoodsButton.IsChecked)
             {
-                myServiceTypes = ServiceTypes.Requester;
+                myServiceTypes = ServiceTypes.Request;
                 mainWindow.setServiceType(myServiceTypes);
                 IInputElement target = NavigationHelper.FindFrame("ListPage1", this);
                 NavigationCommands.GoToPage.Execute("/RequestGoodsPage.xaml", target);

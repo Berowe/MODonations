@@ -90,13 +90,13 @@ namespace MiddleOut
 
             Service service = new Service(user.getName(), user.getEmail());
 
-            service.setServiceType(ServiceTypes.Educator);
+            service.setServiceType(ServiceTypes.Educate);
             service.setDonationRequest(myDonationType);
             service.setDescription(myDescription);
 
             user.addService(service);
             ServiceDatabase serviceDatabase = mainWindow.GetServiceDatabase();
-            serviceDatabase.createService(ServiceTypes.Educator, myDonationType, user, service);
+            serviceDatabase.createService(ServiceTypes.Educate, myDonationType, user, service);
 
             //Direct to thank you page 
             IInputElement target = NavigationHelper.FindFrame("ListPage1", this);

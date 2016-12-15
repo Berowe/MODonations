@@ -14,7 +14,7 @@ using System.Threading.Tasks;
     /// <summary>
     /// Service type enumerations
     /// </summary>
-    public enum ServiceTypes { Donor, Driver, Educator, Requester }
+    public enum ServiceTypes { Donate, Drive, Educate, Request }
 
     /// <summary>
     /// User type enumerations

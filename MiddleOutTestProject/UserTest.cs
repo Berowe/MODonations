@@ -54,7 +54,7 @@ namespace MiddleOutTestProject
             Assert.IsTrue(test.isAdmin());
 
             Service toy = new Service("tester", "tester@uw.edu");
-            sBase.createService(ServiceTypes.Donor, DonationTypes.Toys, test, toy);
+            sBase.createService(ServiceTypes.Donate, DonationTypes.Toys, test, toy);
             myServices = new List<Service>();
             myServices.Add(toy);
             test.addService(toy);
@@ -63,7 +63,7 @@ namespace MiddleOutTestProject
             Assert.IsTrue(test.checkPassword("pass"));
             Assert.IsFalse(test.checkPassword("Password"));
 
-            test.addDriver(vehichle, capacity, start, stop, license);
+            test.addDrive(vehichle, capacity, start, stop, license);
             Assert.AreEqual(vehichle, test.getVehicleType());
             Assert.AreEqual(capacity, test.getCapacity());
             Assert.AreEqual(start, test.getTimeStart());
