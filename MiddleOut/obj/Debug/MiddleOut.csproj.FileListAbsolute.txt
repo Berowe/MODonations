@@ -279,3 +279,5 @@ C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.g.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form1.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.Form2.resources
 C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\MiddleOut.csproj.GenerateResource.Cache
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.baml
+C:\Users\azoni\Desktop\MiddleOut\MiddleOut\obj\Debug\ProfilePage.g.cs

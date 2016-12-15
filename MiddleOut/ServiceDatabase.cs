@@ -200,7 +200,8 @@ namespace MiddleOut
                     theService.setServiceID(createServiceID(DonationTypes.DonationRequest));
                     theService.setServiceType(sType);
                     theService.setDonationRequest(dType);
-                    myDonationRequests.Add(theService.getServiceID(), theService);
+                    if (theService.getServiceID() == null)
+                        myDonationRequests.Add(theService.getServiceID(), theService);
                     serial = serializeDictionary(myDonationRequests);
                     writeFile(myDictionaryFileStrings[12], serial);
                     myServiceIDs.Add(theService.getServiceID());

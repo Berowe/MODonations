@@ -14,7 +14,6 @@
                 <mui:Link DisplayName="Home" Source="Pages/Home.xaml" />
                 <mui:Link DisplayName="Add A Service" Source="/ChooseServicePage.xaml" />
                 <mui:Link DisplayName="Mapping" Source="/MapPage.xaml" />
-                <mui:Link DisplayName="Notifications" Source="/NotificationPage.xaml" />
                 <mui:Link DisplayName="About" Source="/AboutPage.xaml" />
                 <mui:Link DisplayName="Profile" Source="/ProfilePage.xaml" />
             </mui:ModernTab.Links>
